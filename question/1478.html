@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Что такое замыкание
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <div class="row">
+        <div class="col">
+            <h1 class="mt-5 mb-5 fs-3">Что такое замыкание</h1>
+            
+            <div class="row">
+                <div class="card mb-3 col" >
+                    <div class="card-body">
+                        <p class="card-text"><p>Замыкание &mdash; это функция, которая запоминает своё лексическое окружение даже после того, как она выполняется вне своей области видимости. Другими словами, функция, объявленная в определённой области видимости, сохраняет доступ к переменным этой области, даже когда она вызывается за пределами своего первоначального контекста.</p>
+
+<p>Это важно по нескольким причинам:<br />
+1. <strong>Инкапсуляция данных:</strong> Позволяют скрыть переменные внутри функции, делая их недоступными извне, кроме как через другую функцию, созданную в той же области видимости.<br />
+2. <strong>Сохранение состояния:</strong> Позволяют сохранять состояние между вызовами функции, без использования глобальных переменных.<br />
+3. <strong>Каррирование и функциональное программирование: </strong>Облегчают каррирование и другие техники функционального программирования, позволяя функциям работать с переменными, которые были в их области видимости в момент создания.</p>
+
+<p>Пример:</p>
+
+<pre>
+<code>function создатьСчетчик() {
+    let количество = 0; // переменная количество "замкнута" внутри функции увеличить
+
+    function увеличить() {
+        количество += 1;
+        return количество;
+    }
+
+    return увеличить;
+}
+
+const счетчик = создатьСчетчик();
+console.log(счетчик()); // 1
+console.log(счетчик()); // 2</code></pre>
+
+<p>В этом примере, функция <strong>`увеличить`</strong> имеет доступ к переменной <strong>`количество`</strong>, даже после того как <strong>`создатьСчетчик`</strong> завершила выполнение. Это происходит благодаря механизму замыканий: <strong>`увеличить`</strong> &quot;запоминает&quot; переменные, которые были в её области видимости в момент создания.</p>
+
+<p>Замыкание &mdash; это когда функция запоминает и имеет доступ к переменным из своей области видимости, даже после того, как она выполняется в другом контексте. Это позволяет функциям сохранять данные между вызовами и обеспечивать инкапсуляцию состояния, что очень полезно для создания приватных переменных и управления состоянием в программе.</p></p>
+                        
+                        <p class="card-text"><small class="text-muted">Feb. 22, 2024, easyoffer</small></p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+
+<!--            <h2 class="mb-3 mt-5 fs-5" >Добавить ответ:</h2>-->
+
+<!--            <div class="form-error"></div>-->
+<!--            <form class="row g-3" action = "" method="post">-->
+<!--                    <input type="hidden" name="csrfmiddlewaretoken" value="qpiWlvZaK5vNAiXJD0OGS83ycelqXuQfLAb88Wou9zH3f39JyuqX9Iebpo2mttFw">-->
+<!--                  <div class="col-md-4">-->
+<!--                    <label for="id_author" class="form-label">Автор/Источник:</label>-->
+<!--                     <input type="text" name="author" class="form-control" maxlength="50" required id="id_author">-->
+<!--                  </div>-->
+<!--                  <div class="col-md-4">-->
+<!--                    <label for="id_url" class="form-label">Ссылка(не обяз.):</label>-->
+<!--                    <input type="url" name="url" class="form-control" maxlength="200" id="id_url">-->
+<!--                  </div>-->
+<!--                  <div>-->
+<!--                    <label for="id_text" class="form-label"></label>-->
+<!--                    <div class="django-ckeditor-widget" data-field-id="id_text" style="display: inline-block;">
+    <textarea name="text" cols="40" rows="10" required id="id_text" data-processed="0" data-config="{&quot;skin&quot;: &quot;moono-lisa&quot;, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]], &quot;toolbar&quot;: &quot;Custom&quot;, &quot;height&quot;: 291, &quot;width&quot;: &quot;550px&quot;, &quot;filebrowserWindowWidth&quot;: 940, &quot;filebrowserWindowHeight&quot;: 725, &quot;toolbar_Custom&quot;: [[&quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;], [&quot;NumberedList&quot;, &quot;BulletedList&quot;], [&quot;Link&quot;, &quot;Unlink&quot;], [&quot;Image&quot;, &quot;CodeSnippet&quot;]], &quot;extraPlugins&quot;: &quot;codesnippet&quot;, &quot;language&quot;: &quot;en-us&quot;}" data-external-plugin-resources="[]" data-id="id_text" data-type="ckeditortype"></textarea>
+</div>-->
+<!--                  </div>-->
+<!--                  <div class="col-12">-->
+<!--                    <button class="btn btn-primary btn-sm" type="submit">Добавить ответ</button>-->
+<!--                  </div>-->
+<!--            </form>-->
+        </div>
+        <div class="col-12 col-sm-4">
+            <h2 class="mb-3 mt-5 fs-5" >Примеры ответов:</h2>
+            <ul class="list-group list-group-flush mb-3">
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/N1gKaF6BhDc?t=1415" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Tech Interview Fest | Моковое cобесе…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://www.youtube.com/live/t52BuzKzqWw?feature=share&amp;t=862" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Публичное собеседование: junior-fron…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://www.youtube.com/live/fk_eTY2IZQE?feature=share&amp;t=514" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Публичное собеседование: фронтендер …</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/gV6eobXisYU?t=279" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>СОБЕСЕДОВАНИЕ на FRONTEND разработчи…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/NRufVTyELC4?t=1538" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>РЕАЛЬНОЕ СОБЕСЕДОВАНИЕ НА FRONTEND Р…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/lq4eefCCuVo?t=887" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Реальное СОБЕСЕДОВАНИЕ на FRONTEND р…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/Y1SekvuZ3M4?t=721" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>РЕАЛЬНОЕ СОБЕСЕДОВАНИЕ НА FRONTEND Р…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/LcAQMKXpcqg?t=681" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>СОБЕСЕДОВАНИЕ JUNIOR FRONTEND РАЗРАБ…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/cRqBsepPgoI?t=1988" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Собеседование frontend junior+ разра…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/0y9WmVR0rW4?t=1469" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>#5 Мидл в 18 лет? Собеседование на F…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/g5LdFoV6iUg?t=786" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>#12 Фронтенд-разработчик нейросети н…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/25lCunO6yDQ?t=3072" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>#0 Cобеседование Junior Frontend раз…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://www.youtube.com/watch?v=1Ej0Wx2TkSs&amp;t=4760s" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>#16 Собеседование Senior Frontend ра…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/qika0TkDFz4?t=6197" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>#7 Первое собеседование Junior Front…</a></small></li>
+                
+            </ul>
+<!--            <button type="button" class="btn btn-primary btn-sm " data-bs-toggle="modal" data-bs-target="#VideoAnswerModal">-->
+<!--              Добавить ссылку-->
+<!--            </button>-->
+<!--            <h2 class="mb-3 mt-5 fs-5">Доп. материалы:</h2>-->
+<!--            <ul class="list-group list-group-flush mb-3">-->
+<!--                -->
+<!--            </ul>-->
+<!--            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#ExtraContentModal">-->
+<!--              Добавить ссылку-->
+<!--            </button>-->
+        </div>
+    </div>
+
+
+
+    <!-- ExtraContentModal -->
+    <div class="modal fade" id="ExtraContentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Добавить ссылку на доп. матераил</h1>
+          </div>
+          <div class="modal-body">
+               <form action="1478.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="qpiWlvZaK5vNAiXJD0OGS83ycelqXuQfLAb88Wou9zH3f39JyuqX9Iebpo2mttFw">
+                      <div class="mb-3">
+                        <label for="id_content-title" class="col-form-label">Название: </label>
+                        <input type="text" name="content-title" class="form-control" maxlength="255" required id="id_content-title">
+                      </div>
+                      <div class="mb-3">
+                        <label for="id_content-url" class="col-form-label">Ссылка: </label>
+                        <input type="url" name="content-url" class="form-control" required id="id_content-url">
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить</button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VideoAnswerModal -->
+    <div class="modal fade" id="VideoAnswerModal" tabindex="-1" aria-labelledby="VideoAnswerModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="VideoAnswerModalLabel">Добавить ответ из mock-собесов</h1>
+          </div>
+          <div class="modal-body">
+                <form action="1478.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="qpiWlvZaK5vNAiXJD0OGS83ycelqXuQfLAb88Wou9zH3f39JyuqX9Iebpo2mttFw">
+                      <div class="mb-3">
+                        <label for="id_video-title" class="col-form-label">Название видео: </label>
+                        <input type="text" name="video-title" class="form-control" maxlength="255" required id="id_video-title">
+                      </div>
+                      <div class="mb-3">
+                        <label for="id_video-url" class="col-form-label">Ссылка на момент ответа: </label>
+                        <input type="url" name="video-url" class="form-control" required id="id_video-url">
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить</button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

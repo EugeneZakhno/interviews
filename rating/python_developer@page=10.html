@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Вопросы с собеседований на Python Developer
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <h1 class="mt-5 fs-3"> Вопросы с собеседований на Python Developer</h1>
+    
+    <p class="fs-5 mt-3 mb-5 fs-6">Вопросов всего: 1096.
+<!--        Вы можете-->
+<!--        <a type="button" class="link" data-bs-toggle="modal" data-bs-target="#exampleModal"> Добавить вопрос </a>-->
+    </p>
+    
+    <div class="row align-items-start">
+            <div class="col-12 col-md-2 d-flex flex-column align-items-start">
+                <p class="">Фильтр:</p>
+                <form action="python_developer@page=10.html">
+                    <select class="form-select" aria-label="Default select example" name="tag">
+                        
+                            <option selected>Все</option>
+                        
+                          <option value="Все">Все</option>
+                        
+                          <option value="Нет">Нет</option>
+                        
+                          <option value="HRский">HRский</option>
+                        
+                          <option value="Тестирование">Тестирование</option>
+                        
+                          <option value="ООП">ООП</option>
+                        
+                          <option value="Базы данных">Базы данных</option>
+                        
+                          <option value="SQL">SQL</option>
+                        
+                          <option value="Tools">Tools</option>
+                        
+                          <option value="SDLC">SDLC</option>
+                        
+                          <option value="REST &amp; SOAP">REST &amp; SOAP</option>
+                        
+                          <option value="Python">Python</option>
+                        
+                          <option value="ORM">ORM</option>
+                        
+                          <option value="HTTP / API">HTTP / API</option>
+                        
+                          <option value="GIL">GIL</option>
+                        
+                          <option value="Flask">Flask</option>
+                        
+                          <option value="FastAPI">FastAPI</option>
+                        
+                          <option value="Django">Django</option>
+                        
+                          <option value="Best Practices">Best Practices</option>
+                        
+                          <option value="Языки">Языки</option>
+                        
+                          <option value="Фреймворки">Фреймворки</option>
+                        
+                          <option value="Модули / Пакеты">Модули / Пакеты</option>
+                        
+                          <option value="Веб-разработка">Веб-разработка</option>
+                        
+                          <option value="Асинхронность">Асинхронность</option>
+                        
+                          <option value="Алгоритмы, структуры">Алгоритмы, структуры</option>
+                        
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-primary mt-3">Выбрать</button>
+                </form>
+            </div>
+            
+            <div class="col">
+                <form class="d-flex mb-3" role="search" method="get" action="python_developer@page=10.html">
+                    <input type="text" name="search_query" class="form-control me-2" placeholder="Поиск вопроса" aria-label="Search" id="id_search_query">
+                    <button class="btn btn-outline-success" type="submit">Поиск</button>
+                </form>
+                
+                <table class="table table-sm table-hover">
+                    <thead>
+                        <tr>
+                            <th>Шанс</th>
+                            <th>Вопрос</th>
+                            <th class="d-none d-sm-table-cell">Тег</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/1416.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой результат будет Post.objects.all() и какого типа вернет</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/1417.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое SQL</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/1418.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Каким запросом я могу достать все данные из таблицы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/1419.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое многие-ко-многим</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/1421.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как реализуется М2М в SQL</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/1422.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое View</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/1424.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Звёздный синтаксис</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/1426.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Два способа создания класса</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/1427.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем файл .pyc отличается от .py</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/1429.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что делает python объектно-ориентированным</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/1431.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как производится отладка программы на Python</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/1432.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как вставить объект чтобы он оказался под определенным индексом</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/1434.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что нужно сделать, чтобы функция возвращала значение</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/1437.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что если в функции не будет return, будет ли она что-то возвращать</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/1439.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как конвертировать список в строку</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/1441.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">SQL оператор HAVING</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/1442.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Множественное наследование</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/1444.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Компоненты django</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/80.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как посмотреть количество доступной ОЗУ на Linux</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/7948.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие NoSQL базы данных знаешь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Базы данных</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/10538.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой редактор используешь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/10539.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какую операционную систему используешь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/10540.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что используешь для организации рабочего времени</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/10541.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Насколько хорошо знаешь Linux</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/1229.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему мы используем enumerate() при итерации последовательности</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/10542.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем WebSocket отличется от обычного сокета</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HTTP / API</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/1231.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как реализовать декоратор с аргументом</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/1253.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем нужен wraps</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/72.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Каким образом можно в CI/CD встроить проверку типов</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/73.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое CSV</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/74.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой редактор используете</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/75.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какую операционную систему используете</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/76.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что используете для организации рабочего времени</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/77.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Насколько хорошо вы знаете Linux</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/78.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как посмотреть список запущенных процессов на Linux</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/79.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое PID процесса</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/81.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как проверить доступность порта на удаленной машине</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/82.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Назовите админские команды в Linux</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/83.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что делали в Docker</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/84.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое ветка в GIT</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/85.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как в одной команде проиндексировать все файлы и добавить коммит</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/86.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое git stash</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/87.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие бывают сигналы в Linux</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/88.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего использовал makefile в Linux</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/89.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая минимальная периодичность использования crontab</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/129.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о системе прав в Linux</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/130.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как собрать образ в Docker</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/131.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Cоздается дефолтная сеть в докере или нужно создавать самому</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/132.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой брокер использовал ранее</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/133.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как обеспечить беспрерывную работу сервиса ci/cd</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/134.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем нужен kubernetes</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/135.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">С какими системами мониторинга знаком</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/136.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какое flo используешь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/137.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">От чего будешь создавать ветку</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/138.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какими тузами пользуешься при работе с kit&#x27;ом</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/139.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой IDE используешь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/140.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличается docker от виртуальной машины</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/141.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое docker daemon</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/142.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем нужен docker registry</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/143.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое docker registry</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/144.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Назови основные команды docker</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/145.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем нужен докер файл</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/146.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем нужен файл docker.ignore</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/147.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как используется кеширование в докере</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/148.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое docker image</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/149.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое docker container</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/150.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем нужен volume в docker</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/151.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Работал ли с AWS</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/152.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Использовал ли в CSS препроцессоры</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/153.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой опыт с google cloud</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/154.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Apache Airflow</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/155.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем отличие Cron от Apache Airflow</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/156.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какую систему контроля версий используешь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/157.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Плюсы и минусы NoSQL базы данных</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/158.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Плюсы и минусы реляционных баз данных</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/159.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как реализуется связь один к одному</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/160.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как реализуется связь один ко многим</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/161.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Primary key</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/162.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Foreign key</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/163.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое self join</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/164.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое запросы на группировку</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/165.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Разница между DELETE и TRUNCATE</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/166.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое оконные функции</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/167.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Разница оконной функции и group by</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/168.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть операторы ограничений</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/169.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем нужны триггеры</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/170.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">n+1</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/171.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая разница между CI и CD</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SDLC</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/172.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая разница между Scrum и Kanban</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SDLC</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/173.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">что будете делать, если на проекте нет тестов и заказчик не хочет тратить на их разработку время и деньги</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SDLC</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/174.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Code Debt и как с ним быть</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SDLC</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/175.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем нужен docker registry</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">REST &amp; SOAP</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/176.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как бы решили какой из REST или SOAP веб сервисов использовать</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">REST &amp; SOAP</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/177.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие способы для мониторинга веб-приложений в production использовал или знаешь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">REST &amp; SOAP</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/188.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница между структурой данных стек и очередь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/189.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Опиши основные операции структур стек и очередь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/190.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь о структуре &quot;очередь&quot;</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/191.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Опиши алгоритм, который будет брать числа от 1 до 1000 и подсчитывать количество чисел с семеркой</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/192.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая алгоритмическая сложность у получения ключа из словаря</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/193.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие алгоритмы сортировок знаешь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                
+                <nav>
+                  <ul class="pagination pagination-sm">
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="python_developer@page=1.html">1</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="python_developer@page=2.html">2</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="python_developer@page=3.html">3</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="python_developer@page=4.html">4</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="python_developer@page=5.html">5</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="python_developer@page=6.html">6</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="python_developer@page=7.html">7</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="python_developer@page=8.html">8</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="python_developer@page=9.html">9</a>
+                              </li>
+                        
+                      
+                      
+                      
+                      <li class="page-item active" aria-current="page">
+                      <span class="page-link">10</span>
+                      </li>
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="python_developer@page=11.html">11</a>
+                              </li>
+                        
+                      
+                      
+                  </ul>
+                </nav>
+                
+            </div>
+            
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Добавление вопроса</h5>
+            <button type="button" class="close btn" data-bs-dismiss="modal" aria-label="Close">
+              <span  aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <form action="python_developer@page=10.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="TFt7k4IesAis7h68nLD6ks7p5YEw2WJteQmj7v7yR4uIM2i8iffnB2i2i8lsyVyK">
+                    <div class="mb-3">
+                           <p class="fs-5">Вы добавляете вопрос для Python Developer</p>
+                        <label for="id_title" class="col-form-label">Вопрос:</label>
+                        <input type="text" name="title" class="form-control" maxlength="255" required id="id_title">
+                      </div>
+                    <div class="mb-3">
+                        <label for="id_tag" class="col-form-label">Тег:</label>
+                        <select name="tag" class="form-select">
+                            
+                                <option value="1">Нет</option>
+                            
+                                <option value="12">HRский</option>
+                            
+                                <option value="14">Тестирование</option>
+                            
+                                <option value="16">ООП</option>
+                            
+                                <option value="18">Базы данных</option>
+                            
+                                <option value="21">SQL</option>
+                            
+                                <option value="22">Tools</option>
+                            
+                                <option value="23">SDLC</option>
+                            
+                                <option value="24">REST &amp; SOAP</option>
+                            
+                                <option value="25">Python</option>
+                            
+                                <option value="26">ORM</option>
+                            
+                                <option value="27">HTTP / API</option>
+                            
+                                <option value="28">GIL</option>
+                            
+                                <option value="29">Flask</option>
+                            
+                                <option value="30">FastAPI</option>
+                            
+                                <option value="31">Django</option>
+                            
+                                <option value="32">Best Practices</option>
+                            
+                                <option value="33">Языки</option>
+                            
+                                <option value="34">Фреймворки</option>
+                            
+                                <option value="36">Модули / Пакеты</option>
+                            
+                                <option value="37">Веб-разработка</option>
+                            
+                                <option value="38">Асинхронность</option>
+                            
+                                <option value="39">Алгоритмы, структуры</option>
+                            
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить вопрос </button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

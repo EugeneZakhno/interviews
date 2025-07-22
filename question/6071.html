@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Какие преимущества есть у Go
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <div class="row">
+        <div class="col">
+            <h1 class="mt-5 mb-5 fs-3">Какие преимущества есть у Go</h1>
+            
+            <div class="row">
+                <div class="card mb-3 col" >
+                    <div class="card-body">
+                        <p class="card-text"><ul>
+	<li>Параллелизм</li>
+	<li>Кросс-платформенность</li>
+	<li>Скорость и компиляция</li>
+	<li>Статическая типизация</li>
+	<li>Богатая стандартная библиотека</li>
+	<li>Возможность писать в функциональном стиле</li>
+	<li>Нет ООП</li>
+	<li>Авторитетные отцы-основатели и сильное комьюнити</li>
+	<li>Простой и понятный синтаксис</li>
+	<li>Open Source</li>
+	<li>Обаятельный талисман</li>
+</ul></p>
+                        
+                        <p class="card-text"><small class="text-muted">Oct. 13, 2023, <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank"  href="https://github.com/goavengers/go-interview/tree/master/docs/podolsky#27">Источник</a></small></p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="card mb-3 col" >
+                    <div class="card-body">
+                        <p class="card-text"><p>Go (или Golang) обладает рядом преимуществ, которые делают его популярным. Рассмотрим основные из них:</p>
+
+<p><strong>1. Простота и лаконичность</strong><br />
+Был разработан с упором на простоту синтаксиса и лаконичность. Это делает язык легким для изучения и чтения кода. Минимализм языка позволяет разработчикам сосредоточиться на решении задач, а не на сложностях синтаксиса.</p>
+
+<p><strong>2. Высокая производительность</strong><br />
+Компилируется в машинный код, что обеспечивает высокую производительность выполнения программ. Производительность Go сопоставима с производительностью программ, написанных на C или C++, благодаря низкоуровневой оптимизации компилятора.</p>
+
+<p><strong>3. Параллелизм и конкурентность</strong><br />
+Одним из ключевых преимуществ является встроенная поддержка параллелизма и конкурентности. С помощью горутин и каналов разработчики могут легко создавать многопоточные приложения.Пример:</p>
+
+<pre>
+<code>```go
+package main
+
+import (
+    "fmt"
+    "time"
+)
+
+func say(s string) {
+    for i := 0; i &lt; 3; i++ {
+        time.Sleep(100 * time.Millisecond)
+        fmt.Println(s)
+    }
+}
+
+func main() {
+    go say("world")
+    say("hello")
+}
+```</code></pre>
+
+<p>В этом примере функция<strong> `say` </strong>запускается как горутина с помощью <strong>`go say(&quot;world&quot;)`</strong>, что позволяет выполнять её конкурентно с основной программой.</p>
+
+<p><strong>4. Сильная система типов и безопасность памяти</strong><br />
+Имеет строгую систему типов, которая помогает предотвращать ошибки на этапе компиляции. В языке отсутствуют неявные преобразования типов, что снижает вероятность ошибок. Также Go управляет памятью с помощью встроенного сборщика мусора (garbage collector), что предотвращает утечки памяти.</p>
+
+<p><strong>5. Встроенная поддержка стандартных инструментов</strong><br />
+Поставляется с богатым набором встроенных инструментов для разработки, таких как:</p>
+
+<ul>
+	<li><strong>`go fmt` </strong>для автоматического форматирования кода.</li>
+	<li><strong>`go test` </strong>для запуска тестов.</li>
+	<li><strong>`go build`</strong> и <strong>`go run`</strong> для сборки и выполнения программ.</li>
+	<li><strong>`go doc` </strong>для генерации документации.</li>
+</ul>
+
+<p><strong>6. Кроссплатформенность</strong><br />
+Поддерживает компиляцию кода для различных платформ и операционных систем. Это делает его удобным для разработки кроссплатформенных приложений.</p>
+
+<p><strong>7. Стандартная библиотека</strong><br />
+Обширна и покрывает многие аспекты разработки, такие как работа с сетью, работа с файлами, веб-разработка и многое другое. Это позволяет разработчикам быстро начинать работу, не тратя время на поиск и интеграцию сторонних библиотек.</p>
+
+<p><strong>8. Сообщество и поддержка</strong><br />
+Имеет большое и активное сообщество, а также поддерживается компанией Google. Это гарантирует наличие множества ресурсов для обучения и решения возникающих вопросов, а также активное развитие и улучшение языка.</p>
+
+<p>Go прост, эффективен и поддерживает параллелизм. Он обеспечивает высокую производительность, безопасность памяти и богатую стандартную библиотеку, что делает его отличным выбором для многих задач разработки.</p></p>
+                        
+                        <p class="card-text"><small class="text-muted">May 23, 2024, easyoffer</small></p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+
+<!--            <h2 class="mb-3 mt-5 fs-5" >Добавить ответ:</h2>-->
+
+<!--            <div class="form-error"></div>-->
+<!--            <form class="row g-3" action = "" method="post">-->
+<!--                    <input type="hidden" name="csrfmiddlewaretoken" value="Rbk0tNm5xz95fvgTo8v16fFTIizJaKzjcmdcgeLpW3llUgsTjC7inPQwVsgFGJoA">-->
+<!--                  <div class="col-md-4">-->
+<!--                    <label for="id_author" class="form-label">Автор/Источник:</label>-->
+<!--                     <input type="text" name="author" class="form-control" maxlength="50" required id="id_author">-->
+<!--                  </div>-->
+<!--                  <div class="col-md-4">-->
+<!--                    <label for="id_url" class="form-label">Ссылка(не обяз.):</label>-->
+<!--                    <input type="url" name="url" class="form-control" maxlength="200" id="id_url">-->
+<!--                  </div>-->
+<!--                  <div>-->
+<!--                    <label for="id_text" class="form-label"></label>-->
+<!--                    <div class="django-ckeditor-widget" data-field-id="id_text" style="display: inline-block;">
+    <textarea name="text" cols="40" rows="10" required id="id_text" data-processed="0" data-config="{&quot;skin&quot;: &quot;moono-lisa&quot;, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]], &quot;toolbar&quot;: &quot;Custom&quot;, &quot;height&quot;: 291, &quot;width&quot;: &quot;550px&quot;, &quot;filebrowserWindowWidth&quot;: 940, &quot;filebrowserWindowHeight&quot;: 725, &quot;toolbar_Custom&quot;: [[&quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;], [&quot;NumberedList&quot;, &quot;BulletedList&quot;], [&quot;Link&quot;, &quot;Unlink&quot;], [&quot;Image&quot;, &quot;CodeSnippet&quot;]], &quot;extraPlugins&quot;: &quot;codesnippet&quot;, &quot;language&quot;: &quot;en-us&quot;}" data-external-plugin-resources="[]" data-id="id_text" data-type="ckeditortype"></textarea>
+</div>-->
+<!--                  </div>-->
+<!--                  <div class="col-12">-->
+<!--                    <button class="btn btn-primary btn-sm" type="submit">Добавить ответ</button>-->
+<!--                  </div>-->
+<!--            </form>-->
+        </div>
+        <div class="col-12 col-sm-4">
+            <h2 class="mb-3 mt-5 fs-5" >Примеры ответов:</h2>
+            <ul class="list-group list-group-flush mb-3">
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/GD0iHLucYdU?t=571" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Собеседование Senior Go-разработчика…</a></small></li>
+                
+            </ul>
+<!--            <button type="button" class="btn btn-primary btn-sm " data-bs-toggle="modal" data-bs-target="#VideoAnswerModal">-->
+<!--              Добавить ссылку-->
+<!--            </button>-->
+<!--            <h2 class="mb-3 mt-5 fs-5">Доп. материалы:</h2>-->
+<!--            <ul class="list-group list-group-flush mb-3">-->
+<!--                -->
+<!--            </ul>-->
+<!--            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#ExtraContentModal">-->
+<!--              Добавить ссылку-->
+<!--            </button>-->
+        </div>
+    </div>
+
+
+
+    <!-- ExtraContentModal -->
+    <div class="modal fade" id="ExtraContentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Добавить ссылку на доп. матераил</h1>
+          </div>
+          <div class="modal-body">
+               <form action="6071.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="Rbk0tNm5xz95fvgTo8v16fFTIizJaKzjcmdcgeLpW3llUgsTjC7inPQwVsgFGJoA">
+                      <div class="mb-3">
+                        <label for="id_content-title" class="col-form-label">Название: </label>
+                        <input type="text" name="content-title" class="form-control" maxlength="255" required id="id_content-title">
+                      </div>
+                      <div class="mb-3">
+                        <label for="id_content-url" class="col-form-label">Ссылка: </label>
+                        <input type="url" name="content-url" class="form-control" required id="id_content-url">
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить</button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VideoAnswerModal -->
+    <div class="modal fade" id="VideoAnswerModal" tabindex="-1" aria-labelledby="VideoAnswerModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="VideoAnswerModalLabel">Добавить ответ из mock-собесов</h1>
+          </div>
+          <div class="modal-body">
+                <form action="6071.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="Rbk0tNm5xz95fvgTo8v16fFTIizJaKzjcmdcgeLpW3llUgsTjC7inPQwVsgFGJoA">
+                      <div class="mb-3">
+                        <label for="id_video-title" class="col-form-label">Название видео: </label>
+                        <input type="text" name="video-title" class="form-control" maxlength="255" required id="id_video-title">
+                      </div>
+                      <div class="mb-3">
+                        <label for="id_video-url" class="col-form-label">Ссылка на момент ответа: </label>
+                        <input type="url" name="video-url" class="form-control" required id="id_video-url">
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить</button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Требования на должность Rust Developer
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <h1 class="mt-5 fs-3"> Требования на должность Rust Developer (Все)</h1>
+    <p class="fs-6 mt-3 mb-5">Анализ проведен July 22, 2025, на основе <a href="https://hh.ru/search/vacancy?ored_clusters=true&amp;enable_snippets=true&amp;hhtmFrom=vacancy_search_list&amp;search_field=name&amp;search_field=company_name&amp;search_field=description&amp;text=NAME%3A%28%21%22rust%22%29&amp;L_save_area=true" target="_blank">поискового запроса.</a> Вакансий обработано: 46</p>
+        <div class="row">
+            <div class="col-12 col-md-2">
+                <form action="rust_developer.html" method="get">
+                    <p>Направление:</p>
+                    <select class="form-select form-select" aria-label=".form-select-sm example" name="title">
+                        <option selected>Все</option>
+                        
+                      <option  value="Все">Все</option>
+                        
+                    </select>
+                    <button type="submit" class="btn btn-primary btn-sm mt-3">Выбрать</button>
+                </form>
+            </div>
+            <div class="col row">
+            
+            <div class="col">
+                <p><b>Навыки</b> – из раздела "навыки" в вакансиях на HeadHuner</p>
+                <table class="table table-sm table-bordered table-hover ">
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Навык</th>
+                            <th>Упоминаний</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>Rust</td>
+                            <td>24</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>2</td>
+                            <td>TypeScript</td>
+                            <td>11</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>3</td>
+                            <td>Python</td>
+                            <td>10</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>4</td>
+                            <td>Go</td>
+                            <td>9</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>5</td>
+                            <td>C++</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>6</td>
+                            <td>PostgreSQL</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>7</td>
+                            <td>Linux</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>8</td>
+                            <td>DevOps</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>9</td>
+                            <td>Cosmos SDK</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>10</td>
+                            <td>DeFi</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>11</td>
+                            <td>Blockchain</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>12</td>
+                            <td>Crypto</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>13</td>
+                            <td>React</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>14</td>
+                            <td>GCP</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>15</td>
+                            <td>Terraform</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>16</td>
+                            <td>Grafana</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>17</td>
+                            <td>Prometheus</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>18</td>
+                            <td>C/C++</td>
+                            <td>5</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>19</td>
+                            <td>Git</td>
+                            <td>5</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>20</td>
+                            <td>Clickhouse</td>
+                            <td>4</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>21</td>
+                            <td>Apache Kafka</td>
+                            <td>4</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>22</td>
+                            <td>rust</td>
+                            <td>3</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>23</td>
+                            <td>TCP/IP</td>
+                            <td>3</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>24</td>
+                            <td>ARM</td>
+                            <td>3</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>25</td>
+                            <td>MIPS</td>
+                            <td>3</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>26</td>
+                            <td>Unix</td>
+                            <td>3</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>27</td>
+                            <td>kernel</td>
+                            <td>3</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>28</td>
+                            <td>Lua</td>
+                            <td>2</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>29</td>
+                            <td>Tokio</td>
+                            <td>2</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>30</td>
+                            <td>C</td>
+                            <td>2</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>31</td>
+                            <td>Docker</td>
+                            <td>2</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>32</td>
+                            <td>Kubernetes</td>
+                            <td>2</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>33</td>
+                            <td>Redis</td>
+                            <td>2</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>34</td>
+                            <td>JavaScript</td>
+                            <td>2</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>35</td>
+                            <td>Node.js</td>
+                            <td>2</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>36</td>
+                            <td>Асинхронное программирование</td>
+                            <td>2</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>37</td>
+                            <td>SQLite</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>38</td>
+                            <td>Monero</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>39</td>
+                            <td>Windows API</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>40</td>
+                            <td>Posix API</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>41</td>
+                            <td>Kafka</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>42</td>
+                            <td>Elasticsearch</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>43</td>
+                            <td>Gitlab</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>44</td>
+                            <td>Atlassian Jira</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>45</td>
+                            <td>Teamleading</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>46</td>
+                            <td>Team management</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>47</td>
+                            <td>Leadership Skills</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>48</td>
+                            <td>AWS</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>49</td>
+                            <td>Azure</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>50</td>
+                            <td>Solidity</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>51</td>
+                            <td>Golang</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>52</td>
+                            <td>Микросервисная архитектура</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>53</td>
+                            <td>Постановка задач разработчикам</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>54</td>
+                            <td>Cloud</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>55</td>
+                            <td>IaaS</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>56</td>
+                            <td>PaaS</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>57</td>
+                            <td>SaaS</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>58</td>
+                            <td>Actix</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>59</td>
+                            <td>Hyper</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>60</td>
+                            <td>blockchain</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>61</td>
+                            <td>Web3</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>62</td>
+                            <td>async/await</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>63</td>
+                            <td>macros</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>64</td>
+                            <td>futures</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>65</td>
+                            <td>tokio</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>66</td>
+                            <td>RUST</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>67</td>
+                            <td>XDR</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>68</td>
+                            <td>Clikhouse</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>69</td>
+                            <td>Crystal</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>70</td>
+                            <td>ActixWeb</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>71</td>
+                            <td>Java</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>72</td>
+                            <td>Spring Framework</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>73</td>
+                            <td>Electron</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>74</td>
+                            <td>REST API</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>75</td>
+                            <td>CI/CD</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>76</td>
+                            <td>Оптимизация кода</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>77</td>
+                            <td>Техническая документация</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>78</td>
+                            <td>Проектирование высоконагруженных систем</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>79</td>
+                            <td>gRPC</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>80</td>
+                            <td>Алгоритмы и структуры данных</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>81</td>
+                            <td>Системное программирование</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>82</td>
+                            <td>Аудит информационной безопасности</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>83</td>
+                            <td>Bash</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>84</td>
+                            <td>Уязвимости программного обеспечения</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>85</td>
+                            <td>Администрирование</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>86</td>
+                            <td>borrow checker</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>87</td>
+                            <td>DPDK</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>88</td>
+                            <td>Аналитическое мышление</td>
+                            <td>1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>89</td>
+                            <td>Алгоритмы и структуры данных Информационный поиск</td>
+                            <td>1</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="col">
+                <p><b>Ключевые слова</b> – из описаний вакансий на HeadHuner</p>
+                <table class="table table-sm table-bordered table-hover ">
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Ключевое слово</th>
+                            <th>Упоминаний</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>rust</td>
+                            <td>138</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>2</td>
+                            <td>development</td>
+                            <td>64</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>3</td>
+                            <td>c</td>
+                            <td>47</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>4</td>
+                            <td>go</td>
+                            <td>34</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>5</td>
+                            <td>blockchain</td>
+                            <td>33</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>6</td>
+                            <td>work</td>
+                            <td>32</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>7</td>
+                            <td>python</td>
+                            <td>28</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>8</td>
+                            <td>typescript</td>
+                            <td>27</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>9</td>
+                            <td>react</td>
+                            <td>26</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>10</td>
+                            <td>postgresql</td>
+                            <td>25</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>11</td>
+                            <td>api</td>
+                            <td>22</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>12</td>
+                            <td>team</td>
+                            <td>22</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>13</td>
+                            <td>time</td>
+                            <td>18</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>14</td>
+                            <td>protocol</td>
+                            <td>17</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>15</td>
+                            <td>full</td>
+                            <td>17</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>16</td>
+                            <td>defi</td>
+                            <td>17</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>17</td>
+                            <td>web</td>
+                            <td>16</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>18</td>
+                            <td>linux</td>
+                            <td>16</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>19</td>
+                            <td>technologies</td>
+                            <td>16</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>20</td>
+                            <td>software</td>
+                            <td>16</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>21</td>
+                            <td>europe</td>
+                            <td>16</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>22</td>
+                            <td>looking</td>
+                            <td>16</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>23</td>
+                            <td>cosmwasm</td>
+                            <td>16</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>24</td>
+                            <td>project</td>
+                            <td>16</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>25</td>
+                            <td>cosmos</td>
+                            <td>16</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>26</td>
+                            <td>sdk</td>
+                            <td>16</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>27</td>
+                            <td>tools</td>
+                            <td>16</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>28</td>
+                            <td>smart</td>
+                            <td>16</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>29</td>
+                            <td>support</td>
+                            <td>16</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>30</td>
+                            <td>code</td>
+                            <td>14</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>31</td>
+                            <td>usd</td>
+                            <td>12</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>32</td>
+                            <td>tokio</td>
+                            <td>12</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>33</td>
+                            <td>web3</td>
+                            <td>12</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>34</td>
+                            <td>prometheus</td>
+                            <td>12</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>35</td>
+                            <td>developer</td>
+                            <td>11</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>36</td>
+                            <td>js</td>
+                            <td>10</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>37</td>
+                            <td>grafana</td>
+                            <td>10</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>38</td>
+                            <td>git</td>
+                            <td>9</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>39</td>
+                            <td>clickhouse</td>
+                            <td>9</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>40</td>
+                            <td>docker</td>
+                            <td>9</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>41</td>
+                            <td>discord</td>
+                            <td>9</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>42</td>
+                            <td>tarantool</td>
+                            <td>9</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>43</td>
+                            <td>ui</td>
+                            <td>9</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>44</td>
+                            <td>integration</td>
+                            <td>9</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>45</td>
+                            <td>dev</td>
+                            <td>9</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>46</td>
+                            <td>wasm</td>
+                            <td>9</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>47</td>
+                            <td>english</td>
+                            <td>9</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>48</td>
+                            <td>lua</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>49</td>
+                            <td>kafka</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>50</td>
+                            <td>perf</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>51</td>
+                            <td>nitka</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>52</td>
+                            <td>developes</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>53</td>
+                            <td>customers</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>54</td>
+                            <td>brings</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>55</td>
+                            <td>together</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>56</td>
+                            <td>professionals</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>57</td>
+                            <td>eastern</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>58</td>
+                            <td>north</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>59</td>
+                            <td>south</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>60</td>
+                            <td>america</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>61</td>
+                            <td>armenia</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>62</td>
+                            <td>georgia</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>63</td>
+                            <td>kazakhstan</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>64</td>
+                            <td>experienced</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>65</td>
+                            <td>offer</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>66</td>
+                            <td>fresh</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>67</td>
+                            <td>interesting</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>68</td>
+                            <td>tasks</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>69</td>
+                            <td>ambitious</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>70</td>
+                            <td>main</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>71</td>
+                            <td>task</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>72</td>
+                            <td>s</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>73</td>
+                            <td>following</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>74</td>
+                            <td>areas</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>75</td>
+                            <td>chain</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>76</td>
+                            <td>contracts</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>77</td>
+                            <td>infrastructure</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>78</td>
+                            <td>configuration</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>79</td>
+                            <td>gcp</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>80</td>
+                            <td>terraform</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>81</td>
+                            <td>monitoring</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>82</td>
+                            <td>could</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>83</td>
+                            <td>partner</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>84</td>
+                            <td>protocols</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>85</td>
+                            <td>wallets</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>86</td>
+                            <td>custodians</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>87</td>
+                            <td>exchanges</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>88</td>
+                            <td>so</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>89</td>
+                            <td>produce</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>90</td>
+                            <td>high</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>91</td>
+                            <td>quality</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>92</td>
+                            <td>technical</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>93</td>
+                            <td>documentation</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>94</td>
+                            <td>g</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>95</td>
+                            <td>docs</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>96</td>
+                            <td>cookbooks</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>97</td>
+                            <td>examples</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>98</td>
+                            <td>tutorials</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>99</td>
+                            <td>engaging</td>
+                            <td>8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>100</td>
+                            <td>developers</td>
+                            <td>8</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            </div>
+        </div>
+
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

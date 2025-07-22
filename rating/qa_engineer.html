@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Вопросы с собеседований на QA Engineer
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <h1 class="mt-5 fs-3"> Вопросы с собеседований на QA Engineer</h1>
+    
+    <p class="fs-5 mt-3 mb-5 fs-6">Вопросов всего: 1855.
+<!--        Вы можете-->
+<!--        <a type="button" class="link" data-bs-toggle="modal" data-bs-target="#exampleModal"> Добавить вопрос </a>-->
+    </p>
+    
+    <div class="row align-items-start">
+            <div class="col-12 col-md-2 d-flex flex-column align-items-start">
+                <p class="">Фильтр:</p>
+                <form action="qa_engineer.html">
+                    <select class="form-select" aria-label="Default select example" name="tag">
+                        
+                            <option selected>Все</option>
+                        
+                          <option value="Все">Все</option>
+                        
+                          <option value="Нет">Нет</option>
+                        
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-primary mt-3">Выбрать</button>
+                </form>
+            </div>
+            
+            <div class="col">
+                <form class="d-flex mb-3" role="search" method="get" action="qa_engineer.html">
+                    <input type="text" name="search_query" class="form-control me-2" placeholder="Поиск вопроса" aria-label="Search" id="id_search_query">
+                    <button class="btn btn-outline-success" type="submit">Поиск</button>
+                </form>
+                
+                <table class="table table-sm table-hover">
+                    <thead>
+                        <tr>
+                            <th>Шанс</th>
+                            <th>Вопрос</th>
+                            <th class="d-none d-sm-table-cell">Тег</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">95%</td>
+                            
+                            <td><a href="../question/7798.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о себе</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">75%</td>
+                            
+                            <td><a href="../question/7799.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие виды тестирования существуют</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">65%</td>
+                            
+                            <td><a href="../question/7800.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое тестирование</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">50%</td>
+                            
+                            <td><a href="../question/7801.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое регрессивное тестирование</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">45%</td>
+                            
+                            <td><a href="../question/7802.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про уровни тестирования</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">42%</td>
+                            
+                            <td><a href="../question/7803.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о своем опыте</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">40%</td>
+                            
+                            <td><a href="../question/7804.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое баг репорты</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">37%</td>
+                            
+                            <td><a href="../question/7805.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи что такое Smoke тестирование</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">37%</td>
+                            
+                            <td><a href="../question/7807.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое JSON</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">37%</td>
+                            
+                            <td><a href="../question/7806.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что в твоем понимании валидация</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">35%</td>
+                            
+                            <td><a href="../question/7808.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие цели тестирования знаешь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">32%</td>
+                            
+                            <td><a href="../question/7809.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Основные компоненты баг репорта</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">32%</td>
+                            
+                            <td><a href="../question/7810.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи что такое Sanity тестирование</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">32%</td>
+                            
+                            <td><a href="../question/7812.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о чек листе</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">32%</td>
+                            
+                            <td><a href="../question/7811.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что в твоем понимании верификация</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">30%</td>
+                            
+                            <td><a href="../question/7818.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи жизненный цикл бага</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">30%</td>
+                            
+                            <td><a href="../question/7815.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про статическое тестирование</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">30%</td>
+                            
+                            <td><a href="../question/7814.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое тестирование локализации</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">30%</td>
+                            
+                            <td><a href="../question/7819.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Знаешь техники тест дизайна</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">30%</td>
+                            
+                            <td><a href="../question/7813.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница get от post</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">30%</td>
+                            
+                            <td><a href="../question/7816.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про методологии разработки</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">27%</td>
+                            
+                            <td><a href="../question/7820.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о тест кейсах</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">27%</td>
+                            
+                            <td><a href="../question/7822.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про методологии разработки scrum</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">27%</td>
+                            
+                            <td><a href="../question/7821.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая бывает тестовая документация</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">27%</td>
+                            
+                            <td><a href="../question/7823.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое exploratory testing ( исследовательское )</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/7826.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про динамическое тестирование</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/7827.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Откуда брать требования, если нет документации</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/7825.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое эквивалентное разделение</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/7829.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что описывается в тест плане</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/7824.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему выбрал тестирование</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/7828.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что будешь делать, если баг воспроизводится после исправления</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/7831.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Quality Assurance ( QA )</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/7830.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что можешь рассказать про SQL</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/7832.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про join&#x27;ы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">22%</td>
+                            
+                            <td><a href="../question/7835.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Техника анализа граничных значений, можешь о ней рассказать</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">22%</td>
+                            
+                            <td><a href="../question/7838.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница тест-кейса и чек-листа</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">22%</td>
+                            
+                            <td><a href="../question/7836.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое тестирование инсталляции</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">22%</td>
+                            
+                            <td><a href="../question/7837.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой статус показывает отказ разработчика исправлять баг</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">22%</td>
+                            
+                            <td><a href="../question/7833.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое позитивное тестирование</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">22%</td>
+                            
+                            <td><a href="../question/7834.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про нефункциональные виды тестирования</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">20%</td>
+                            
+                            <td><a href="../question/7853.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие существуют типы баз данных</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">20%</td>
+                            
+                            <td><a href="../question/7851.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое rest api</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">20%</td>
+                            
+                            <td><a href="../question/7850.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про методологии разработки agile</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">20%</td>
+                            
+                            <td><a href="../question/7852.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что помнишь об авторизации</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">20%</td>
+                            
+                            <td><a href="../question/7846.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про тест план</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">20%</td>
+                            
+                            <td><a href="../question/7845.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что происходит в конце спринта</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">20%</td>
+                            
+                            <td><a href="../question/7847.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что происходит с баг репортом после его создания</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">20%</td>
+                            
+                            <td><a href="../question/7843.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое серый ящик в тестировании</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">20%</td>
+                            
+                            <td><a href="../question/7842.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое негативное тестирование</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">20%</td>
+                            
+                            <td><a href="../question/7844.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про атрибуты чек-листа</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">20%</td>
+                            
+                            <td><a href="../question/7848.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о критериях начала тестирования</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">20%</td>
+                            
+                            <td><a href="../question/7839.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие знаешь статус коды</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">20%</td>
+                            
+                            <td><a href="../question/7840.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про тестовую документацию</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">20%</td>
+                            
+                            <td><a href="../question/7841.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про кросс-браузерное тестирование</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">20%</td>
+                            
+                            <td><a href="../question/7849.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Из чего состоит запрос на сервере</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">17%</td>
+                            
+                            <td><a href="../question/7858.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие знаешь ящики тестирования</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">17%</td>
+                            
+                            <td><a href="../question/7871.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что помнишь об аутентификации</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">17%</td>
+                            
+                            <td><a href="../question/7870.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что означает 405 ошибка</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">17%</td>
+                            
+                            <td><a href="../question/7868.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие http методы могут быть</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">17%</td>
+                            
+                            <td><a href="../question/7867.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое 500 ошибка</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">17%</td>
+                            
+                            <td><a href="../question/7869.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи что такое идемпотентность</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">17%</td>
+                            
+                            <td><a href="../question/7862.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Из чего состоит ответ на сервере</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">17%</td>
+                            
+                            <td><a href="../question/7861.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для тестирования ПО где можно взять ожидаемый результат</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">17%</td>
+                            
+                            <td><a href="../question/7863.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про гибридные приложения</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">17%</td>
+                            
+                            <td><a href="../question/7859.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть критерии по выбору между тест-кейсом и чек-листа</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">17%</td>
+                            
+                            <td><a href="../question/7857.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про continuous Integration ( CI )</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">17%</td>
+                            
+                            <td><a href="../question/7860.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что включает в себя тест кейс</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">17%</td>
+                            
+                            <td><a href="../question/7864.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем нужны техники дизайна</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">17%</td>
+                            
+                            <td><a href="../question/7854.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про API тестирование</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">17%</td>
+                            
+                            <td><a href="../question/7855.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про автоматизацию</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">17%</td>
+                            
+                            <td><a href="../question/7856.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про типы приложений</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">17%</td>
+                            
+                            <td><a href="../question/7865.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что делать, если пришел баг, со статусом duplicate</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">17%</td>
+                            
+                            <td><a href="../question/7866.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что значит реляционные базы данных</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">15%</td>
+                            
+                            <td><a href="../question/7886.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь про клиент серверную архитектуру</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">15%</td>
+                            
+                            <td><a href="../question/7885.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Назови кейсы реконектов</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">15%</td>
+                            
+                            <td><a href="../question/7887.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Дай определение priority</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">15%</td>
+                            
+                            <td><a href="../question/7883.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи по каким критериям выбираешь какой тест мы оставляем вручную, а какой автоматизируем</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">15%</td>
+                            
+                            <td><a href="../question/7882.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое XML</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">15%</td>
+                            
+                            <td><a href="../question/7884.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем API отличается для веб-клиента от мобильного</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">15%</td>
+                            
+                            <td><a href="../question/7888.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Дай определение severity</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">15%</td>
+                            
+                            <td><a href="../question/7878.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой придет статус код, если сервер сломан</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">15%</td>
+                            
+                            <td><a href="../question/7877.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Сколько будет проверок при анализе граничных значений</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">15%</td>
+                            
+                            <td><a href="../question/7879.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие виды тестирования бы применил к веб приложению</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">15%</td>
+                            
+                            <td><a href="../question/7875.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть особенности тестирования веб приложений</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">15%</td>
+                            
+                            <td><a href="../question/7874.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какое тестирование применяется к тестированию api</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">15%</td>
+                            
+                            <td><a href="../question/7876.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что делать, если баг не виден разработчику</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">15%</td>
+                            
+                            <td><a href="../question/7880.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что делать, если все проверено, баг есть, разработчик отказывается чинить</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">15%</td>
+                            
+                            <td><a href="../question/7872.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое эффект пестицида</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">15%</td>
+                            
+                            <td><a href="../question/7873.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про ОСНОВНЫЕ АТРИБУТЫ БАГА</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">15%</td>
+                            
+                            <td><a href="../question/7881.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие могут быть критерии конца тестирования</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/7893.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работают веб приложения</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/7892.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое http</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/7894.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие виды тестирования важны для нативных приложений</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/7890.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая разница у протоколов http и https</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/7889.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое SDLC</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/7891.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница между Scrum и Kanban</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/7895.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Приведи пример когда высокий приоритет, но низкая серьезность или наоборот</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/7897.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Dev Tool</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/7898.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое git</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/7899.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Quality Control</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                
+                <nav>
+                  <ul class="pagination pagination-sm">
+                      
+                      
+                      <li class="page-item active" aria-current="page">
+                      <span class="page-link">1</span>
+                      </li>
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="qa_engineer@page=2.html">2</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="qa_engineer@page=3.html">3</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="qa_engineer@page=4.html">4</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="qa_engineer@page=5.html">5</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="qa_engineer@page=6.html">6</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="qa_engineer@page=7.html">7</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="qa_engineer@page=8.html">8</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="qa_engineer@page=9.html">9</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="qa_engineer@page=10.html">10</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="qa_engineer@page=11.html">11</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="qa_engineer@page=12.html">12</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="qa_engineer@page=13.html">13</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="qa_engineer@page=14.html">14</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="qa_engineer@page=15.html">15</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="qa_engineer@page=16.html">16</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="qa_engineer@page=17.html">17</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="qa_engineer@page=18.html">18</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="qa_engineer@page=19.html">19</a>
+                              </li>
+                        
+                      
+                      
+                  </ul>
+                </nav>
+                
+            </div>
+            
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Добавление вопроса</h5>
+            <button type="button" class="close btn" data-bs-dismiss="modal" aria-label="Close">
+              <span  aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <form action="qa_engineer.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="vxnGTHN8ju9A3Q3IZu0BNEyqUUCD26w9QIgSG8csIYlQIBfIUYCS4eJ374jzy5lq">
+                    <div class="mb-3">
+                           <p class="fs-5">Вы добавляете вопрос для QA Engineer</p>
+                        <label for="id_title" class="col-form-label">Вопрос:</label>
+                        <input type="text" name="title" class="form-control" maxlength="255" required id="id_title">
+                      </div>
+                    <div class="mb-3">
+                        <label for="id_tag" class="col-form-label">Тег:</label>
+                        <select name="tag" class="form-select">
+                            
+                                <option value="1">Нет</option>
+                            
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить вопрос </button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

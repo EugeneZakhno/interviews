@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Вопросы с собеседований на Ruby Developer
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <h1 class="mt-5 fs-3"> Вопросы с собеседований на Ruby Developer</h1>
+    
+    <p class="fs-5 mt-3 mb-5 fs-6">Вопросов всего: 86.
+        На данный момент мало данных для просчета вероятности.
+<!--        Вы можете-->
+<!--        <a type="button" class="link" data-bs-toggle="modal" data-bs-target="#exampleModal"> Добавить вопрос </a>-->
+    </p>
+    
+    <div class="row align-items-start">
+            <div class="col-12 col-md-2 d-flex flex-column align-items-start">
+                <p class="">Фильтр:</p>
+                <form action="ruby_developer.html">
+                    <select class="form-select" aria-label="Default select example" name="tag">
+                        
+                            <option selected>Все</option>
+                        
+                          <option value="Все">Все</option>
+                        
+                          <option value="Нет">Нет</option>
+                        
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-primary mt-3">Выбрать</button>
+                </form>
+            </div>
+            
+            <div class="col">
+                <form class="d-flex mb-3" role="search" method="get" action="ruby_developer.html">
+                    <input type="text" name="search_query" class="form-control me-2" placeholder="Поиск вопроса" aria-label="Search" id="id_search_query">
+                    <button class="btn btn-outline-success" type="submit">Поиск</button>
+                </form>
+                
+                <table class="table table-sm table-hover">
+                    <thead>
+                        <tr>
+                            <th>Вопрос</th>
+                            <th class="d-none d-sm-table-cell">Тег</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td><a href="../question/5616.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как решил стать программистом</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5617.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о себе</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5619.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Где для себя проводишь границу между фронтендом и бекендом</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5620.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что для тебя MVC</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5621.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что для тебя MVC</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5622.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Подробно опиши процессы, которые происходят после открытия браузера</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5623.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что из себя представляет HTTP запрос</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5624.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как защитить свои данные с помощью протокола HTTPS</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5625.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как устроен реквест цикл в рельсах</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5626.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В какой момент создается объект контроллера и сколько он живет</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5627.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что делать, когда к данным одновременно обращаются два воркера</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5628.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что будет, если транзакция попытается залочить запись, залоченную другой транзакцией</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5629.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что делать, чтобы база, становящаяся больше, не тормозила</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5630.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие знаешь типы индексов</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5631.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как используется индекс в большой таблице</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5632.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Сколько нужно операций, чтобы поискать по отсортированному большому массиву/дереву</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5633.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что дешевле отсортировать массив и искать, или использовать перебор</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5634.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем хорош hash в Ruby</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5635.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое хеш-функция</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5636.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">На чем пишешь тесты</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5637.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие фреймворки используешь для тестов</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5638.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">На какой версии рельсов работаешь</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5639.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличается Rebase от Merge</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5640.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как вставить в функцию объекты не связанные между собой</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5641.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как делать наследование моделей или полиморфной ассоциации</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5642.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как поймешь, что день прошел не зря</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5643.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как относишься к современным практикам ведения проекта</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5644.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Выбери Винда, Мак или Линукс</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5645.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему тебя лучше не брать на работу</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5646.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Назови три самых любимых твоих вопроса на собеседовании.</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5647.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о своем хобби</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5648.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как хорошо знаешь английский язык</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5649.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое HASH</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5650.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое class</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5651.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Назови язык программирования, в котором нет class</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5652.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое class на языке ruby</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5653.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая ошибка будет, если писать строку с большой буквы</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5654.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое скобочки на языке программирования</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5655.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое аргумент для class</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5656.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое sort</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5657.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что делают hash квадратные скобочки</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5658.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть механизмы для слома отдельной части проекта</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5659.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь о фронтэнде</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5660.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что больше нравится массив или хеш</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5661.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем концептуальная разница между массивом и хешом</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5662.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что является ключом в массивве и хеше</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5663.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что быстрее массив или хеш</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5664.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Array.new</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5665.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое фигурные скобки</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5666.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что работает быстрее блок, проц или лямбда</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5667.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое лямбда и проц</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5668.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое нижнее подчеркивание 1</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5669.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем передавать блок при инициализации array</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5670.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое ActiveRecord Relation</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5671.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница между Joins и Include</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5672.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое eager load</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5673.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие виды Join используешь постоянно</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5674.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какведет себя функция find</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5675.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что происходит на уровне базы данных, когда происходит транзакция</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5676.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что происходит в Ruby приложении, когда заходишь на страницу сайта</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5677.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое иерархическая система DNS</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5678.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Получили DNS и пошли запросом на наш сервис - что происходит дальше</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5679.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое TCP/IP</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5680.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как роутер отправляет твой пакет данных на нужный сервер</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5681.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое закольцованность сети</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5682.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Application Server</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5683.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем ставить njinx перед Ruby</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5684.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что происходит в nginx</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5685.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Объясни, что значит &quot;ответ&quot;, когда говорим &quot;возвращается ответ&quot;</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5686.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое multi-stage builds</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5687.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем в Ruby модули</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5688.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Можно ли с помощью class сделать то же самое, что и в модуле</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5689.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое оператор 3 = в Ruby</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5690.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что делает функция Joins на Thread</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5691.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Garbage Collector</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5692.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое GVL</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5693.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Fiber</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5694.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Green thread</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5695.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Ractor</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5696.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое кооперативная вытесняющая многозадачность</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5697.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как в Ruby реализована вытесняющая многозадачность</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5698.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как за два года улучшил свои навыки программиста</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5699.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как можно идти в языках программирования с конца строки к ее началу</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5700.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой угол между минутной и часовой стрелками часов, которые показывают время 3:15</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5701.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как можно совершить отладку кода без дебагера</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5618.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как выбрал для себя бекенд</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                
+            </div>
+            
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Добавление вопроса</h5>
+            <button type="button" class="close btn" data-bs-dismiss="modal" aria-label="Close">
+              <span  aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <form action="ruby_developer.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="tlPEGnrcA1LB0iPdwQRy981vRPN9RhyvOwIQtOQwZvXRF31drktPqIc84Zu5ngnM">
+                    <div class="mb-3">
+                           <p class="fs-5">Вы добавляете вопрос для Ruby Developer</p>
+                        <label for="id_title" class="col-form-label">Вопрос:</label>
+                        <input type="text" name="title" class="form-control" maxlength="255" required id="id_title">
+                      </div>
+                    <div class="mb-3">
+                        <label for="id_tag" class="col-form-label">Тег:</label>
+                        <select name="tag" class="form-select">
+                            
+                                <option value="1">Нет</option>
+                            
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить вопрос </button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

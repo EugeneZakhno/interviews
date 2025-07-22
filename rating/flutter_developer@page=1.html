@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Вопросы с собеседований на Flutter Developer
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <h1 class="mt-5 fs-3"> Вопросы с собеседований на Flutter Developer</h1>
+    
+    <p class="fs-5 mt-3 mb-5 fs-6">Вопросов всего: 257.
+        На данный момент мало данных для просчета вероятности.
+<!--        Вы можете-->
+<!--        <a type="button" class="link" data-bs-toggle="modal" data-bs-target="#exampleModal"> Добавить вопрос </a>-->
+    </p>
+    
+    <div class="row align-items-start">
+            <div class="col-12 col-md-2 d-flex flex-column align-items-start">
+                <p class="">Фильтр:</p>
+                <form action="flutter_developer@page=1.html">
+                    <select class="form-select" aria-label="Default select example" name="tag">
+                        
+                            <option selected>Все</option>
+                        
+                          <option value="Все">Все</option>
+                        
+                          <option value="Нет">Нет</option>
+                        
+                          <option value="Общие">Общие</option>
+                        
+                          <option value="Паттерны">Паттерны</option>
+                        
+                          <option value="Тестирование">Тестирование</option>
+                        
+                          <option value="Архитектура">Архитектура</option>
+                        
+                          <option value="Асинхронность">Асинхронность</option>
+                        
+                          <option value="Многопоточность">Многопоточность</option>
+                        
+                          <option value="Dart">Dart</option>
+                        
+                          <option value="Flutter">Flutter</option>
+                        
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-primary mt-3">Выбрать</button>
+                </form>
+            </div>
+            
+            <div class="col">
+                <form class="d-flex mb-3" role="search" method="get" action="flutter_developer@page=1.html">
+                    <input type="text" name="search_query" class="form-control me-2" placeholder="Поиск вопроса" aria-label="Search" id="id_search_query">
+                    <button class="btn btn-outline-success" type="submit">Поиск</button>
+                </form>
+                
+                <table class="table table-sm table-hover">
+                    <thead>
+                        <tr>
+                            <th>Вопрос</th>
+                            <th class="d-none d-sm-table-cell">Тег</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td><a href="../question/6780.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Task RunnersЧем отличаются виды компиляции в Dart</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6701.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое mixin</a></td>
+                            <td>Dart</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6716.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь о том, как работает Flutter &quot;под капотом&quot;</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6704.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Never</a></td>
+                            <td>Dart</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6796.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем нужны типы компиляций в Dart</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6783.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое dynamic</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6705.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое extension</a></td>
+                            <td>Dart</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6781.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему в Flutter используется только один поток</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6696.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь про принципы SOLID</a></td>
+                            <td>Общие</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6697.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Назовите принципы ООП, которые  известны</a></td>
+                            <td>Общие</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6801.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего нужны ключи во Flutter</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6789.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про анимацию во Flutter</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6802.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего extension нужен</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6787.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего нужен виджет Container</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6794.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как подходишь к выбору архитектуры</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6784.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что для тебя язык dart</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6804.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">На какие архитектурные слои делится Flutter</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6721.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличается Stateful от Stateless виджет</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6788.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие бывают виды компиляции в Dart</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6782.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличается var и dynamic</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6673.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работает базовая навигация на Flutter</a></td>
+                            <td>Архитектура</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6703.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое nullsafety в dart</a></td>
+                            <td>Dart</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6795.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего нужны стримы во Flutter</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6798.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про операторы в Dart</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6785.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь о языке dart</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6786.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие жесты позволяют обрабатывать Flutter</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6718.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Widget и как он отрисовывается</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6702.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличаются final и const</a></td>
+                            <td>Dart</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6800.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое FutureBuilder</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6790.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Где можно использовать Never</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6811.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Работают ли принципы SOLID с Flutter</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6744.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">WidgetsFlutterBinding</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6908.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего нужен файл pubspec.yaml</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6884.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что есть в Dart от стандартного мира ООП</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6949.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть модификаторы доступа в Dart</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6906.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть особенности у сбощика мусора в Dart</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6892.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как правильно именовать свойства, которые возвращают true либо false</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6947.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое именованные параметры</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6945.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего нужны именованные параметры в функциях и конструкторах</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6904.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как используются стримы во Flutter</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6943.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем анонимные функции отличаются от обычных</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6941.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое анонимные функции</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6902.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличаются Provider и Scoped Model</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6890.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">По каким правилам в Dart именуются методы</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6882.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем отличия абстрактного класса, mixin</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6688.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Compute</a></td>
+                            <td>Многопоточность</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6689.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Проблемы многопоточности</a></td>
+                            <td>Многопоточность</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6690.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь о DI in production в Dart</a></td>
+                            <td>Общие</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6691.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь о структурах данных</a></td>
+                            <td>Общие</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6692.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Git Flow</a></td>
+                            <td>Общие</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6693.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Императивное и декларативное программирование</a></td>
+                            <td>Общие</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6694.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Стек и куча</a></td>
+                            <td>Общие</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6695.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">DAO, DTO, VO, BO</a></td>
+                            <td>Общие</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6687.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Dart является языком однопоточным или многопоточным</a></td>
+                            <td>Многопоточность</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6939.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница между var и string</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6698.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие знаешь паттерны проектирования</a></td>
+                            <td>Паттерны</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6699.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь про тесты во Flutter</a></td>
+                            <td>Тестирование</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6700.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">TDD</a></td>
+                            <td>Тестирование</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6686.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Isolate</a></td>
+                            <td>Многопоточность</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="https://easyoffer.ru/question/6685" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Генераторы (sync* / async*)</a></td>
+                            <td>Асинхронность</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6933.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие способы добавления локализации на Flutter  известны</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6900.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего нужен Provider</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6684.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Completer</a></td>
+                            <td>Асинхронность</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6683.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Event Loop</a></td>
+                            <td>Асинхронность</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6931.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как добавить локализацию в приложение на Flutter</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6682.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Await под капотом</a></td>
+                            <td>Асинхронность</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6681.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Конструкторы Future</a></td>
+                            <td>Асинхронность</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6919.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое SharedPreferences</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6898.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие у Flutter есть возможности адаптивности для десктопа</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6888.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему null ошибки называются &quot;ошибки на миллион&quot;</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6680.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Future</a></td>
+                            <td>Асинхронность</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6679.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое стримы</a></td>
+                            <td>Асинхронность</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6917.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что после android 6 случилось с Permissions</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6715.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Аннотации</a></td>
+                            <td>Dart</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6678.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Базы данных</a></td>
+                            <td>Архитектура</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6714.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Covariant</a></td>
+                            <td>Dart</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6724.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь о сборщике мусора в Dart</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6727.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как устроен сборщик мусора в Dart</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6728.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие виды виджетов бывают</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6729.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие деревья тебе известны во Flutter</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6730.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Жизненный цикл Stateful виджета</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6731.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">BuildContext</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6732.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">InheritedWidget</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6733.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Element</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6734.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">RenderObject</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6735.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Виды элементов</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6736.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Жизненный цикл Element-а</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6737.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">GlobalKeys</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6738.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">LocalKeys</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6740.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Модель выполнения во Flutter</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6742.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">CustomPaint</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6746.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Bindings</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6749.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Каналы платформы</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6751.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Режимы сборки</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6753.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Package и Plugin</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6755.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">FFI Plugin</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6757.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Этапы анимации</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6760.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Виды анимаций</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6762.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Tween</a></td>
+                            <td>Flutter</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/6713.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Dart VM</a></td>
+                            <td>Dart</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                
+                <nav>
+                  <ul class="pagination pagination-sm">
+                      
+                      
+                      <li class="page-item active" aria-current="page">
+                      <span class="page-link">1</span>
+                      </li>
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="flutter_developer@page=2.html">2</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="flutter_developer@page=3.html">3</a>
+                              </li>
+                        
+                      
+                      
+                  </ul>
+                </nav>
+                
+            </div>
+            
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Добавление вопроса</h5>
+            <button type="button" class="close btn" data-bs-dismiss="modal" aria-label="Close">
+              <span  aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <form action="flutter_developer@page=1.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="d7p0y7f0eyPxwFjaRHB9UJKEZ56eMCPPyiiclyEkD21NbqvaMbdqbjVhcfNaiBE6">
+                    <div class="mb-3">
+                           <p class="fs-5">Вы добавляете вопрос для Flutter Developer</p>
+                        <label for="id_title" class="col-form-label">Вопрос:</label>
+                        <input type="text" name="title" class="form-control" maxlength="255" required id="id_title">
+                      </div>
+                    <div class="mb-3">
+                        <label for="id_tag" class="col-form-label">Тег:</label>
+                        <select name="tag" class="form-select">
+                            
+                                <option value="1">Нет</option>
+                            
+                                <option value="9">Общие</option>
+                            
+                                <option value="11">Паттерны</option>
+                            
+                                <option value="14">Тестирование</option>
+                            
+                                <option value="19">Архитектура</option>
+                            
+                                <option value="38">Асинхронность</option>
+                            
+                                <option value="56">Многопоточность</option>
+                            
+                                <option value="72">Dart</option>
+                            
+                                <option value="73">Flutter</option>
+                            
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить вопрос </button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

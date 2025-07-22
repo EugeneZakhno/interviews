@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Что знаешь о принципах программирования KISS
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <div class="row">
+        <div class="col">
+            <h1 class="mt-5 mb-5 fs-3">Что знаешь о принципах программирования KISS</h1>
+            
+            <div class="row">
+                <div class="card mb-3 col" >
+                    <div class="card-body">
+                        <p class="card-text"><p>Принцип&nbsp;<em>Keep It Stupid Simple</em>&nbsp;(&laquo;Придерживайся простоты&raquo;) велит вам следить за тем, чтобы код оставался как можно более простым. Чем код проще, тем легче в нем разобраться как вам, так и другим людям, занимающимся его поддержкой. Под простотой главным образом имеется в виду отказ от использования хитроумных приемов и ненужного усложнения.</p>
+
+<p>В качестве примеров нарушения этого принципа можно назвать написание отдельной функции только лишь для осуществления операции сложения или использование побитового оператора (right shift &gt;&gt; 1) для деления целых чисел на 2. Последнее, безусловно, более эффективно, чем обычное (/2), но при этом очень сильно снижается понятность кода. Применяя такой подход, вы осуществляете clever coding (&laquo;заумный кодинг&raquo;) и over-optimization (чрезмерную оптимизацию). И то, и другое в долгосрочной перспективе не слишком хорошо сказывается на здоровье вашего кода.</p></p>
+                        
+                        <p class="card-text"><small class="text-muted">Oct. 12, 2023, <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank"  href="https://github.com/yakimka/python_interview_questions/blob/master/questions.md/#kiss">Источник</a></small></p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="card mb-3 col" >
+                    <div class="card-body">
+                        <p class="card-text"><p>Принцип&nbsp;<em>Keep It Stupid Simple</em>&nbsp;(&laquo;Придерживайся простоты&raquo;) велит вам следить за тем, чтобы код оставался как можно более простым. Чем код проще, тем легче в нем разобраться как вам, так и другим людям, занимающимся его поддержкой. Под простотой главным образом имеется в виду отказ от использования хитроумных приемов и ненужного усложнения.</p>
+
+<p>В качестве примеров нарушения этого принципа можно назвать написание отдельной функции только лишь для осуществления операции сложения или использование побитового оператора (right shift &gt;&gt; 1) для деления целых чисел на 2. Последнее, безусловно, более эффективно, чем обычное (/2), но при этом очень сильно снижается понятность кода. Применяя такой подход, вы осуществляете clever coding (&laquo;заумный кодинг&raquo;) и over-optimization (чрезмерную оптимизацию). И то и другое в долгосрочной перспективе не слишком хорошо сказывается на здоровье вашего кода.</p></p>
+                        
+                        <p class="card-text"><small class="text-muted">Oct. 12, 2023, <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank"  href="https://github.com/yakimka/python_interview_questions/blob/master/questions.md/#kiss">Источник</a></small></p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="card mb-3 col" >
+                    <div class="card-body">
+                        <p class="card-text"><p>KISS &mdash; это принцип проектирования и программирования, при котором простота системы декларируется в качестве основной цели или ценности. Есть два варианта расшифровки аббревиатуры: &laquo;keep it simple, stupid&raquo;</p>
+
+<p><strong>В&nbsp;проектировании следование принципу KISS выражается в&nbsp;том, что:</strong></p>
+
+<ul>
+	<li>не&nbsp;имеет смысла реализовывать дополнительные функции, которые не&nbsp;будут использоваться вовсе или&nbsp;их использование крайне маловероятно.&nbsp;Как правило, большинству пользователей достаточно базового функционала, а&nbsp;усложнение только вредит удобству приложения;</li>
+	<li>не&nbsp;стоит перегружать интерфейс теми опциями, которые не&nbsp;будут нужны большинству пользователей, гораздо проще предусмотреть для&nbsp;них отдельный &laquo;расширенный&raquo; интерфейс (или&nbsp;вовсе отказаться от&nbsp;данного функционала);</li>
+	<li>бессмысленно делать реализацию сложной&nbsp;бизнес-логики,&nbsp;которая учитывает абсолютно все возможные варианты поведения системы, пользователя и&nbsp;окружающей среды, &mdash;&nbsp;во-первых,&nbsp;это&nbsp;просто невозможно, а&nbsp;во-вторых,&nbsp;такая фанатичность заставляет собирать &laquo;звездолёт&raquo;, что&nbsp;чаще всего иррационально с&nbsp;коммерческой точки зрения.</li>
+</ul>
+
+<p><strong>В&nbsp;программировании следование принципу KISS можно описать так:</strong></p>
+
+<ul>
+	<li>не&nbsp;имеет смысла беспредельно увеличивать уровень абстракции, надо&nbsp;уметь вовремя остановиться;</li>
+	<li>бессмысленно закладывать в&nbsp;проект избыточные функции &laquo;про&nbsp;запас&raquo;, которые может быть&nbsp;когда-нибудь&nbsp;кому-либо&nbsp;понадобятся (тут скорее правильнее&nbsp;подход согласно принципу YAGNI);</li>
+	<li>не&nbsp;стоит подключать огромную библиотеку, если вам от&nbsp;неё нужна лишь пара функций;</li>
+	<li>декомпозиция&nbsp;чего-то&nbsp;сложного на&nbsp;простые составляющие &mdash; это&nbsp;архитектурно верный подход (тут KISS перекликается с&nbsp;DRY);</li>
+	<li>абсолютная математическая точность или&nbsp;предельная детализация нужны не&nbsp;всегда &mdash; большинство систем создаются не&nbsp;для&nbsp;запуска космических шаттлов, данные можно и&nbsp;нужно обрабатывать с&nbsp;той точностью, которая достаточна для&nbsp;качественного решения задачи, а&nbsp;детализацию выдавать в&nbsp;нужном пользователю объёме, а&nbsp;не&nbsp;в&nbsp;максимально возможном объёме.</li>
+</ul>
+
+<p>Также KISS имеет много общего&nbsp;c принципом разделения интерфейса&nbsp;<a href="https://web-creator.ru/articles/solid">из&nbsp;пяти принципов SOLID</a>, сформулированных Робертом Мартином.</p>
+
+<p><!-- notionvc: 62cdc7fc-35fb-437b-852a-9f01b3b9c3ac --></p></p>
+                        
+                        <p class="card-text"><small class="text-muted">Oct. 12, 2023, <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank"  href="https://amplified-process-d87.notion.site/KISS-85c2aa8eb077441c8f56d516c1ceebde">Источник</a></small></p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="card mb-3 col" >
+                    <div class="card-body">
+                        <p class="card-text"><p>KISS (Keep It Simple, Stupid) - это принцип проектирования ПО, который призывает к тому, чтобы решения были максимально простыми и непритязательными. Имеет следующие ключевые аспекты:</p>
+
+<p>1. <strong>Простота и ясность:</strong> ПО должно быть простым и понятным для понимания, как для его создателей, так и для пользователей. Простота снижает сложность, упрощает разработку и обслуживание кода.</p>
+
+<p>2. <strong>Отказ от избыточности:</strong> Избегайте излишних деталей и сложных конструкций в коде. Пишите только тот код, который необходим для решения задачи.</p>
+
+<p>3. <strong>Работоспособность и надежность:</strong> Простота не должна жертвовать работоспособностью и надежностью программы. ПО должно продолжать работать правильно и стабильно при любых условиях.</p>
+
+<p>4. <strong>Легкость сопровождения и расширения:</strong> ПО должно быть легко поддерживаемым и расширяемым. Простой код легче изменить, доработать и адаптировать под новые требования.</p>
+
+<p>Принцип KISS подчеркивает важность обеспечения минимального количества сложности в ПО, что способствует повышению его читаемости, надежности и производительности. Он учитывает тот факт, что чем проще решение, тем менее вероятно наличие ошибок и проблем в будущем.</p></p>
+                        
+                        <p class="card-text"><small class="text-muted">Feb. 18, 2024, easyoffer</small></p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+
+<!--            <h2 class="mb-3 mt-5 fs-5" >Добавить ответ:</h2>-->
+
+<!--            <div class="form-error"></div>-->
+<!--            <form class="row g-3" action = "" method="post">-->
+<!--                    <input type="hidden" name="csrfmiddlewaretoken" value="G4vgFIkXoHZGvtrxzDqyKG9h0M1CcjNQ1foss9JhNbbWaeDxu72P1gkUdWIyIiC7">-->
+<!--                  <div class="col-md-4">-->
+<!--                    <label for="id_author" class="form-label">Автор/Источник:</label>-->
+<!--                     <input type="text" name="author" class="form-control" maxlength="50" required id="id_author">-->
+<!--                  </div>-->
+<!--                  <div class="col-md-4">-->
+<!--                    <label for="id_url" class="form-label">Ссылка(не обяз.):</label>-->
+<!--                    <input type="url" name="url" class="form-control" maxlength="200" id="id_url">-->
+<!--                  </div>-->
+<!--                  <div>-->
+<!--                    <label for="id_text" class="form-label"></label>-->
+<!--                    <div class="django-ckeditor-widget" data-field-id="id_text" style="display: inline-block;">
+    <textarea name="text" cols="40" rows="10" required id="id_text" data-processed="0" data-config="{&quot;skin&quot;: &quot;moono-lisa&quot;, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]], &quot;toolbar&quot;: &quot;Custom&quot;, &quot;height&quot;: 291, &quot;width&quot;: &quot;550px&quot;, &quot;filebrowserWindowWidth&quot;: 940, &quot;filebrowserWindowHeight&quot;: 725, &quot;toolbar_Custom&quot;: [[&quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;], [&quot;NumberedList&quot;, &quot;BulletedList&quot;], [&quot;Link&quot;, &quot;Unlink&quot;], [&quot;Image&quot;, &quot;CodeSnippet&quot;]], &quot;extraPlugins&quot;: &quot;codesnippet&quot;, &quot;language&quot;: &quot;en-us&quot;}" data-external-plugin-resources="[]" data-id="id_text" data-type="ckeditortype"></textarea>
+</div>-->
+<!--                  </div>-->
+<!--                  <div class="col-12">-->
+<!--                    <button class="btn btn-primary btn-sm" type="submit">Добавить ответ</button>-->
+<!--                  </div>-->
+<!--            </form>-->
+        </div>
+        <div class="col-12 col-sm-4">
+            <h2 class="mb-3 mt-5 fs-5" >Примеры ответов:</h2>
+            <ul class="list-group list-group-flush mb-3">
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/BoazgBZ4D7k?t=6424" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Собеседование Python. Разбор вопросов</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/REN0G58nJAs?t=2146" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Собеседование python-разработчика дл…</a></small></li>
+                
+            </ul>
+<!--            <button type="button" class="btn btn-primary btn-sm " data-bs-toggle="modal" data-bs-target="#VideoAnswerModal">-->
+<!--              Добавить ссылку-->
+<!--            </button>-->
+<!--            <h2 class="mb-3 mt-5 fs-5">Доп. материалы:</h2>-->
+<!--            <ul class="list-group list-group-flush mb-3">-->
+<!--                -->
+<!--            </ul>-->
+<!--            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#ExtraContentModal">-->
+<!--              Добавить ссылку-->
+<!--            </button>-->
+        </div>
+    </div>
+
+
+
+    <!-- ExtraContentModal -->
+    <div class="modal fade" id="ExtraContentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Добавить ссылку на доп. матераил</h1>
+          </div>
+          <div class="modal-body">
+               <form action="494.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="G4vgFIkXoHZGvtrxzDqyKG9h0M1CcjNQ1foss9JhNbbWaeDxu72P1gkUdWIyIiC7">
+                      <div class="mb-3">
+                        <label for="id_content-title" class="col-form-label">Название: </label>
+                        <input type="text" name="content-title" class="form-control" maxlength="255" required id="id_content-title">
+                      </div>
+                      <div class="mb-3">
+                        <label for="id_content-url" class="col-form-label">Ссылка: </label>
+                        <input type="url" name="content-url" class="form-control" required id="id_content-url">
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить</button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VideoAnswerModal -->
+    <div class="modal fade" id="VideoAnswerModal" tabindex="-1" aria-labelledby="VideoAnswerModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="VideoAnswerModalLabel">Добавить ответ из mock-собесов</h1>
+          </div>
+          <div class="modal-body">
+                <form action="494.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="G4vgFIkXoHZGvtrxzDqyKG9h0M1CcjNQ1foss9JhNbbWaeDxu72P1gkUdWIyIiC7">
+                      <div class="mb-3">
+                        <label for="id_video-title" class="col-form-label">Название видео: </label>
+                        <input type="text" name="video-title" class="form-control" maxlength="255" required id="id_video-title">
+                      </div>
+                      <div class="mb-3">
+                        <label for="id_video-url" class="col-form-label">Ссылка на момент ответа: </label>
+                        <input type="url" name="video-url" class="form-control" required id="id_video-url">
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить</button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

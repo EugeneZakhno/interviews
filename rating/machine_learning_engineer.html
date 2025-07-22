@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Вопросы с собеседований на Machine Learning Engineer
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <h1 class="mt-5 fs-3"> Вопросы с собеседований на Machine Learning Engineer</h1>
+    
+    <p class="fs-5 mt-3 mb-5 fs-6">Вопросов всего: 75.
+        На данный момент мало данных для просчета вероятности.
+<!--        Вы можете-->
+<!--        <a type="button" class="link" data-bs-toggle="modal" data-bs-target="#exampleModal"> Добавить вопрос </a>-->
+    </p>
+    
+    <div class="row align-items-start">
+            <div class="col-12 col-md-2 d-flex flex-column align-items-start">
+                <p class="">Фильтр:</p>
+                <form action="machine_learning_engineer.html">
+                    <select class="form-select" aria-label="Default select example" name="tag">
+                        
+                            <option selected>Все</option>
+                        
+                          <option value="Все">Все</option>
+                        
+                          <option value="Нет">Нет</option>
+                        
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-primary mt-3">Выбрать</button>
+                </form>
+            </div>
+            
+            <div class="col">
+                <form class="d-flex mb-3" role="search" method="get" action="machine_learning_engineer.html">
+                    <input type="text" name="search_query" class="form-control me-2" placeholder="Поиск вопроса" aria-label="Search" id="id_search_query">
+                    <button class="btn btn-outline-success" type="submit">Поиск</button>
+                </form>
+                
+                <table class="table table-sm table-hover">
+                    <thead>
+                        <tr>
+                            <th>Вопрос</th>
+                            <th class="d-none d-sm-table-cell">Тег</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td><a href="../question/5322.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о себе</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5323.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работает градиентный бустинг</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5324.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему бустинг градиентный</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5325.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про свой опыт</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5326.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Uplift-моделирование</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5327.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что за классы трансформируются в Uplift - моделировании</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5328.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что будешь делать, когда маркетолог попросит сделать модель оттока</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5329.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие метрики знаешь для дисбаланса классов</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5330.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как подобрать отсчеку при перехода с  Presicion на Recall</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5331.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работает бустрап</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5332.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как оценить доверительный интервал площади</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5333.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как оценить метрику, если есть только модели и их оценки</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5334.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие бывают схемы кросс-валидации</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5335.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как по другому называется точность оценки</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5336.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая система валидации нужна оценке финального качества модели</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5337.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Из каких основных компонентов состоит A/B тест</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5338.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое ошибка первого рода</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5339.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи, что такое P-value, нулевая гипотеза и т.п.</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5340.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как проводятся симуляции</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5341.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как в тесте определить, сколько данных нужно</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5342.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как проверить мощность ошибки второго рода</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5343.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как понять что все готово к тесту</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5344.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое модель</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5345.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что будет, если в градиентном бустинге убрать первое дерево</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5346.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как различаются построения деревьев в разных библиотеках машинного обучения</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5347.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как строится дерево в XGBoost</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5348.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как оценить предсказание регриссионной модели градиентного бустинга</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5349.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про Deploy ML-сервисов</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5350.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие знаешь веб-фреймворки на пайтон</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5351.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как фиксируется версия библиотек</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5352.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">За какими метриками можно следить после Deploy</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5353.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что делать если модель не просчитала предсказаний, а ответ нужен срочно</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5354.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">С каких моделей начал бы моделировать прогноз спроса</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5355.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие структуры данных знаешь и в чем их суть</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5356.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем отличие структур данных друг от друга</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5357.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">С какими структурами данных работал</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5358.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое dict и как он работает</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5359.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое линейные регрессия</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5360.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем линейные модели отличаются от knn</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5361.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой популярный loss в линейной регрессии</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5362.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое knn</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5363.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая модель лучше предскажет объект, которого не было в обучающей выборке, линейная или knn</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5364.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое жадный алгоритм построения дерева</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5365.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Может ли быть такая ситуация когда качество на трейне не 100%, при правильном обучении дерева</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5366.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое смещение и разброс</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5367.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В каком случае дерево 100% ошибётся при отправке обьекта на листья</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5368.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть недостатки у градиентного бустинга</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5369.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему у градиентного бустинга смещение и разброс малы или высоки</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5370.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие минусы есть у градиентного бустинга</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5371.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Когда бустинг даст отрицательное значение в тренировочной выборке, где их нет</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5372.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какое предсказание даст градиентный бустинг на товар, который гораздо дороже других</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5373.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как сделать сервис по укорачиванию ссылок</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5374.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как можно привести объек нефиксированной длины к фиксированной длине</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5375.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что можно сделать с остатками модели между предсказаниями и фактом</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5376.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое feedback loop</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5377.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Поиск по дереву и его алгоритмическая сложность</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5378.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как видишь свою будущую профессию</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5379.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как пришел в Data Science</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5380.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть три главных бустинга</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5381.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие основные гиперпараметры есть в бустинге</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5382.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть два основных вида регуляризации</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5383.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">На что повлияет использование большое кол-во признаков при обучении модели</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5384.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В cv, как создаются feature maps визуализации</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5385.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему свёрточные сети называют локально связными</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5386.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чём разница между Max и Avegare pooling в свёрточной сети</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5387.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что произойдёт, если заменить Max pooling 2x2 на свёртку со страйдом 2</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5388.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое depthwise свёртки</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5389.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая бывает регуляризация на уровне аугментации</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5390.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая бывает аугментация для текстов</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5391.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем при обучении нейронной сети со временем понижают learning rate</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5392.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Когда нет необходимости понижать learning rate с эпохами</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5393.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как структурировать эксперименты</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5394.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Делал ли когда-нибудь cherry pick</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5395.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Docker</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/5396.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой жизненный цикл у моделей</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                
+            </div>
+            
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Добавление вопроса</h5>
+            <button type="button" class="close btn" data-bs-dismiss="modal" aria-label="Close">
+              <span  aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <form action="machine_learning_engineer.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="J37ahSexWppobAmhaXJ7eTqBcd7NHEv64e0m4jDRlTBEQlyh5rlovtBepnOJdDkn">
+                    <div class="mb-3">
+                           <p class="fs-5">Вы добавляете вопрос для Machine Learning Engineer</p>
+                        <label for="id_title" class="col-form-label">Вопрос:</label>
+                        <input type="text" name="title" class="form-control" maxlength="255" required id="id_title">
+                      </div>
+                    <div class="mb-3">
+                        <label for="id_tag" class="col-form-label">Тег:</label>
+                        <select name="tag" class="form-select">
+                            
+                                <option value="1">Нет</option>
+                            
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить вопрос </button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

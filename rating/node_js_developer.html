@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Вопросы с собеседований на Node.js Developer
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <h1 class="mt-5 fs-3"> Вопросы с собеседований на Node.js Developer</h1>
+    
+    <p class="fs-5 mt-3 mb-5 fs-6">Вопросов всего: 209.
+        На данный момент мало данных для просчета вероятности.
+<!--        Вы можете-->
+<!--        <a type="button" class="link" data-bs-toggle="modal" data-bs-target="#exampleModal"> Добавить вопрос </a>-->
+    </p>
+    
+    <div class="row align-items-start">
+            <div class="col-12 col-md-2 d-flex flex-column align-items-start">
+                <p class="">Фильтр:</p>
+                <form action="node_js_developer.html">
+                    <select class="form-select" aria-label="Default select example" name="tag">
+                        
+                            <option selected>Все</option>
+                        
+                          <option value="Все">Все</option>
+                        
+                          <option value="Нет">Нет</option>
+                        
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-primary mt-3">Выбрать</button>
+                </form>
+            </div>
+            
+            <div class="col">
+                <form class="d-flex mb-3" role="search" method="get" action="node_js_developer.html">
+                    <input type="text" name="search_query" class="form-control me-2" placeholder="Поиск вопроса" aria-label="Search" id="id_search_query">
+                    <button class="btn btn-outline-success" type="submit">Поиск</button>
+                </form>
+                
+                <table class="table table-sm table-hover">
+                    <thead>
+                        <tr>
+                            <th>Вопрос</th>
+                            <th class="d-none d-sm-table-cell">Тег</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td><a href="../question/3416.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про себя</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3418.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про свой опыт</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3437.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Promise</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3432.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какое отличие гет и пост</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3439.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем нужен DOM</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3427.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего нужен Set</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3428.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличается http от https</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3435.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как пришел к frontend</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3424.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего нужен Map</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3421.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи чем занимаешься сейчас</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3431.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница между null и undefined</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3480.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница между аsync/await и рromise</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3444.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как устроен pipeline</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3447.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие имеются проекты с микрофреймворками и т.д</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3477.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие способы работы с асинхронным кодом ты знаешь</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3472.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как можно поменять контекст какой-то функции</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3470.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Знаком ли с оператором in В чем его недостаток</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3442.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что из себя представляет шина</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3507.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как реализуется многопоточность в Node</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3460.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем нужен SQL</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3503.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое деоптимизация</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3463.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница между оператором сравнения == и ===</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3520.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работает конвертация на Node</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3524.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего нужен package-lock.json</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3528.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Dependency Injection</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3479.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое аsync/await и для чего это нужно</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3536.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">С какими проектами работал</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3482.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь про EventEmitter</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3483.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего нужны массивы</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3484.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего нужны списки</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3499.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как Node исполняет JavaScript код</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3459.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой опыт с базами данных</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3457.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что будет если умрет дочерний процесс</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3495.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работает JavaScript код в Node</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3455.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Deploy</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3493.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Может ли Node.js исполнить TypeScript</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3570.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">С чем можно использовать контейнеры зависимости</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3496.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Из каких компонентов состоит Node</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3587.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как думаешь, почему Node смог завоевать рынок</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3502.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое оптимизация</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3645.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Используешь кодогенерацию</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="https://easyoffer.ru/question/3506" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как раскрывается однопоточность в Node</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3651.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">С какими проблемами систем модульности сталкивался</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3509.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Thread Pool</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3512.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Libuv</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3518.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как оценить медленность Event Loop</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3667.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое идемпотентность</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3522.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Package.json</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3675.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Из чего состоит Nest</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3526.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой любимый framework и почему</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3492.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое бинарное дерево поиска</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3530.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие паттерны использовались на практике</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3532.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие использовал ORM</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3534.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть этапы жизненного цикла ПО</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3452.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое пересечение массивов</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3538.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как Node обрабатывает большое количество реквестов</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3540.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь о библиотеке Libpq</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3543.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие операции и функции асинхронные в коде</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3547.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие операции и функции синхронные в коде</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3549.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница backend и frontend</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3550.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работает Event loop</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3552.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как можно применять Node</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3490.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работает стек</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3562.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что может находиться на уровне инфраструктуры в приложении</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3560.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как sprint и Hibernate вписываются в архитектуру приложений</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3489.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая сложность будет у алгоритма для получения элемента из Map</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3558.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть сценарии по реализации работы Event Loop</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3557.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой будет план отчета на планерке о блокировке Event Loop</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3564.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему ORM находиться на периферии</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3566.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как решить проблему использования зависимостей периферии в ядре</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3555.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Может ли Event loop быть заблокирован в Node.js</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3573.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как происходит передача зависимостей в конструкторы</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3574.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Где лучше всего писать api</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3577.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Писал на Nest.js</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3579.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие минусы у Nest.js</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3580.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие паттерны распространены в Java, которые не встретить в JS и TypeScript</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3583.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие паттерны распространены в JS и TypeScript, которые не встретить в Java</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3584.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про безопасность в Java</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3554.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как понять, что есть проблема с циклом Event loop</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3639.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие основные технические идеи легли в основу создания Node</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3641.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что используешь для работы с базами данных</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3643.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Где можно использовать метаданные</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3487.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие недостатки есть у списков</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3647.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть системы модульности</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3648.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница систем модульности</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3650.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Можно совмещать системы модульности</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3486.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие недостатки есть у массивов</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3653.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая существенная разница есть между динамическим импортом и реквайером в середине файла</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3655.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь про сетевые протоколы</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3656.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Собираете какие-то метрики</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3660.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как борешься с утечками памяти, если такие появляются</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3661.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие паттерны используешь</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3663.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работает Node</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3665.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличается react от http</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3451.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работает redirect в http</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3668.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое веб-сокет</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3671.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая структура цикла у Node в Eventloop</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3673.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">С какой фазы стартует цикл в Node в Eventloop</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3448.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Дай общее понимание протоколов tcp, http</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/3736.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое пост</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                
+                <nav>
+                  <ul class="pagination pagination-sm">
+                      
+                      
+                      <li class="page-item active" aria-current="page">
+                      <span class="page-link">1</span>
+                      </li>
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="node_js_developer@page=2.html">2</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="node_js_developer@page=3.html">3</a>
+                              </li>
+                        
+                      
+                      
+                  </ul>
+                </nav>
+                
+            </div>
+            
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Добавление вопроса</h5>
+            <button type="button" class="close btn" data-bs-dismiss="modal" aria-label="Close">
+              <span  aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <form action="node_js_developer.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="CEmAqX7MwdZ6AlHSRmujVChRFO2Pfd1VXPfMdow6VHbmf6TSMQ6AccsuSYJLLcQc">
+                    <div class="mb-3">
+                           <p class="fs-5">Вы добавляете вопрос для Node.js Developer</p>
+                        <label for="id_title" class="col-form-label">Вопрос:</label>
+                        <input type="text" name="title" class="form-control" maxlength="255" required id="id_title">
+                      </div>
+                    <div class="mb-3">
+                        <label for="id_tag" class="col-form-label">Тег:</label>
+                        <select name="tag" class="form-select">
+                            
+                                <option value="1">Нет</option>
+                            
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить вопрос </button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

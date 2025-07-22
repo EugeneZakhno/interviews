@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Вопросы с собеседований на 1C Developer
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <h1 class="mt-5 fs-3"> Вопросы с собеседований на 1C Developer</h1>
+    
+    <p class="fs-5 mt-3 mb-5 fs-6">Вопросов всего: 160.
+        На данный момент мало данных для просчета вероятности.
+<!--        Вы можете-->
+<!--        <a type="button" class="link" data-bs-toggle="modal" data-bs-target="#exampleModal"> Добавить вопрос </a>-->
+    </p>
+    
+    <div class="row align-items-start">
+            <div class="col-12 col-md-2 d-flex flex-column align-items-start">
+                <p class="">Фильтр:</p>
+                <form action="1c_developer@page=2.html">
+                    <select class="form-select" aria-label="Default select example" name="tag">
+                        
+                            <option selected>Все</option>
+                        
+                          <option value="Все">Все</option>
+                        
+                          <option value="Нет">Нет</option>
+                        
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-primary mt-3">Выбрать</button>
+                </form>
+            </div>
+            
+            <div class="col">
+                <form class="d-flex mb-3" role="search" method="get" action="1c_developer@page=2.html">
+                    <input type="text" name="search_query" class="form-control me-2" placeholder="Поиск вопроса" aria-label="Search" id="id_search_query">
+                    <button class="btn btn-outline-success" type="submit">Поиск</button>
+                </form>
+                
+                <table class="table table-sm table-hover">
+                    <thead>
+                        <tr>
+                            <th>Вопрос</th>
+                            <th class="d-none d-sm-table-cell">Тег</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td><a href="../question/12485.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие поля надо индексировать в запросе?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12486.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Когда стоит объединение использовать в запросе?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12487.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как обработать результаты запросов?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12488.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как устроена КД3?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12489.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие методы http сервисы могут принимать?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12490.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что можешь рассказать про баг по ценообразованию?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12491.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое расширение? Где использовал?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12492.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие способы переопределения процеды функции существуют в расширении?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12493.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что происходит на стороне СУБД когда добавляет новый реквизит к типовому объекту?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12494.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что делать когда тормозит отчет?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12495.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Есть какая-то процедура, как понять сколько она выполняется?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12496.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Есть задача по загрузке нескольких десятков тысяч документов, как оптимизировать процесс чтобы побыстрее загрузилось?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12497.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Мы должны аккуратно дорабатывать конфигурацию. Был ли опыт дорабатывания формы программы?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12498.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работают переопределяемые модули в типовых конфигурациях?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12499.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что можешь рассказать про опыт работы с хранилищем?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12500.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой опыт работы по зупу?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12501.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие-нибудь обмены вы писали с использование типовой функциональности?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12502.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как изменить типовую форму ее не меняя через обработчики событий?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="https://easyoffer.ru/question/12503" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажите о своем опыте</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12504.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница между джейсон и xml?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12505.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем существенно отличается регистр сведений от справочника?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12506.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Постройте в уме запрос к номенклатуре из регистра</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12507.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">С какими СУБД работали?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12508.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие типы можно использовать в ресурсе регистра накопления?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12509.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть методы списания остатков?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12510.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой опыт работы по сетям?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12511.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой период мы можем передать в виртуальную таблицу периодического регистра?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12512.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое момент времени?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12513.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем опасность функции &quot;текущая дата&quot;?&quot;</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12514.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Есть регистр сведений с реквизитом составного типа(документ). Нам надо получить дату конкретного документа, как это сделать?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12515.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие + и - СКД?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12516.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажите о интересных проектах, что у вас были</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12517.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие сильные стороны свои можете отметить?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12518.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего используете рективу?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12519.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Каким способом можно отсортировать структуру?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12520.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">С какими подсистемами БСП приходилось работать?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12521.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как передать значение реквизита формы в фильтр формы выбора?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12522.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое разделяемая блокировка?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12523.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое автоматическая блокировка?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12524.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Будет ли использоваться индекс, если в запросе есть условие по 3-му измерению регистра, все измерения в котором проиндексированы?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12525.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Где хранится временная таблица?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12526.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему возникает ошибка &quot;в данной транзакции происходили ошибки&quot;? Как ее избежать?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12527.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Опишите порядок действий, если нужно организовать постоянный обмен документами между 2-мя различными конфигурациями использующими БСП</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12528.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что ищите, какая компания должна быть чтобы вы работали долго?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12529.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какую конфигурацию больше знаете, с какой работали?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12530.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Сколько понадобится времени чтобы написать запрос к 2-м таблицам с целью заполнения шапки готовой формы документа?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12531.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего могут полезны планы обмена в синхронизации между различными системами?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12532.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Когда лучше использовать регистр сведений, а не журнал регистрации?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12533.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие способы оптимизации работы 1С за счет администрирования БД ты знаешь?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12534.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Когда мы обращаемся к объекту через точку, что происходит?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12535.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Отчего хотите уйти в текущей работе?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12536.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое транзакция?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12537.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие наборы данных можно использовать в СКД?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12538.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Можно ли временную таблицу передавать между запросами?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12539.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличается конструкция запроса объединить от объединить все?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12540.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему не следует использовать запрос в цикле?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12541.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что означает поле индексирования?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12542.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В каком случае ты используешь индексы, если это касается дела запросов?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12543.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Если ты в запросе делаешь полное, левое соединение. Индексы как могут повлиять в этом случае?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href="../question/12544.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Документ должен писать транзакции 200000 записей. Какие проблемы это вызовет? И как решить?</a></td>
+                            <td>Нет</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                
+                <nav>
+                  <ul class="pagination pagination-sm">
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="1c_developer@page=1.html">1</a>
+                              </li>
+                        
+                      
+                      
+                      
+                      <li class="page-item active" aria-current="page">
+                      <span class="page-link">2</span>
+                      </li>
+                      
+                      
+                  </ul>
+                </nav>
+                
+            </div>
+            
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Добавление вопроса</h5>
+            <button type="button" class="close btn" data-bs-dismiss="modal" aria-label="Close">
+              <span  aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <form action="1c_developer@page=2.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="3jJfhzlFF4F6rN1cjWHWBSlMgy36owHmouCr40KZ4yRm6ydceqjdSswptIK2UvwD">
+                    <div class="mb-3">
+                           <p class="fs-5">Вы добавляете вопрос для 1C Developer</p>
+                        <label for="id_title" class="col-form-label">Вопрос:</label>
+                        <input type="text" name="title" class="form-control" maxlength="255" required id="id_title">
+                      </div>
+                    <div class="mb-3">
+                        <label for="id_tag" class="col-form-label">Тег:</label>
+                        <select name="tag" class="form-select">
+                            
+                                <option value="1">Нет</option>
+                            
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить вопрос </button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

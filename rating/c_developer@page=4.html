@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Вопросы с собеседований на C/C++ Developer
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <h1 class="mt-5 fs-3"> Вопросы с собеседований на C/C++ Developer</h1>
+    
+    <p class="fs-5 mt-3 mb-5 fs-6">Вопросов всего: 434.
+<!--        Вы можете-->
+<!--        <a type="button" class="link" data-bs-toggle="modal" data-bs-target="#exampleModal"> Добавить вопрос </a>-->
+    </p>
+    
+    <div class="row align-items-start">
+            <div class="col-12 col-md-2 d-flex flex-column align-items-start">
+                <p class="">Фильтр:</p>
+                <form action="c_developer@page=4.html">
+                    <select class="form-select" aria-label="Default select example" name="tag">
+                        
+                            <option selected>Все</option>
+                        
+                          <option value="Все">Все</option>
+                        
+                          <option value="Нет">Нет</option>
+                        
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-primary mt-3">Выбрать</button>
+                </form>
+            </div>
+            
+            <div class="col">
+                <form class="d-flex mb-3" role="search" method="get" action="c_developer@page=4.html">
+                    <input type="text" name="search_query" class="form-control me-2" placeholder="Поиск вопроса" aria-label="Search" id="id_search_query">
+                    <button class="btn btn-outline-success" type="submit">Поиск</button>
+                </form>
+                
+                <table class="table table-sm table-hover">
+                    <thead>
+                        <tr>
+                            <th>Шанс</th>
+                            <th>Вопрос</th>
+                            <th class="d-none d-sm-table-cell">Тег</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11180.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая разница между rvalue и lvalue</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11181.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое таблица виртуальных методов</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11182.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой новый тип переменных появился в С++11</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11183.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Можно ли перегрузить операторы new и delete</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11184.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое new placement</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11185.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что происходит, если оператор new не может выделить память</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11186.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Назовите операторы приведения типов в С++</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11187.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Сколько занимает места объект пустого класса</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11188.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Сколько места в байтах занимает указатель</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11189.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Сколько места занимают bool, char, short, int, long long, float, double</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11190.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая польза от безымянного пространства имен</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11191.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое ODR</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11192.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличаются STL контейнеры vector и array</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11193.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое итератор в STL</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11194.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Каким свойством должен обладать объект, чтобы его можно было добавить в ассоциативные контейнеры в качестве ключа</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11195.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое отложенная инициализация</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11196.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое исключения в С++</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11197.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как можно управлять выравниванием памяти в структурах</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11198.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое битовые поля в С++</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11199.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое POD тип</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11200.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое тайп трейты</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11201.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие полезные фичи есть в С++14</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11202.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаете о нотациях Big Endian, Little Endian, Middle Endian</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11203.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как вы будете реализовывать Singletone</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11204.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое MVC</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11205.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое MVP</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11206.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как умножить или разделить на 2 целое число, используя битовые операции</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11207.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое deadlock</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11208.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое состояние гонки</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11209.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличается mutex от симафора</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11210.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличается процесс от потока</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11211.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем хорош lock_guard</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11212.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего нужна функция thread::join()</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11213.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое conditional_variable</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/11214.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое std::future</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/3950.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть стандартные библиотеки с умными указателями</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4050.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая основная проблема у Pointers</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4054.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">На основе чего несколько shared_ptr могут ссылаться на один указатель</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4059.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем нужен weak_ptr</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4061.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое циклическая зависимость и чем она грозит</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4062.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что происходит с vector при добавлении элемента</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4063.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работает момент realloc в vector</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4064.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как использовать move семантику для vector</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4066.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая сложность у операции push_back у vector</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4069.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Когда будем использовать set, а когда unordered_set</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4071.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что делает оператор delete</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4073.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть тонкости при вызове виртуальной функции из конструктора или деструктора</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4075.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работает виртуальность в C++</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4076.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Может ли быть конструктор виртуальным методом</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4078.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое override</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4080.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть тонкости если летит исключение из конструктора</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4082.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему не стоит использовать double except</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4084.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как называется идиома статического полиморфизма в C++</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4085.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как пофиксить проблему, когда mutex является локальной переменной</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4089.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть виды mutex в стандартной библиотеке</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4091.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как можно синхронизировать взаимодействия между потоками</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4093.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как сделать что бы пользователь класса не мог создать объект в heap</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4096.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как ограничить количество экземпляров класса</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4098.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как перегрузить постфиксный и префиксный инкремент в С++</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4100.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Перегрузка логический операций это Best practice или Bad practice</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4110.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть нюансы при взаимодействии программ С и С++</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4111.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что происходит с динамической памятью при взаимодействии программ на С и С++</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4112.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как отключить mangling</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4113.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что надо учитывать при взаимодействии С и С++ для exception</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4115.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как устроены строки в С++</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4116.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая есть оптимизация в строках С++</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4117.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какое преимущество даст строка построенная на list</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4118.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что происходит с памятью процесса, когда мы его fork-аем в Linux</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4119.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличается выброс исключения от аборта</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4120.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Когда при вызове exception не зовутся деструкторы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4121.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем особенность выброса исключений в конструкторе и деструкторе</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4122.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие знаешь гарантии безопасности</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4123.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Строгая гарантия безопасности</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4124.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Базовая гарантия безопасности</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4125.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">О чем следует помнить при вызове исключений в конструкторе</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4126.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">О чем следует помнить при вызове исключений в деструкторе</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4127.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как можно проверить что нет double exception</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4128.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как проверить вылетело ли исключение в каком то из потоков</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4129.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">При помощи чего сохраняются exception</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4130.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие знаешь умные указатели в С++</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4132.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем используются делиторы в умных указателях</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4133.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как написать умный указатель для одного и множества объектов</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4134.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как сделать так, что бы в shared_ptr были утечки</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4135.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как сделать так, что бы в unique_ptr были утечки</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4136.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Когда в умных указателях не вызовиться delete для объекта</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4137.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В конструкторе при вызове new вылетело исключение - это утечка</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4138.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница map и unordered_map</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4139.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">За счет чего появляетcя амортизированная константная сложность в map</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4140.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что нужно сделать с map или unordered_map для использования в качестве ключа свой класс</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4142.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что происходит с элементами vector во время realloc</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4143.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что сделать что бы во время realloc элементы перемещались</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4144.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Асимптотическая сложность в list</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4146.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие контейнеры позволяют вставку в начало контейнера</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4147.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница map и unordered_map</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4148.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что нужно сделать для использования класса в качестве ключа в unordered_map</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4149.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работает map и unordered_map</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4150.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая сложность работы с map и unordered_map</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4151.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как называется одинаковый результат после применения хэш функции</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4153.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие знаешь виды итераторов</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/4154.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Можешь рассказать концепцию input output</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                
+                <nav>
+                  <ul class="pagination pagination-sm">
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="c_developer@page=1.html">1</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="c_developer@page=2.html">2</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="c_developer@page=3.html">3</a>
+                              </li>
+                        
+                      
+                      
+                      
+                      <li class="page-item active" aria-current="page">
+                      <span class="page-link">4</span>
+                      </li>
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="c_developer@page=5.html">5</a>
+                              </li>
+                        
+                      
+                      
+                  </ul>
+                </nav>
+                
+            </div>
+            
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Добавление вопроса</h5>
+            <button type="button" class="close btn" data-bs-dismiss="modal" aria-label="Close">
+              <span  aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <form action="c_developer@page=4.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="lucDXILfdv6jSYfTdFnIyEfiUOPldghaGF5PK9azCZizxJrT89ZZPeqV7YwhJf6r">
+                    <div class="mb-3">
+                           <p class="fs-5">Вы добавляете вопрос для C/C++ Developer</p>
+                        <label for="id_title" class="col-form-label">Вопрос:</label>
+                        <input type="text" name="title" class="form-control" maxlength="255" required id="id_title">
+                      </div>
+                    <div class="mb-3">
+                        <label for="id_tag" class="col-form-label">Тег:</label>
+                        <select name="tag" class="form-select">
+                            
+                                <option value="1">Нет</option>
+                            
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить вопрос </button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

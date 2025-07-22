@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Вопросы с собеседований на Frontend Developer
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <h1 class="mt-5 fs-3"> Вопросы с собеседований на Frontend Developer</h1>
+    
+    <p class="fs-5 mt-3 mb-5 fs-6">Вопросов всего: 1429.
+<!--        Вы можете-->
+<!--        <a type="button" class="link" data-bs-toggle="modal" data-bs-target="#exampleModal"> Добавить вопрос </a>-->
+    </p>
+    
+    <div class="row align-items-start">
+            <div class="col-12 col-md-2 d-flex flex-column align-items-start">
+                <p class="">Фильтр:</p>
+                <form action="frontend_developer@page=11.html">
+                    <select class="form-select" aria-label="Default select example" name="tag">
+                        
+                            <option selected>Все</option>
+                        
+                          <option value="Все">Все</option>
+                        
+                          <option value="Нет">Нет</option>
+                        
+                          <option value="Общие">Общие</option>
+                        
+                          <option value="HTML">HTML</option>
+                        
+                          <option value="CSS">CSS</option>
+                        
+                          <option value="Javascript">Javascript</option>
+                        
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-primary mt-3">Выбрать</button>
+                </form>
+            </div>
+            
+            <div class="col">
+                <form class="d-flex mb-3" role="search" method="get" action="frontend_developer@page=11.html">
+                    <input type="text" name="search_query" class="form-control me-2" placeholder="Поиск вопроса" aria-label="Search" id="id_search_query">
+                    <button class="btn btn-outline-success" type="submit">Поиск</button>
+                </form>
+                
+                <table class="table table-sm table-hover">
+                    <thead>
+                        <tr>
+                            <th>Шанс</th>
+                            <th>Вопрос</th>
+                            <th class="d-none d-sm-table-cell">Тег</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4939.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что произойдёт, если написать typeof null</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4940.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какими способами можно изменить контекст объекта</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4941.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое массив arguments</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4942.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В каком случае важен порядок: при копировании объекта или массива</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4943.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое методы массива</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4944.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В каких случаях лучше использовать map</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4945.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В каких случаях лучше использовать foreach</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4946.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой способ изменяет массив</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4947.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие инструменты используешь при взаимодействии с сервером</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4948.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие статусы есть у promise</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4949.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что использовали до promise</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4950.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Кому видны данные, хранящиеся в local storage, session storage и cookies</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4951.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В каком формате хранятся данные в local storage</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4952.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего нужен react</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4953.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие преимущества есть у react</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4954.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как можно использовать в рамках jsx js код</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4955.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что не допускается писать в js коде в рамках jsx</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4956.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что можно использовать при написании js кода в рамках jsx</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4957.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой тип данных представляет из себя virtual dom в js</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4958.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему нельзя напрямую использовать браузерный dom</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4959.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое state и props</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4960.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как нужно изменять состояние компонентов</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4961.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что возвращает usestate</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4962.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чём находятся значения функции</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4963.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое useeffect</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4964.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что можно использовать в useeffect</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4965.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего указывается массив зависимостей</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4966.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Приведи примеры того, что можно использовать в useeffect, помимо запросов на сервер</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4967.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое побочные эффекты</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4968.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работаешь со списками</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4969.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что используется для отображения списка данных в jsx</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4970.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего используются ключи в jsx</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4971.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть ключи в jsx</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4972.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про упрявляемые и неуправляемые компоненты</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4973.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работает поток данных между redux и компонентом</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4974.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как можно изменить состояние в redux</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4975.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой способ помогает бороться с прокидыванием, помимо redux</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4632.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работает http</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4977.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое константа</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4978.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое массив</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4979.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая цель у оператора присваивания</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4980.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как происходит взаимодействие клиентов и сервера</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4981.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое область видимости</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4982.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Сколько может длиться тех собеседование</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4983.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое json</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4984.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие числовые значения имеют true/false</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4985.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как преобразуется строка в число</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4986.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое singleton</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4987.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое классы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4988.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое паттерны проектирования</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4989.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое debug</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4990.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как стал it специалистом</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4991.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как решить проблему несовместимости некоторых css-cвойств в браузере</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4992.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Когда используются теги div и span</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4993.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про частный случай - settimeout 0</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4994.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Назови основные методы перебора массивов и объектов</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4995.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая ключевая особенность react-рендера</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4996.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего в react используется react-router-dom</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4997.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое spa</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4998.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое сrud и его параметры запроса</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/4999.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие типы данных  поддерживаются в typescript</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5000.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как происходит загрузка страницы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5001.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как браузер парсит html файл</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5002.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что происходит с внешними ресурсами который считывает браузер при парсинге html</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5003.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое метатеги и для чего они нужны</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5004.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие внесли новые теги в html5 и какие теги устарели</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5005.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое screen reader и аccessibility</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5006.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего нужна методология в html</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5007.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие бывают css unity</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5008.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие популярные форматы картинок используются в веб-верстке</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5009.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как оптимизировать загрузку картинок на странице</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5010.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что лучше использовать шрифт svg или sprite</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5011.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Опиши псевдоклассы и псевдоэлементы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5012.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое боксовая модель, из чего она состоит, и какие бывают виды</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5013.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое margin collaps и для чего</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5014.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое float</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5015.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как отменить обтекание картинки текстом</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5016.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое поток</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5017.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему flow плохо влияет на перформанс страницы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5018.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем смысл работы flex-box</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5019.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличается display: block от display: inline</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5020.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое adaptive и responsive web-страницы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5021.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличается display: none от visibility hidden</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5022.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое вендорные префиксы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5023.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что необходимо указать в css для срабатывания данных брэкпоинтов</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5024.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему стали популярны препроцессоры</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5025.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем отличие переменных в css от пременных в препроцессорах</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5026.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем отличие импортов в css от импортов в препроцессорах</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5027.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как выбрать правильные библиотеки для подключения к проекту</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5028.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое код quality в html и css</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5136.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие псевдоклассы знаешь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5029.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о hexagonal архитектуре и откуда она возникла</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5030.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое архитектура портов и адаптеров</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5031.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего нужен адаптер</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5032.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как вписывается graphql в гексагональную архитектуру</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5033.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как адаптер связан с овп паттерном</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5034.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как связан cqrs с event sourcing</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5035.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о внедрении зависимостей</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5036.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как из react осуществить доступ к данным</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">3%</td>
+                            
+                            <td><a href="../question/5037.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие могут быть оптимизации для снижения обмена данных между front-end и сервером</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                
+                <nav>
+                  <ul class="pagination pagination-sm">
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="frontend_developer@page=1.html">1</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="frontend_developer@page=2.html">2</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="frontend_developer@page=3.html">3</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="frontend_developer@page=4.html">4</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="frontend_developer@page=5.html">5</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="frontend_developer@page=6.html">6</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="frontend_developer@page=7.html">7</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="frontend_developer@page=8.html">8</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="frontend_developer@page=9.html">9</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="frontend_developer@page=10.html">10</a>
+                              </li>
+                        
+                      
+                      
+                      
+                      <li class="page-item active" aria-current="page">
+                      <span class="page-link">11</span>
+                      </li>
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="frontend_developer@page=12.html">12</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="frontend_developer@page=13.html">13</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="frontend_developer@page=14.html">14</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="frontend_developer@page=15.html">15</a>
+                              </li>
+                        
+                      
+                      
+                  </ul>
+                </nav>
+                
+            </div>
+            
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Добавление вопроса</h5>
+            <button type="button" class="close btn" data-bs-dismiss="modal" aria-label="Close">
+              <span  aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <form action="frontend_developer@page=11.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="hOdDkZ8ixcLlp6kaQcFJUAdrMqh0Q95KCZ6P7qxCWGXB4RwaLGh0bao4ZAYWm8U1">
+                    <div class="mb-3">
+                           <p class="fs-5">Вы добавляете вопрос для Frontend Developer</p>
+                        <label for="id_title" class="col-form-label">Вопрос:</label>
+                        <input type="text" name="title" class="form-control" maxlength="255" required id="id_title">
+                      </div>
+                    <div class="mb-3">
+                        <label for="id_tag" class="col-form-label">Тег:</label>
+                        <select name="tag" class="form-select">
+                            
+                                <option value="1">Нет</option>
+                            
+                                <option value="9">Общие</option>
+                            
+                                <option value="54">HTML</option>
+                            
+                                <option value="55">CSS</option>
+                            
+                                <option value="58">Javascript</option>
+                            
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить вопрос </button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

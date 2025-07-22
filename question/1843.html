@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Расскажи про утилити типы
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <div class="row">
+        <div class="col">
+            <h1 class="mt-5 mb-5 fs-3">Расскажи про утилити типы</h1>
+            
+            <div class="row">
+                <div class="card mb-3 col" >
+                    <div class="card-body">
+                        <p class="card-text"><p><u>Утилити типы (utility types)</u> &mdash; это встроенные типы, которые помогают манипулировать другими типами и упрощают работу с ними. Они позволяют изменять, расширять, ограничивать и комбинировать типы, что делает код более гибким и безопасным. Вот некоторые из наиболее часто используемых утилити и их примеры:</p>
+
+<p><strong>1. Partial</strong></p>
+
+<p>Делает все свойства типа<strong> `T`</strong> необязательными.</p>
+
+<pre>
+<code>```typescript
+interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+const updateUser = (id: number, userUpdates: Partial&lt;User&gt;) =&gt; {
+  // Обновление пользователя
+};
+
+updateUser(1, { name: 'Alice' }); // Можно передать только часть свойств
+```</code></pre>
+
+<p><strong>2. Required</strong></p>
+
+<p>Делает все свойства типа<strong> `T` </strong>обязательными.</p>
+
+<pre>
+<code>```typescript
+interface User {
+  id?: number;
+  name?: string;
+  email?: string;
+}
+
+const user: Required&lt;User&gt; = {
+  id: 1,
+  name: 'Alice',
+  email: 'alice@example.com'
+}; // Все свойства должны быть указаны
+```</code></pre>
+
+<p><strong>3. Readonly</strong></p>
+
+<p>Делает все свойства типа <strong>`T`</strong> только для чтения.</p>
+
+<pre>
+<code>```typescript
+interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+const user: Readonly&lt;User&gt; = {
+  id: 1,
+  name: 'Alice',
+  email: 'alice@example.com'
+};
+
+user.id = 2; // Ошибка: свойство id доступно только для чтения
+```</code></pre>
+
+<p><strong>4. Pick</strong></p>
+
+<p>Создает тип с набором свойств<strong> `K` </strong>из типа<strong> `T`</strong>.</p>
+
+<pre>
+<code>```typescript
+interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+const user: Pick&lt;User, 'id' | 'name'&gt; = {
+  id: 1,
+  name: 'Alice'
+}; // Только свойства id и name
+```</code></pre>
+
+<p><strong>5. Omit</strong></p>
+
+<p>Создает тип, исключающий свойства<strong> `K`</strong> из типа<strong> `T`</strong>.</p>
+
+<pre>
+<code>```typescript
+interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+const user: Omit&lt;User, 'email'&gt; = {
+  id: 1,
+  name: 'Alice'
+}; // Все свойства, кроме email
+```</code></pre>
+
+<p><strong>6. Record</strong></p>
+
+<p>Создает тип объекта, ключи которого из<strong> `K`</strong>, а значения типа<strong> `T`</strong>.</p>
+
+<pre>
+<code>```typescript
+type Roles = 'admin' | 'user' | 'guest';
+
+const roles: Record&lt;Roles, string&gt; = {
+  admin: 'Admin User',
+  user: 'Regular User',
+  guest: 'Guest User'
+};
+```</code></pre>
+
+<p><strong>7. Exclude</strong></p>
+
+<p>Создает тип, исключая из<strong> `T` </strong>те типы, которые находятся в<strong> `U`</strong>.</p>
+
+<pre>
+<code>```typescript
+type T = 'a' | 'b' | 'c';
+type U = 'a';
+
+type Result = Exclude&lt;T, U&gt;; // 'b' | 'c'
+```</code></pre>
+
+<p><strong>8. Extract</strong></p>
+
+<p>Создает тип, включающий только те типы из <strong>`T`</strong>, которые также находятся в<strong> `U`</strong>.</p>
+
+<pre>
+<code>```typescript
+type T = 'a' | 'b' | 'c';
+type U = 'a' | 'c';
+
+type Result = Extract&lt;T, U&gt;; // 'a' | 'c'
+```</code></pre>
+
+<p><strong>9. NonNullable</strong></p>
+
+<p>Исключает <strong>`null`</strong> и <strong>`undefined` </strong>из типа<strong> `T`</strong>.</p>
+
+<pre>
+<code>```typescript
+type T = string | number | null | undefined;
+
+type NonNullableT = NonNullable&lt;T&gt;; // string | number
+```</code></pre>
+
+<p>10. ReturnType</p>
+
+<p>Получает тип возвращаемого значения функции<strong> `T`</strong>.</p>
+
+<pre>
+<code>```typescript
+function getUser() {
+  return { id: 1, name: 'Alice' };
+}
+
+type User = ReturnType&lt;typeof getUser&gt;; // { id: number, name: string }
+```</code></pre>
+
+<p>Утилити типы помогают манипулировать типами, делая их более гибкими и безопасными. Они позволяют изменять, расширять, ограничивать и комбинировать типы. Вот основные утилити типы и их примеры:</p>
+
+<p>Основные утилити&nbsp;<strong>1. Partial: </strong>Делает все свойства типа необязательными.</p>
+
+<pre>
+<code>   ```typescript
+   interface User {
+     id: number;
+     name: string;
+     email: string;
+   }
+
+   const updateUser = (id: number, userUpdates: Partial&lt;User&gt;) =&gt; {
+     // Обновление пользователя
+   };
+
+   updateUser(1, { name: 'Alice' }); // Можно передать только часть свойств
+   ```</code></pre>
+
+<p><strong>2. Required: </strong>Делает все свойства типа обязательными.</p>
+
+<pre>
+<code>   ```typescript
+   interface User {
+     id?: number;
+     name?: string;
+     email?: string;
+   }
+
+   const user: Required&lt;User&gt; = {
+     id: 1,
+     name: 'Alice',
+     email: 'alice@example.com'
+   }; // Все свойства должны быть указаны
+   ```</code></pre>
+
+<p><strong>3. Readonly: </strong>Делает все свойства типа только для чтения.</p>
+
+<pre>
+<code>   ```typescript
+   interface User {
+     id: number;
+     name: string;
+     email: string;
+   }
+
+   const user: Readonly&lt;User&gt; = {
+     id: 1,
+     name: 'Alice',
+     email: 'alice@example.com'
+   };
+
+   user.id = 2; // Ошибка: свойство id доступно только для чтения
+   ```</code></pre>
+
+<p><strong>4. Pick:</strong> Создает тип с набором свойств из указанного типа.</p>
+
+<pre>
+<code>   ```typescript
+   interface User {
+     id: number;
+     name: string;
+     email: string;
+   }
+
+   const user: Pick&lt;User, 'id' | 'name'&gt; = {
+     id: 1,
+     name: 'Alice'
+   }; // Только свойства id и name
+   ```</code></pre>
+
+<p><strong>5. Omit: </strong>Создает тип, исключающий указанные свойства из типа.</p>
+
+<pre>
+<code>   ```typescript
+   interface User {
+     id: number;
+     name: string;
+     email: string;
+   }
+
+   const user: Omit&lt;User, 'email'&gt; = {
+     id: 1,
+     name: 'Alice'
+   }; // Все свойства, кроме email
+   ```</code></pre>
+
+<p><strong>6. Record:</strong> Создает тип объекта с ключами из одного типа и значениями другого типа.</p>
+
+<pre>
+<code>   ```typescript
+   type Roles = 'admin' | 'user' | 'guest';
+
+   const roles: Record&lt;Roles, string&gt; = {
+     admin: 'Admin User',
+     user: 'Regular User',
+     guest: 'Guest User'
+   };
+   ```</code></pre>
+
+<p><strong>7. Exclude: </strong>Исключает из типа те типы, которые находятся в другом типе.</p>
+
+<pre>
+<code>   ```typescript
+   type T = 'a' | 'b' | 'c';
+   type U = 'a';
+
+   type Result = Exclude&lt;T, U&gt;; // 'b' | 'c'
+   ```</code></pre>
+
+<p><strong>8. Extract: </strong>Включает только те типы, которые находятся в обоих типах.</p>
+
+<pre>
+<code>   ```typescript
+   type T = 'a' | 'b' | 'c';
+   type U = 'a' | 'c';
+
+   type Result = Extract&lt;T, U&gt;; // 'a' | 'c'
+   ```</code></pre>
+
+<p><strong>9. NonNullable: </strong>Исключает <strong>`null` </strong>и <strong>`undefined` </strong>из типа.</p>
+
+<pre>
+<code>   ```typescript
+   type T = string | number | null | undefined;
+
+   type NonNullableT = NonNullable&lt;T&gt;; // string | number
+   ```</code></pre>
+
+<p><strong>10. ReturnType:</strong> Получает тип возвращаемого значения функции.</p>
+
+<pre>
+<code>   ```typescript
+   function getUser() {
+     return { id: 1, name: 'Alice' };
+   }
+
+   type User = ReturnType&lt;typeof getUser&gt;; // { id: number, name: string }
+   ```</code></pre>
+
+<p><u>Утилити типы</u> &mdash; это встроенные типы, которые позволяют легко изменять, расширять и комбинировать другие типы. Они делают код более гибким, безопасным и удобным для поддержки.</p></p>
+                        
+                        <p class="card-text"><small class="text-muted">June 1, 2024, easyoffer</small></p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+
+<!--            <h2 class="mb-3 mt-5 fs-5" >Добавить ответ:</h2>-->
+
+<!--            <div class="form-error"></div>-->
+<!--            <form class="row g-3" action = "" method="post">-->
+<!--                    <input type="hidden" name="csrfmiddlewaretoken" value="FqTHZ3VJt3R2IAthT0r8evealBeJYmW40BMTMuk3Sx3inlFhOu3pv5pNyLVFulLl">-->
+<!--                  <div class="col-md-4">-->
+<!--                    <label for="id_author" class="form-label">Автор/Источник:</label>-->
+<!--                     <input type="text" name="author" class="form-control" maxlength="50" required id="id_author">-->
+<!--                  </div>-->
+<!--                  <div class="col-md-4">-->
+<!--                    <label for="id_url" class="form-label">Ссылка(не обяз.):</label>-->
+<!--                    <input type="url" name="url" class="form-control" maxlength="200" id="id_url">-->
+<!--                  </div>-->
+<!--                  <div>-->
+<!--                    <label for="id_text" class="form-label"></label>-->
+<!--                    <div class="django-ckeditor-widget" data-field-id="id_text" style="display: inline-block;">
+    <textarea name="text" cols="40" rows="10" required id="id_text" data-processed="0" data-config="{&quot;skin&quot;: &quot;moono-lisa&quot;, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]], &quot;toolbar&quot;: &quot;Custom&quot;, &quot;height&quot;: 291, &quot;width&quot;: &quot;550px&quot;, &quot;filebrowserWindowWidth&quot;: 940, &quot;filebrowserWindowHeight&quot;: 725, &quot;toolbar_Custom&quot;: [[&quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;], [&quot;NumberedList&quot;, &quot;BulletedList&quot;], [&quot;Link&quot;, &quot;Unlink&quot;], [&quot;Image&quot;, &quot;CodeSnippet&quot;]], &quot;extraPlugins&quot;: &quot;codesnippet&quot;, &quot;language&quot;: &quot;en-us&quot;}" data-external-plugin-resources="[]" data-id="id_text" data-type="ckeditortype"></textarea>
+</div>-->
+<!--                  </div>-->
+<!--                  <div class="col-12">-->
+<!--                    <button class="btn btn-primary btn-sm" type="submit">Добавить ответ</button>-->
+<!--                  </div>-->
+<!--            </form>-->
+        </div>
+        <div class="col-12 col-sm-4">
+            <h2 class="mb-3 mt-5 fs-5" >Примеры ответов:</h2>
+            <ul class="list-group list-group-flush mb-3">
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/VzorPrTjUII?t=2295" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Middle за год? Собеседование #3 fron…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/ZEKcJgVI-YM?t=2810" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Талант в 18 лет? Собеседование #2 fr…</a></small></li>
+                
+            </ul>
+<!--            <button type="button" class="btn btn-primary btn-sm " data-bs-toggle="modal" data-bs-target="#VideoAnswerModal">-->
+<!--              Добавить ссылку-->
+<!--            </button>-->
+<!--            <h2 class="mb-3 mt-5 fs-5">Доп. материалы:</h2>-->
+<!--            <ul class="list-group list-group-flush mb-3">-->
+<!--                -->
+<!--            </ul>-->
+<!--            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#ExtraContentModal">-->
+<!--              Добавить ссылку-->
+<!--            </button>-->
+        </div>
+    </div>
+
+
+
+    <!-- ExtraContentModal -->
+    <div class="modal fade" id="ExtraContentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Добавить ссылку на доп. матераил</h1>
+          </div>
+          <div class="modal-body">
+               <form action="1843.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="FqTHZ3VJt3R2IAthT0r8evealBeJYmW40BMTMuk3Sx3inlFhOu3pv5pNyLVFulLl">
+                      <div class="mb-3">
+                        <label for="id_content-title" class="col-form-label">Название: </label>
+                        <input type="text" name="content-title" class="form-control" maxlength="255" required id="id_content-title">
+                      </div>
+                      <div class="mb-3">
+                        <label for="id_content-url" class="col-form-label">Ссылка: </label>
+                        <input type="url" name="content-url" class="form-control" required id="id_content-url">
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить</button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VideoAnswerModal -->
+    <div class="modal fade" id="VideoAnswerModal" tabindex="-1" aria-labelledby="VideoAnswerModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="VideoAnswerModalLabel">Добавить ответ из mock-собесов</h1>
+          </div>
+          <div class="modal-body">
+                <form action="1843.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="FqTHZ3VJt3R2IAthT0r8evealBeJYmW40BMTMuk3Sx3inlFhOu3pv5pNyLVFulLl">
+                      <div class="mb-3">
+                        <label for="id_video-title" class="col-form-label">Название видео: </label>
+                        <input type="text" name="video-title" class="form-control" maxlength="255" required id="id_video-title">
+                      </div>
+                      <div class="mb-3">
+                        <label for="id_video-url" class="col-form-label">Ссылка на момент ответа: </label>
+                        <input type="url" name="video-url" class="form-control" required id="id_video-url">
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить</button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Вопросы с собеседований на Python Developer
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <h1 class="mt-5 fs-3"> Вопросы с собеседований на Python Developer</h1>
+    
+    <p class="fs-5 mt-3 mb-5 fs-6">Вопросов всего: 1096.
+<!--        Вы можете-->
+<!--        <a type="button" class="link" data-bs-toggle="modal" data-bs-target="#exampleModal"> Добавить вопрос </a>-->
+    </p>
+    
+    <div class="row align-items-start">
+            <div class="col-12 col-md-2 d-flex flex-column align-items-start">
+                <p class="">Фильтр:</p>
+                <form action="python_developer@page=1.html">
+                    <select class="form-select" aria-label="Default select example" name="tag">
+                        
+                            <option selected>Все</option>
+                        
+                          <option value="Все">Все</option>
+                        
+                          <option value="Нет">Нет</option>
+                        
+                          <option value="HRский">HRский</option>
+                        
+                          <option value="Тестирование">Тестирование</option>
+                        
+                          <option value="ООП">ООП</option>
+                        
+                          <option value="Базы данных">Базы данных</option>
+                        
+                          <option value="SQL">SQL</option>
+                        
+                          <option value="Tools">Tools</option>
+                        
+                          <option value="SDLC">SDLC</option>
+                        
+                          <option value="REST &amp; SOAP">REST &amp; SOAP</option>
+                        
+                          <option value="Python">Python</option>
+                        
+                          <option value="ORM">ORM</option>
+                        
+                          <option value="HTTP / API">HTTP / API</option>
+                        
+                          <option value="GIL">GIL</option>
+                        
+                          <option value="Flask">Flask</option>
+                        
+                          <option value="FastAPI">FastAPI</option>
+                        
+                          <option value="Django">Django</option>
+                        
+                          <option value="Best Practices">Best Practices</option>
+                        
+                          <option value="Языки">Языки</option>
+                        
+                          <option value="Фреймворки">Фреймворки</option>
+                        
+                          <option value="Модули / Пакеты">Модули / Пакеты</option>
+                        
+                          <option value="Веб-разработка">Веб-разработка</option>
+                        
+                          <option value="Асинхронность">Асинхронность</option>
+                        
+                          <option value="Алгоритмы, структуры">Алгоритмы, структуры</option>
+                        
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-primary mt-3">Выбрать</button>
+                </form>
+            </div>
+            
+            <div class="col">
+                <form class="d-flex mb-3" role="search" method="get" action="python_developer@page=1.html">
+                    <input type="text" name="search_query" class="form-control me-2" placeholder="Поиск вопроса" aria-label="Search" id="id_search_query">
+                    <button class="btn btn-outline-success" type="submit">Поиск</button>
+                </form>
+                
+                <table class="table table-sm table-hover">
+                    <thead>
+                        <tr>
+                            <th>Шанс</th>
+                            <th>Вопрос</th>
+                            <th class="d-none d-sm-table-cell">Тег</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">93%</td>
+                            
+                            <td><a href="../question/593.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о себе</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HRский</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">83%</td>
+                            
+                            <td><a href="../question/594.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о своем опыте</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HRский</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">83%</td>
+                            
+                            <td><a href="../question/779.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть типы данных в Python</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">66%</td>
+                            
+                            <td><a href="../question/595.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о своих лучших проектах</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HRский</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">53%</td>
+                            
+                            <td><a href="../question/596.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что сподвигло стать Python разработчиком</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HRский</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">43%</td>
+                            
+                            <td><a href="../question/780.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое контекстный менеджер</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">43%</td>
+                            
+                            <td><a href="../question/597.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие у тебя планы на развитие на ближайшее будущее</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HRский</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">40%</td>
+                            
+                            <td><a href="../question/781.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница между итератором и генератором</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">36%</td>
+                            
+                            <td><a href="../question/332.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое SOLID</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">36%</td>
+                            
+                            <td><a href="../question/782.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое декораторы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">33%</td>
+                            
+                            <td><a href="../question/323.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие базы данных использовал в работе</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Базы данных</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">33%</td>
+                            
+                            <td><a href="../question/783.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем init() отличается от new()</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">33%</td>
+                            
+                            <td><a href="../question/784.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое генератор</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">30%</td>
+                            
+                            <td><a href="../question/322.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое индексы и как они работают</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Базы данных</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">30%</td>
+                            
+                            <td><a href="../question/333.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие знаешь принципы ООП</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">30%</td>
+                            
+                            <td><a href="../question/785.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое итератор</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">26%</td>
+                            
+                            <td><a href="../question/334.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое полиморфизм</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">26%</td>
+                            
+                            <td><a href="../question/786.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что может быть ключем в словаре</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">26%</td>
+                            
+                            <td><a href="../question/335.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про ООП в программировании</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">23%</td>
+                            
+                            <td><a href="../question/788.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое лямбда-функции</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">23%</td>
+                            
+                            <td><a href="../question/337.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь о наследовании</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">23%</td>
+                            
+                            <td><a href="../question/787.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое MRO</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">23%</td>
+                            
+                            <td><a href="../question/336.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое миксин</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">20%</td>
+                            
+                            <td><a href="../question/466.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь про декоратор Middleware</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Фреймворки</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">20%</td>
+                            
+                            <td><a href="../question/686.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем суть принципа REST</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HTTP / API</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">20%</td>
+                            
+                            <td><a href="../question/338.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о инкапсуляции</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">20%</td>
+                            
+                            <td><a href="../question/321.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Acid в SQL</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Базы данных</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">20%</td>
+                            
+                            <td><a href="../question/489.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего нужен PEP8</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Best Practices</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">20%</td>
+                            
+                            <td><a href="../question/226.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое асинхронность</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Асинхронность</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/792.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое магические методы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/794.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем отличие списка от кортежа</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/793.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что относится к изменяемым типам данных и к неизменяемым</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/789.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое list comprehension</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/790.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое метаклассы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="https://easyoffer.ru/question/791" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что делает декоратор property</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/227.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем отличие асинхронности, threading&#x27;га и мультипроцессинга</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Асинхронность</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">13%</td>
+                            
+                            <td><a href="../question/797.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница сравнение через is и &quot;==&quot;</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">13%</td>
+                            
+                            <td><a href="../question/795.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Python компилируемый или интерпретируемый</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">13%</td>
+                            
+                            <td><a href="../question/598.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие области в профессиональной деятельности у тебя развиты слабо</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HRский</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">13%</td>
+                            
+                            <td><a href="../question/599.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о сложностях с которыми столкнулась во время обучения</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HRский</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">13%</td>
+                            
+                            <td><a href="../question/796.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое slots</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">13%</td>
+                            
+                            <td><a href="../question/339.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь про singleton</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">13%</td>
+                            
+                            <td><a href="../question/687.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие основные HTTP методы знаешь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HTTP / API</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">13%</td>
+                            
+                            <td><a href="../question/767.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь про ORM</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ORM</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">13%</td>
+                            
+                            <td><a href="../question/228.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Мультипроцессинг что это</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Асинхронность</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">13%</td>
+                            
+                            <td><a href="../question/229.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Threading что это</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Асинхронность</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/609.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как видишь свою идеальную команду</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HRский</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/605.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Был ли у тебя опыт работы в команде</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HRский</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/606.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как справлялся с сложностями в команде</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HRский</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/603.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какое направление разработки интересует</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HRский</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/600.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как себя оцениваете как разработчика</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HRский</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/604.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">расскажите с какими проблемами сталкивались в своих проектах</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HRский</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/178.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое BigO notation</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/40.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие фреймворки/библиотеки в основном используешь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/800.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое GIL</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/799.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что происходит в момент итерации по списку</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/601.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему решил заняться программированием</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HRский</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/602.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о ситуации, когда приходилось делегировать поставленные задачи</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HRский</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/801.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Разница между одинарным и двойным подчеркиванием Python</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/798.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличаются декораторы classmethod и staticmethod</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/607.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Кем себя видишь через два года при работе в фуллтайм</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HRский</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/608.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему выбрал направление бекэнд</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HRский</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/802.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как в функцию передаются аргументы, по ссылке или по значению</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/467.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работает middleware</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Фреймворки</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/43.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Docker</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/803.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь про два основных типа данных Python</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/180.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что быстрее, словарь или список</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/179.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь о сложности алгоритма</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/340.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем нужен метод super в классе</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/341.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое абстрактные классы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/45.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Отличия rebase от merge</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/804.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие магические методы и для чего используются</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Python</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/319.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что тебе известно про нереляционные базы данных</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Базы данных</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/320.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое транзакция</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Базы данных</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/689.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть коды ответов HTTP</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HTTP / API</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/688.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего нужен сериализатор</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HTTP / API</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/690.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие типы HTTP запросов знаешь В чем их отличия</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HTTP / API</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/490.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие паттерны программирования знаешь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Best Practices</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/230.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое корутина в Python</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Асинхронность</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">10%</td>
+                            
+                            <td><a href="../question/41.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое git</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/64.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего используют redis в проектах</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/610.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что ожидаешь от будущей работы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HRский</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/71.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое cherry pick</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/611.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Был ли опыт в написании личных проектов</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HRский</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/579.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем хорош FastAPI</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">FastAPI</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/540.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как реализован many to many в Django</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Django</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/537.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое querySet() в Django</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Django</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/536.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Назови основные сущности в Django</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Django</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/538.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какую бы связь использовал для расширения стандартного юзера</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Django</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/495.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь о принципах программирования DRY</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Best Practices</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/51.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое git flow</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/492.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как распределяешь свое рабочее время</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Best Practices</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/534.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Объясни значение Model View Teamplay (MVT)</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Django</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/539.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что означает querySet() ленивые</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Django</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/612.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что предпринимаешь если сталкиваешься с трудностями</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HRский</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/491.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Где можно хранить бизнес-логику приложения</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Best Practices</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/493.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что в твоем понимании значит правильный код</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Best Practices</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/494.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь о принципах программирования KISS</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Best Practices</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/535.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Объясни как происходит обработка HTTP запросов на Django</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Django</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/349.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как абстрактный класс реализуется в Python</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                
+                <nav>
+                  <ul class="pagination pagination-sm">
+                      
+                      
+                      <li class="page-item active" aria-current="page">
+                      <span class="page-link">1</span>
+                      </li>
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="python_developer@page=2.html">2</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="python_developer@page=3.html">3</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="python_developer@page=4.html">4</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="python_developer@page=5.html">5</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="python_developer@page=6.html">6</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="python_developer@page=7.html">7</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="python_developer@page=8.html">8</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="python_developer@page=9.html">9</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="python_developer@page=10.html">10</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="python_developer@page=11.html">11</a>
+                              </li>
+                        
+                      
+                      
+                  </ul>
+                </nav>
+                
+            </div>
+            
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Добавление вопроса</h5>
+            <button type="button" class="close btn" data-bs-dismiss="modal" aria-label="Close">
+              <span  aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <form action="python_developer@page=1.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="TM6a4xrK5wNZXstNL999xM07WkdlQif5eXZmRYQ4u0ZfCdFNGDLqOmbK9uUhmh4m">
+                    <div class="mb-3">
+                           <p class="fs-5">Вы добавляете вопрос для Python Developer</p>
+                        <label for="id_title" class="col-form-label">Вопрос:</label>
+                        <input type="text" name="title" class="form-control" maxlength="255" required id="id_title">
+                      </div>
+                    <div class="mb-3">
+                        <label for="id_tag" class="col-form-label">Тег:</label>
+                        <select name="tag" class="form-select">
+                            
+                                <option value="1">Нет</option>
+                            
+                                <option value="12">HRский</option>
+                            
+                                <option value="14">Тестирование</option>
+                            
+                                <option value="16">ООП</option>
+                            
+                                <option value="18">Базы данных</option>
+                            
+                                <option value="21">SQL</option>
+                            
+                                <option value="22">Tools</option>
+                            
+                                <option value="23">SDLC</option>
+                            
+                                <option value="24">REST &amp; SOAP</option>
+                            
+                                <option value="25">Python</option>
+                            
+                                <option value="26">ORM</option>
+                            
+                                <option value="27">HTTP / API</option>
+                            
+                                <option value="28">GIL</option>
+                            
+                                <option value="29">Flask</option>
+                            
+                                <option value="30">FastAPI</option>
+                            
+                                <option value="31">Django</option>
+                            
+                                <option value="32">Best Practices</option>
+                            
+                                <option value="33">Языки</option>
+                            
+                                <option value="34">Фреймворки</option>
+                            
+                                <option value="36">Модули / Пакеты</option>
+                            
+                                <option value="37">Веб-разработка</option>
+                            
+                                <option value="38">Асинхронность</option>
+                            
+                                <option value="39">Алгоритмы, структуры</option>
+                            
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить вопрос </button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

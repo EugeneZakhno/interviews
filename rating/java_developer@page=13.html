@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Вопросы с собеседований на Java Developer
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <h1 class="mt-5 fs-3"> Вопросы с собеседований на Java Developer</h1>
+    
+    <p class="fs-5 mt-3 mb-5 fs-6">Вопросов всего: 1715.
+<!--        Вы можете-->
+<!--        <a type="button" class="link" data-bs-toggle="modal" data-bs-target="#exampleModal"> Добавить вопрос </a>-->
+    </p>
+    
+    <div class="row align-items-start">
+            <div class="col-12 col-md-2 d-flex flex-column align-items-start">
+                <p class="">Фильтр:</p>
+                <form action="java_developer@page=13.html">
+                    <select class="form-select" aria-label="Default select example" name="tag">
+                        
+                            <option selected>Все</option>
+                        
+                          <option value="Все">Все</option>
+                        
+                          <option value="Нет">Нет</option>
+                        
+                          <option value="Общие">Общие</option>
+                        
+                          <option value="Паттерны">Паттерны</option>
+                        
+                          <option value="Git">Git</option>
+                        
+                          <option value="Тестирование">Тестирование</option>
+                        
+                          <option value="ООП">ООП</option>
+                        
+                          <option value="SQL">SQL</option>
+                        
+                          <option value="Tools">Tools</option>
+                        
+                          <option value="Фреймворки">Фреймворки</option>
+                        
+                          <option value="XML">XML</option>
+                        
+                          <option value="UML">UML</option>
+                        
+                          <option value="Spring">Spring</option>
+                        
+                          <option value="Servlets">Servlets</option>
+                        
+                          <option value="JVM">JVM</option>
+                        
+                          <option value="JDBC">JDBC</option>
+                        
+                          <option value="Java Core">Java Core</option>
+                        
+                          <option value="Java Collections">Java Collections</option>
+                        
+                          <option value="Java 8">Java 8</option>
+                        
+                          <option value="Hibernate">Hibernate</option>
+                        
+                          <option value="Шаблоны проектирования">Шаблоны проектирования</option>
+                        
+                          <option value="Сериализация">Сериализация</option>
+                        
+                          <option value="Потоки">Потоки</option>
+                        
+                          <option value="WEB">WEB</option>
+                        
+                          <option value="HTML">HTML</option>
+                        
+                          <option value="CSS">CSS</option>
+                        
+                          <option value="Многопоточность">Многопоточность</option>
+                        
+                          <option value="Журналирование">Журналирование</option>
+                        
+                          <option value="Базы данных">Базы данных</option>
+                        
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-primary mt-3">Выбрать</button>
+                </form>
+            </div>
+            
+            <div class="col">
+                <form class="d-flex mb-3" role="search" method="get" action="java_developer@page=13.html">
+                    <input type="text" name="search_query" class="form-control me-2" placeholder="Поиск вопроса" aria-label="Search" id="id_search_query">
+                    <button class="btn btn-outline-success" type="submit">Поиск</button>
+                </form>
+                
+                <table class="table table-sm table-hover">
+                    <thead>
+                        <tr>
+                            <th>Шанс</th>
+                            <th>Вопрос</th>
+                            <th class="d-none d-sm-table-cell">Тег</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10177.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какое эволюционное развитие получили интерфейсы-маркеры и что их заменило</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10178.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">С какой целью применяется сериализация</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10179.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое принцип PECS и как он используется</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10180.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем могут понадобится на практике immutable объекты</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10181.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое обработка ошибок</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10182.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что делать если вылетел Error, можем ли мы его поймать и как-то обработать</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10183.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Известно, что при вызове метода А будет выдаваться исключение, твои действия</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10184.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как в однопоточной программе получить cant convert modification exception при работе с коллекцией</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10185.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Стримы, какие есть операции и типы операций</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10186.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие функциональные интерфейсы знаешь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10187.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличаются default-методы от static-методов</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10188.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие знаешь типы баз данных</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10189.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем преимущества и недостатки типов баз данных</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10190.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое нормализация данных в реляционной БД</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10191.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о синтаксисе создания таблицы в реляционной БД</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10192.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как изменить таблицу в реляционной БД</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10193.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Знаешь что такое план запроса в реляционной БД</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10194.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работает Spring &quot;под капотом&quot;</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10195.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем нужен hibernate</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10196.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что лучше использовать JOIN или подзапросы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10197.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего используется оператор ORDER BY</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10198.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как GROUP BY обрабатывает значение NULL</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10199.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Перечисли основные агрегатные функции</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10200.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница между COUNT(*) и COUNT({column})</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10201.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего используются операторы IN, BETWEEN, LIKE</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10202.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего применяется ключевое слово UNION</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10203.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие отличия между ограничениями PRIMARY и UNIQUE</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10204.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Может ли значение в столбце, на который наложено ограничение FOREIGN KEY, равняться NULL</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10205.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как создать индекс</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10206.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем отличие между операторами DELETE и TRUNCATE</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10207.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Опиши разницу типов данных DATETIME и TIMESTAMP</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10208.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какое назначение у операторов PIVOT и UNPIVOT в Transact-SQL</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10209.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи об основных функциях ранжирования в Transact-SQL</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10210.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего используются операторы INTERSECT, EXCEPT в Transact-SQL</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10211.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое «анонимные классы», где они применяются</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10212.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Для чего нужна денормализация</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Базы данных</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10213.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Criteria API</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Базы данных</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10214.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое HQL</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Базы данных</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10215.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Верно ли утверждение, что примитивные типы данных всегда хранятся в стеке, а экземпляры ссылочных типов данных в куче</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10216.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про приведение типов, что такое понижение и повышение типа</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10217.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Когда в приложении может быть выброшено исключение ClassCastException</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10218.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое литералы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10219.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему String неизменяемый и финализированный класс</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10220.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему char[] предпочтительнее String для хранения пароля</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10221.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему строка является популярным ключом в HashMap в Java</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10222.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Можно ли использовать строки в конструкции switch</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10223.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему метод clone() объявлен в классе Object, а не в интерфейсе Cloneable</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10224.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое «конструктор по умолчанию»</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10225.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличаются конструкторы по-умолчанию, копирования и конструктор с параметрами</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10226.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Где и как можешь использовать закрытый конструктор</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10227.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про классы-загрузчики и про динамическую загрузку классов</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10228.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Equals() порождает отношение эквивалентности, какими свойствами обладает такое отношение</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10229.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Каким образом реализованы методы hashCode() и equals() в классе Object</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10230.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Есть ли какие-либо рекомендации о том, какие поля следует использовать при подсчете hashCode()</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10231.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой оператор позволяет принудительно выбросить исключение</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10232.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">О чем говорит ключевое слово throws</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10233.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как написать собственное («пользовательское») исключение</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10234.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие существуют unchecked exception</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10235.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Error</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10236.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Может ли один блок catch отлавливать сразу несколько исключений</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10237.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Всегда ли исполняется блок finally</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10238.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Существуют ли ситуации, когда блок finally не будет выполнен</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10239.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Может ли метод main выбросить исключение во вне и если да, то где будет происходить обработка данного исключения</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10240.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое «интернационализация»</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10241.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое «локализация»</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10242.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Отличия SoftReference от WeakReference</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10243.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как написать immutable класс</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10244.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Промежуточные операции в Stream API</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10245.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Жизненный цикл сервлетов</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10246.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое default method в Interface</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10247.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Использование оператора instanceof</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10248.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Всегда ли добавление в ArrayList имеет сложность O(1)</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10249.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Всегда ли в Java существовали дженерики</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10250.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое wildcards</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10251.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Назови основные интерфейсы JCF и их реализации</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10252.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница между классами java.util.Collection и java.util.Collections</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10253.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Приведите примеры итераторов реализующих поведение fail-safe</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10254.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем различаются Enumeration и Iterator</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10255.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как между собой связаны Iterable и Iterator</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10256.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как между собой связаны Iterable, Iterator и «for-each»</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10257.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Сравни Iterator и ListIterator.</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10258.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что произойдет при вызове Iterator.next() без предварительного вызова Iterator.hasNext()</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10259.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как поведёт себя коллекция, если вызвать iterator.remove()</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10260.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как поведёт себя уже инстанциированный итератор для collection, если вызвать collection.remove()</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10261.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как избежать ConcurrentModificationException во время перебора коллекции</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10262.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая коллекция реализует дисциплину обслуживания FIFO</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10263.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая коллекция реализует дисциплину обслуживания FILO</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10264.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем добавили ArrayList, если уже был Vector</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10265.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что работает быстрее ArrayList или LinkedList</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10266.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какое худшее время работы метода contains() для элемента, который есть в LinkedList</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10267.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какое худшее время работы метода contains() для элемента, который есть в ArrayList</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10268.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какое худшее время работы метода add() для LinkedList</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10269.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какое худшее время работы метода add() для ArrayList</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10270.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как происходит удаление элементов из ArrayList, как меняется в этом случае размер ArrayList</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10271.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Предложи эффективный алгоритм удаления нескольких рядом стоящих элементов из середины списка, реализуемого ArrayList</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10272.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Сколько необходимо дополнительной памяти при вызове ArrayList.add()</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10273.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Сколько выделяется дополнительно памяти при вызове LinkedList.add()</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10274.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Оцени количество памяти на хранение одного примитива типа byte в LinkedList</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10275.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Оцени количество памяти на хранение одного примитива типа byte в ArrayList</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">6%</td>
+                            
+                            <td><a href="../question/10276.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Сравни интерфейсы Queue и Deque</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                
+                <nav>
+                  <ul class="pagination pagination-sm">
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=1.html">1</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=2.html">2</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=3.html">3</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=4.html">4</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=5.html">5</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=6.html">6</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=7.html">7</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=8.html">8</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=9.html">9</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=10.html">10</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=11.html">11</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=12.html">12</a>
+                              </li>
+                        
+                      
+                      
+                      
+                      <li class="page-item active" aria-current="page">
+                      <span class="page-link">13</span>
+                      </li>
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=14.html">14</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=15.html">15</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=16.html">16</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=17.html">17</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=18.html">18</a>
+                              </li>
+                        
+                      
+                      
+                  </ul>
+                </nav>
+                
+            </div>
+            
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Добавление вопроса</h5>
+            <button type="button" class="close btn" data-bs-dismiss="modal" aria-label="Close">
+              <span  aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <form action="java_developer@page=13.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="7bvviQ4MuTmmnE3rjZnRGLixrAojFEvrsmoH5ht6TnyC2pfretZ8XltaEK5fbDkI">
+                    <div class="mb-3">
+                           <p class="fs-5">Вы добавляете вопрос для Java Developer</p>
+                        <label for="id_title" class="col-form-label">Вопрос:</label>
+                        <input type="text" name="title" class="form-control" maxlength="255" required id="id_title">
+                      </div>
+                    <div class="mb-3">
+                        <label for="id_tag" class="col-form-label">Тег:</label>
+                        <select name="tag" class="form-select">
+                            
+                                <option value="1">Нет</option>
+                            
+                                <option value="9">Общие</option>
+                            
+                                <option value="11">Паттерны</option>
+                            
+                                <option value="13">Git</option>
+                            
+                                <option value="14">Тестирование</option>
+                            
+                                <option value="16">ООП</option>
+                            
+                                <option value="21">SQL</option>
+                            
+                                <option value="22">Tools</option>
+                            
+                                <option value="34">Фреймворки</option>
+                            
+                                <option value="40">XML</option>
+                            
+                                <option value="41">UML</option>
+                            
+                                <option value="42">Spring</option>
+                            
+                                <option value="43">Servlets</option>
+                            
+                                <option value="44">JVM</option>
+                            
+                                <option value="45">JDBC</option>
+                            
+                                <option value="46">Java Core</option>
+                            
+                                <option value="47">Java Collections</option>
+                            
+                                <option value="48">Java 8</option>
+                            
+                                <option value="49">Hibernate</option>
+                            
+                                <option value="50">Шаблоны проектирования</option>
+                            
+                                <option value="51">Сериализация</option>
+                            
+                                <option value="52">Потоки</option>
+                            
+                                <option value="53">WEB</option>
+                            
+                                <option value="54">HTML</option>
+                            
+                                <option value="55">CSS</option>
+                            
+                                <option value="56">Многопоточность</option>
+                            
+                                <option value="57">Журналирование</option>
+                            
+                                <option value="18">Базы данных</option>
+                            
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить вопрос </button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

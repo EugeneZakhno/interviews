@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Что такое адаптивная верстка
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <div class="row">
+        <div class="col">
+            <h1 class="mt-5 mb-5 fs-3">Что такое адаптивная верстка</h1>
+            
+            <div class="row">
+                <div class="card mb-3 col" >
+                    <div class="card-body">
+                        <p class="card-text"><p>Адаптивная вёрстка (Adaptive Web Design) &mdash; это подход, который позволяет создавать веб-сайты, корректно отображающиеся и удобно используемые на устройствах с различными размерами экранов и разрешениями. Это достигается за счёт использования различных технологий и приёмов дизайна, включая гибкие сетки (flexible grids), медиазапросы (media queries), адаптивные изображения и другие.</p>
+
+<p><strong>Основные компоненты:</strong></p>
+
+<p>1. <em><strong>Гибкие сетки (Fluid Grids):</strong></em> Использование процентных значений для определения ширины элементов вместо фиксированных единиц. Это позволяет элементам масштабироваться в зависимости от размера экрана устройства.</p>
+
+<p>2. <em><strong>Медиазапросы (Media Queries):</strong></em> CSS-технология, которая позволяет применять различные стили в зависимости от характеристик устройства, таких как размер экрана, разрешение, ориентация (портретная или ландшафтная) и др. Медиазапросы позволяют создавать разные &quot;точки останова&quot; (breakpoints), при которых веб-сайт может изменять свой макет для оптимального отображения.</p>
+
+<p>3. <em><strong>Адаптивные изображения:</strong></em> Использование техник и технологий, позволяющих изображениям адаптироваться под разные размеры экранов и разрешения. Это может включать изменение размеров изображений, выбор разного качества изображений в зависимости от скорости соединения или использование элемента<strong> `&lt;picture&gt;`</strong> для определения разных источников изображений для разных условий.</p>
+
+<p>4. <em><strong>Флексибельные медиа:</strong></em> Кроме изображений, это также касается видео и других медиа-элементов, которые должны быть способны изменять свои размеры в соответствии с размером экрана для обеспечения лучшего пользовательского опыта.</p>
+
+<p><strong>Преимущества:</strong></p>
+
+<ul>
+	<li><em><strong>Улучшение пользовательского опыта: </strong></em>Адаптивный сайт удобно просматривать на любом устройстве, будь то компьютер, планшет или смартфон.</li>
+	<li><em><strong>SEO-оптимизация: </strong></em>Поисковые системы, включая Google, предпочитают адаптивные сайты, что может положительно сказаться на ранжировании.</li>
+	<li><em><strong>Экономия ресурсов:</strong></em> Вместо разработки отдельных версий сайта под разные устройства достаточно создать одну адаптивную версию.</li>
+	<li><em><strong>Упрощение поддержки:</strong></em> Управление одной версией сайта значительно упрощает его обновление и поддержку.</li>
+</ul>
+
+<p>Адаптивная вёрстка обеспечивает создание веб-сайтов, которые не только выглядят хорошо на экранах любого размера, но и предоставляют пользователям удобный и эффективный интерфейс взаимодействия, независимо от их устройства.</p></p>
+                        
+                        <p class="card-text"><small class="text-muted">Feb. 27, 2024, easyoffer</small></p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="card mb-3 col" >
+                    <div class="card-body">
+                        <p class="card-text"><p><u>Адаптивная верстка</u> &mdash; это метод создания веб-страниц, которые автоматически подстраиваются под различные размеры экранов и устройства, обеспечивая оптимальное отображение и удобство использования. Это означает, что один и тот же сайт будет хорошо выглядеть и функционировать как на настольных компьютерах с большими экранами, так и на планшетах и смартфонах с меньшими экранами.</p>
+
+<p>Основные техники и принципы адаптивной верстки включают:</p>
+
+<p><strong>1. Медиа-запросы (Media Queries):</strong></p>
+
+<ul>
+	<li>Это CSS-инструмент, который позволяет применять разные стили в зависимости от характеристик устройства, таких как ширина и высота экрана, ориентация и разрешение.</li>
+</ul>
+
+<pre>
+<code>    ```css
+    /* Стили по умолчанию для мобильных устройств */
+    body {
+        font-size: 16px;
+    }
+
+    /* Стили для планшетов */
+    @media (min-width: 768px) {
+        body {
+            font-size: 18px;
+        }
+    }
+
+    /* Стили для настольных компьютеров */
+    @media (min-width: 1024px) {
+        body {
+            font-size: 20px;
+        }
+    }
+    ```</code></pre>
+
+<p><strong>2. Гибкие макеты (Fluid Grids):</strong></p>
+
+<ul>
+	<li>Использование процентных значений для размеров элементов вместо фиксированных пикселей. Это позволяет элементам изменять размер в зависимости от размера экрана.</li>
+</ul>
+
+<pre>
+<code>    ```css
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .column {
+        float: left;
+        width: 50%;
+    }
+    ```</code></pre>
+
+<p><strong>3. Гибкие изображения (Flexible Images):</strong></p>
+
+<ul>
+	<li>Изображения, которые изменяют размер в зависимости от размеров родительского контейнера.</li>
+</ul>
+
+<pre>
+<code>    ```css
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    ```</code></pre>
+
+<p><strong>4. Использование фреймворков:</strong></p>
+
+<ul>
+	<li>Существуют популярные CSS-фреймворки, такие как Bootstrap и Foundation, которые предоставляют готовые решения для адаптивной верстки.</li>
+</ul>
+
+<pre>
+<code>    ```html
+    &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-md-6"&gt;Контент 1&lt;/div&gt;
+            &lt;div class="col-md-6"&gt;Контент 2&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    ```</code></pre>
+
+<p><strong>5. Мобильный подход (Mobile-First):</strong></p>
+
+<ul>
+	<li>Разработка сайта сначала для мобильных устройств, а затем добавление стилей для более крупных экранов. Это позволяет сосредоточиться на ключевом контенте и функциональности.</li>
+</ul>
+
+<pre>
+<code>    ```css
+    /* Стили для мобильных устройств */
+    body {
+        font-size: 16px;
+    }
+
+    /* Стили для более крупных экранов */
+    @media (min-width: 768px) {
+        body {
+            font-size: 18px;
+        }
+    }
+    ```</code></pre>
+
+<p><strong>Пример:</strong></p>
+
+<pre>
+<code>```html
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Адаптивная Верстка&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            padding: 0 15px;
+            margin: 0 auto;
+        }
+
+        .header, .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .sidebar, .content {
+            padding: 15px;
+        }
+
+        .sidebar {
+            background-color: #f4f4f4;
+            flex: 1 1 100%;
+        }
+
+        .content {
+            background-color: #fff;
+            flex: 2 1 100%;
+        }
+
+        @media (min-width: 768px) {
+            .sidebar {
+                flex: 1 1 25%;
+            }
+            .content {
+                flex: 2 1 75%;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="header"&gt;
+            &lt;h1&gt;Мой Вебсайт&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;div class="main"&gt;
+            &lt;div class="sidebar"&gt;
+                &lt;h2&gt;Сайдбар&lt;/h2&gt;
+                &lt;p&gt;Некоторый текст сайдбара...&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="content"&gt;
+                &lt;h2&gt;Контент&lt;/h2&gt;
+                &lt;p&gt;Основной контент страницы...&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="footer"&gt;
+            &lt;p&gt;Футер&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+```</code></pre>
+
+<p>Адаптивная верстка делает сайт удобным на всех устройствах, автоматически подстраивая его под разные размеры экранов. Это достигается с помощью медиа-запросов, гибких макетов и изображений, а также подхода &quot;mobile-first&quot;.</p></p>
+                        
+                        <p class="card-text"><small class="text-muted">May 27, 2024, easyoffer</small></p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+
+<!--            <h2 class="mb-3 mt-5 fs-5" >Добавить ответ:</h2>-->
+
+<!--            <div class="form-error"></div>-->
+<!--            <form class="row g-3" action = "" method="post">-->
+<!--                    <input type="hidden" name="csrfmiddlewaretoken" value="awAzqr4tjzN91xuIf0AcIdGbR81gSmOmvHtLdStNI3ZpGiGIauctZNRO4iIcolDD">-->
+<!--                  <div class="col-md-4">-->
+<!--                    <label for="id_author" class="form-label">Автор/Источник:</label>-->
+<!--                     <input type="text" name="author" class="form-control" maxlength="50" required id="id_author">-->
+<!--                  </div>-->
+<!--                  <div class="col-md-4">-->
+<!--                    <label for="id_url" class="form-label">Ссылка(не обяз.):</label>-->
+<!--                    <input type="url" name="url" class="form-control" maxlength="200" id="id_url">-->
+<!--                  </div>-->
+<!--                  <div>-->
+<!--                    <label for="id_text" class="form-label"></label>-->
+<!--                    <div class="django-ckeditor-widget" data-field-id="id_text" style="display: inline-block;">
+    <textarea name="text" cols="40" rows="10" required id="id_text" data-processed="0" data-config="{&quot;skin&quot;: &quot;moono-lisa&quot;, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]], &quot;toolbar&quot;: &quot;Custom&quot;, &quot;height&quot;: 291, &quot;width&quot;: &quot;550px&quot;, &quot;filebrowserWindowWidth&quot;: 940, &quot;filebrowserWindowHeight&quot;: 725, &quot;toolbar_Custom&quot;: [[&quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;], [&quot;NumberedList&quot;, &quot;BulletedList&quot;], [&quot;Link&quot;, &quot;Unlink&quot;], [&quot;Image&quot;, &quot;CodeSnippet&quot;]], &quot;extraPlugins&quot;: &quot;codesnippet&quot;, &quot;language&quot;: &quot;en-us&quot;}" data-external-plugin-resources="[]" data-id="id_text" data-type="ckeditortype"></textarea>
+</div>-->
+<!--                  </div>-->
+<!--                  <div class="col-12">-->
+<!--                    <button class="btn btn-primary btn-sm" type="submit">Добавить ответ</button>-->
+<!--                  </div>-->
+<!--            </form>-->
+        </div>
+        <div class="col-12 col-sm-4">
+            <h2 class="mb-3 mt-5 fs-5" >Примеры ответов:</h2>
+            <ul class="list-group list-group-flush mb-3">
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/4YRG6cMAASI?t=542" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>50 вопросов по CSS. Собеседование на…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/cRqBsepPgoI?t=1468" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Собеседование frontend junior+ разра…</a></small></li>
+                
+            </ul>
+<!--            <button type="button" class="btn btn-primary btn-sm " data-bs-toggle="modal" data-bs-target="#VideoAnswerModal">-->
+<!--              Добавить ссылку-->
+<!--            </button>-->
+<!--            <h2 class="mb-3 mt-5 fs-5">Доп. материалы:</h2>-->
+<!--            <ul class="list-group list-group-flush mb-3">-->
+<!--                -->
+<!--            </ul>-->
+<!--            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#ExtraContentModal">-->
+<!--              Добавить ссылку-->
+<!--            </button>-->
+        </div>
+    </div>
+
+
+
+    <!-- ExtraContentModal -->
+    <div class="modal fade" id="ExtraContentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Добавить ссылку на доп. матераил</h1>
+          </div>
+          <div class="modal-body">
+               <form action="1800.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="awAzqr4tjzN91xuIf0AcIdGbR81gSmOmvHtLdStNI3ZpGiGIauctZNRO4iIcolDD">
+                      <div class="mb-3">
+                        <label for="id_content-title" class="col-form-label">Название: </label>
+                        <input type="text" name="content-title" class="form-control" maxlength="255" required id="id_content-title">
+                      </div>
+                      <div class="mb-3">
+                        <label for="id_content-url" class="col-form-label">Ссылка: </label>
+                        <input type="url" name="content-url" class="form-control" required id="id_content-url">
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить</button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VideoAnswerModal -->
+    <div class="modal fade" id="VideoAnswerModal" tabindex="-1" aria-labelledby="VideoAnswerModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="VideoAnswerModalLabel">Добавить ответ из mock-собесов</h1>
+          </div>
+          <div class="modal-body">
+                <form action="1800.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="awAzqr4tjzN91xuIf0AcIdGbR81gSmOmvHtLdStNI3ZpGiGIauctZNRO4iIcolDD">
+                      <div class="mb-3">
+                        <label for="id_video-title" class="col-form-label">Название видео: </label>
+                        <input type="text" name="video-title" class="form-control" maxlength="255" required id="id_video-title">
+                      </div>
+                      <div class="mb-3">
+                        <label for="id_video-url" class="col-form-label">Ссылка на момент ответа: </label>
+                        <input type="url" name="video-url" class="form-control" required id="id_video-url">
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить</button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Что такое регрессивное тестирование
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <div class="row">
+        <div class="col">
+            <h1 class="mt-5 mb-5 fs-3">Что такое регрессивное тестирование</h1>
+            
+            <div class="row">
+                <div class="card mb-3 col" >
+                    <div class="card-body">
+                        <p class="card-text"><p>Код связан между собой и одно исправление может повлечь за собой новые проблемы. Если вернутся к примеру с корзиной, то окажется, что количество стало меняться, а вот цвет товара изменить теперь не получается.</p>
+
+<p>Случилось это из-за того, что &laquo;цвет&raquo; и &laquo;количество&raquo; обращались к одному участку кода, который и был поправлен.</p>
+
+<p>Получается, что изменение, внесенное в одну часть кода, будь то исправление или что-либо другое, может случайно повлиять на поведение других частей кода. Такие непреднамеренные побочные эффекты называются регрессиями. А, соответственно, регрессионное тестирование направлено на обнаружение таких непреднамеренных побочных эффектов.</p>
+
+<p>Давайте представим это визуально.</p>
+
+<p>Есть продукт. Он состоит из множества различных частей<strong>.<br />
+<img alt="" src="https://i.postimg.cc/0yrFWzQQ/Screenshot-17.png" /></strong><br />
+В одной из частей был баг и разработчик его исправил. То есть были внесены изменения в одну из частей программы (на рисунке выделено зеленым).</p>
+
+<p><img alt="" src="https://i.postimg.cc/7L3Vm4gh/Screenshot-18.png" /></p>
+
+<p>Данные изменения могли тем или иным образом отразиться и на работе других частей продукта. На рисунке выделено красным<strong>.</strong></p>
+
+<p><img alt="" src="https://i.postimg.cc/h4fyTfCP/Screenshot-19.png" /></p>
+
+<p>Либо может быть ситуация, когда в продукте появляется новый функционал. И его работа может повлиять на старый.</p>
+
+<p><img alt="" src="https://i.postimg.cc/9QjJ61cr/Screenshot-20.png" /></p>
+
+<p>То есть нам нужно проверить работу старого функционала после исправления старого кода и/или написания нового. В этом и заключается регрессионное тестирование.</p>
+
+<p><strong><em>Получается, что при подтверждающем тестировании мы проверяем сам баг, а при регрессионным тестирование - не вызвало ли исправление бага или написание нового кода - каких-либо изменений в других местах.</em></strong></p>
+
+<p>&nbsp;</p></p>
+                        
+                        <p class="card-text"><small class="text-muted">Oct. 16, 2023, <a class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank"  href="https://docs.google.com/document/d/1w08rt7IqDQ_s2kzoy88Zh-eEcxCxaMDf/edit">Источник</a></small></p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="card mb-3 col" >
+                    <div class="card-body">
+                        <p class="card-text"><p>Регрессионное тестирование &ndash; это вид тестирования, чтобы убедиться, что программные изменения или обновления не привели к новым ошибкам в уже протестированных частях и не нарушили работу функционала. Он помогает проверить, что нововведения или исправления не повлияли отрицательно на уже функциональность.</p>
+
+<p>Регрессионное тестирование необходимо, потому что в процессе разработки ПО внесение изменений является неизбежным. Эти изменения могут включать в себя новые функции, исправления ошибок, обновления или оптимизации кода. Любое из этих изменений потенциально может привести к непредвиденным последствиям, включая возникновение новых ошибок в уже протестированных и ранее работающих частях программы. Оно помогает обнаружить такие проблемы до того, как продукт будет выпущен или обновлён.</p>
+
+<p>Включает следующие шаги:</p>
+
+<p>1. <strong>Выбор тестовых случаев:</strong> Не всегда возможно или практично перезапускать все тесты. Поэтому выбираются те тестовые случаи, которые наиболее вероятно могут быть затронуты изменениями.<br />
+2. <strong>Автоматизация тестирования:</strong> Регрессионное тестирование часто автоматизируют, чтобы сэкономить время и ресурсы, поскольку оно должно выполняться многократно на протяжении всего цикла разработки.<br />
+3. <strong>Выполнение тестов: </strong>Запускаются выбранные (или все) тестовые случаи после внесения изменений в программу.<br />
+4. <strong>Анализ результатов:</strong> После выполнения тестов анализируются результаты на предмет выявления регрессий или новых ошибок, вызванных последними изменениями.</p>
+
+<p>Пример использования регрессионного тестирования в проекте может быть следующим: предположим, команда разработчиков вносит изменения в модуль авторизации веб-приложения. После внесения изменений они выполняют такое тестирование, чтобы убедиться, что функционал регистрации новых пользователей, восстановление забытых паролей и другие функции, связанные с учётными записями пользователей, продолжают работать корректно.</p>
+
+<p>Регрессионное тестирование - это проверка того, что новые изменения в программе не испортили то, что работало раньше. Это как если бы после ремонта велосипеда вы проверили, не стал ли он скрипеть или хуже ехать по прежним дорогам.<br />
+&nbsp;</p></p>
+                        
+                        <p class="card-text"><small class="text-muted">Feb. 22, 2024, easyoffer</small></p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+
+<!--            <h2 class="mb-3 mt-5 fs-5" >Добавить ответ:</h2>-->
+
+<!--            <div class="form-error"></div>-->
+<!--            <form class="row g-3" action = "" method="post">-->
+<!--                    <input type="hidden" name="csrfmiddlewaretoken" value="dWHmfORo1KpF505l3CCURzVs9kQgFi60y7Ay2fgIqeBVKLhlY6eb8965muxcbhVh">-->
+<!--                  <div class="col-md-4">-->
+<!--                    <label for="id_author" class="form-label">Автор/Источник:</label>-->
+<!--                     <input type="text" name="author" class="form-control" maxlength="50" required id="id_author">-->
+<!--                  </div>-->
+<!--                  <div class="col-md-4">-->
+<!--                    <label for="id_url" class="form-label">Ссылка(не обяз.):</label>-->
+<!--                    <input type="url" name="url" class="form-control" maxlength="200" id="id_url">-->
+<!--                  </div>-->
+<!--                  <div>-->
+<!--                    <label for="id_text" class="form-label"></label>-->
+<!--                    <div class="django-ckeditor-widget" data-field-id="id_text" style="display: inline-block;">
+    <textarea name="text" cols="40" rows="10" required id="id_text" data-processed="0" data-config="{&quot;skin&quot;: &quot;moono-lisa&quot;, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]], &quot;toolbar&quot;: &quot;Custom&quot;, &quot;height&quot;: 291, &quot;width&quot;: &quot;550px&quot;, &quot;filebrowserWindowWidth&quot;: 940, &quot;filebrowserWindowHeight&quot;: 725, &quot;toolbar_Custom&quot;: [[&quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;], [&quot;NumberedList&quot;, &quot;BulletedList&quot;], [&quot;Link&quot;, &quot;Unlink&quot;], [&quot;Image&quot;, &quot;CodeSnippet&quot;]], &quot;extraPlugins&quot;: &quot;codesnippet&quot;, &quot;language&quot;: &quot;en-us&quot;}" data-external-plugin-resources="[]" data-id="id_text" data-type="ckeditortype"></textarea>
+</div>-->
+<!--                  </div>-->
+<!--                  <div class="col-12">-->
+<!--                    <button class="btn btn-primary btn-sm" type="submit">Добавить ответ</button>-->
+<!--                  </div>-->
+<!--            </form>-->
+        </div>
+        <div class="col-12 col-sm-4">
+            <h2 class="mb-3 mt-5 fs-5" >Примеры ответов:</h2>
+            <ul class="list-group list-group-flush mb-3">
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/lxE4_Im0h7I?t=3268" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>18th. QA interviews stream. 23.01.20…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/Y3GCNUBsINU?t=1061" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Тестировщик QA БЕЗ ОПЫТА собеседован…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/7xpJU_NWs5A?t=1069" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Собеседование на тестировщика ПО (Ju…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://www.youtube.com/watch?v=FLVIXfUDPgQ&amp;t=1557s" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Собеседование на тестировщика ПО (Ju…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://www.youtube.com/watch?v=GIr6aK8YkXk&amp;t=866s" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Собеседование на тестировщика ПО (Ju…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/VFQFwaDMmcQ?t=687" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Собеседование на тестировщика ПО (Ju…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/0lM3RdR1ATk?t=1868" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Собеседование на тестировщика ПО (Ju…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/VwGYMWTZCdM?t=1218" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Собеседование на тестировщика ПО (Ju…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/uWIk2yQhDko?t=1091" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Собеседование на тестировщика ПО (Ju…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/xMdQcx-h0c4?t=1057" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Собеседование на тестировщика ПО (Ju…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/y3XTVxRp94o?t=1095" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Собеседование на тестировщика ПО (Ju…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/BBu-Dx-2xME?t=1766" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Собеседование на тестировщика ПО (Ju…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/Jos08jW7cc0?t=2402" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Рубрика: СОБЕСЕДОВАНИЕ С ПОДПИСЧИКОМ…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/85IKVCtcc5w?t=736" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Рубрика: Собеседование с Подписчиком…</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/xGIQJPq1cN8?t=4906" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>84 QA Interviews Stream. 25.03.2023 …</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/9MeGfPe0Ojs?t=5705" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>70 QA Interviews Stream. 05.10.2022 …</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/bGS7hswa82c?t=9583" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>74 QA Interviews Stream. 05.11.2022 …</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/DZCfThhJWao?t=8413" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>77 QA Interviews Stream. 07.01.2023 …</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://www.youtube.com/live/KlV2-e8gt9E?feature=share&amp;t=48m32s" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>71 QA Interviews Stream. 13.10.2022 …</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/d4FRhblEKUM?t=2002" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>42th #ArtsiomRusau !!! QA Interviews…</a></small></li>
+                
+            </ul>
+<!--            <button type="button" class="btn btn-primary btn-sm " data-bs-toggle="modal" data-bs-target="#VideoAnswerModal">-->
+<!--              Добавить ссылку-->
+<!--            </button>-->
+<!--            <h2 class="mb-3 mt-5 fs-5">Доп. материалы:</h2>-->
+<!--            <ul class="list-group list-group-flush mb-3">-->
+<!--                -->
+<!--            </ul>-->
+<!--            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#ExtraContentModal">-->
+<!--              Добавить ссылку-->
+<!--            </button>-->
+        </div>
+    </div>
+
+
+
+    <!-- ExtraContentModal -->
+    <div class="modal fade" id="ExtraContentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Добавить ссылку на доп. матераил</h1>
+          </div>
+          <div class="modal-body">
+               <form action="7801.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="dWHmfORo1KpF505l3CCURzVs9kQgFi60y7Ay2fgIqeBVKLhlY6eb8965muxcbhVh">
+                      <div class="mb-3">
+                        <label for="id_content-title" class="col-form-label">Название: </label>
+                        <input type="text" name="content-title" class="form-control" maxlength="255" required id="id_content-title">
+                      </div>
+                      <div class="mb-3">
+                        <label for="id_content-url" class="col-form-label">Ссылка: </label>
+                        <input type="url" name="content-url" class="form-control" required id="id_content-url">
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить</button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VideoAnswerModal -->
+    <div class="modal fade" id="VideoAnswerModal" tabindex="-1" aria-labelledby="VideoAnswerModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="VideoAnswerModalLabel">Добавить ответ из mock-собесов</h1>
+          </div>
+          <div class="modal-body">
+                <form action="7801.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="dWHmfORo1KpF505l3CCURzVs9kQgFi60y7Ay2fgIqeBVKLhlY6eb8965muxcbhVh">
+                      <div class="mb-3">
+                        <label for="id_video-title" class="col-form-label">Название видео: </label>
+                        <input type="text" name="video-title" class="form-control" maxlength="255" required id="id_video-title">
+                      </div>
+                      <div class="mb-3">
+                        <label for="id_video-url" class="col-form-label">Ссылка на момент ответа: </label>
+                        <input type="url" name="video-url" class="form-control" required id="id_video-url">
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить</button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

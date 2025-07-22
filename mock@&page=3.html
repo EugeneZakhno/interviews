@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Технические интервью
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <h1 class="mt-5 fs-3">Публичные собеседования</h1>
+<!--    <p class="mt-3 mb-5">Вы можете-->
+<!--        <a type="button" class="link" data-bs-toggle="modal" data-bs-target="#exampleModal"> Добавить мок-интервью </a>-->
+<!--    </p>-->
+        <div class="row">
+            <div class="col-12 col-md-2">
+                <form action="mock@&amp;page=3.html" method="get">
+                    <p>
+    <label for="id_profession">Должность:</label>
+    <select name="profession" class="form-select" required id="id_profession">
+  <option value="" selected>---------</option>
+
+  <option value="20">1C Developer</option>
+
+  <option value="5">Android Developer</option>
+
+  <option value="36">BI Analyst</option>
+
+  <option value="26">Business Analyst</option>
+
+  <option value="11">C/C++ Developer</option>
+
+  <option value="12">C# Developer</option>
+
+  <option value="28">Data Analyst</option>
+
+  <option value="45">Database Administrator</option>
+
+  <option value="31">Database Developer</option>
+
+  <option value="35">Data Engineer</option>
+
+  <option value="14">Data Scientist</option>
+
+  <option value="18">DevOps</option>
+
+  <option value="32">Embedded Developer</option>
+
+  <option value="17">Flutter Developer</option>
+
+  <option value="2">Frontend Developer</option>
+
+  <option value="13">Golang Developer</option>
+
+  <option value="24">HR Manager</option>
+
+  <option value="6">iOS Developer</option>
+
+  <option value="4">Java Developer</option>
+
+  <option value="15">Machine Learning Engineer</option>
+
+  <option value="46">Network Engineer</option>
+
+  <option value="10">Node.js Developer</option>
+
+  <option value="42">Pentester</option>
+
+  <option value="7">PHP Developer</option>
+
+  <option value="25">Product Analyst</option>
+
+  <option value="22">Product Designer</option>
+
+  <option value="8">Product Manager</option>
+
+  <option value="9">Project Manager</option>
+
+  <option value="1">Python Developer</option>
+
+  <option value="3">QA Engineer</option>
+
+  <option value="19">Ruby Developer</option>
+
+  <option value="54">Rust Developer</option>
+
+  <option value="55">Scala Developer</option>
+
+  <option value="44">System Administrator</option>
+
+  <option value="16">System Analyst</option>
+
+  <option value="23">Unity Developer</option>
+
+  <option value="29">Unreal Engine Developer</option>
+
+  <option value="21">UX/UI Designer</option>
+
+</select>
+    
+    
+  </p>
+
+  
+  <p>
+    <label>Грейд:</label>
+    <div id="id_grade"><div>
+    <label for="id_grade_0"><input type="radio" name="grade" value="Junior" required id="id_grade_0">
+ Junior</label>
+
+</div><div>
+    <label for="id_grade_1"><input type="radio" name="grade" value="Middle" required id="id_grade_1">
+ Middle</label>
+
+</div><div>
+    <label for="id_grade_2"><input type="radio" name="grade" value="Senior" required id="id_grade_2">
+ Senior</label>
+
+</div>
+</div>
+    
+    
+      
+    
+  </p>
+                    <button class="btn btn-primary btn-sm mt-3" type="submit">Выбрать</button>
+                </form>
+
+                </fieldset>
+            </div>
+            <div class="col">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Название</th>
+                      <th class="d-none d-sm-table-cell" scope="col">Должность</th>
+                      <th class="d-none d-sm-table-cell" scope="col">Грейд</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-group-divider">
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=YtYBbVZ2PYg&amp;t=6237s" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование python разработчик Игорь Шкода. Ведет Олег Кожанов</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=KpIF31nFrFc" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Python разработчик Антон Балов (badsnus) собеседование в мой стартап НаймиНайми</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=Q3ku8YLRP-w" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Junior Python разработчик | Дарья Мухамеджанова</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=RJFYyx3a9a0" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Степан Саржан собеседование junior python разработчик. Вопросы из Тинькова</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=N1KGIzzdWDc&amp;t=1511s" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование junior python разработчик | Сергей Афонин</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=EtVt0OtppQI&amp;t=3910s" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Курзюкова Яна собеседование python разработчик. Секция SQL запросы на основе Тинькофф</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=YtYBbVZ2PYg&amp;t=6237s" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Александр Буваев собеседование Python разработчик</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=np9VYg4EsN0" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Станислав Чупринский собеседование junior python разработчик</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=MmfvpUiaNJQ&amp;t=1823s" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Артём Римша. Собеседование junior python разработчик</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=Hvnl_xhNZS8" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Айрат Сахибгареев собеседование python разработчик</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=wWzk2j0iC1Q" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование python разработчик.Юлиян</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=F7tSghzRvD4" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Домрачев Дмитрий python developer собеседование</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=1Dbj41UiQFM" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Усенко Михаил | Собеседование python разработчик</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=qvxhCaw_wmE" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Алтынбаев Артур python разработчик собеседование</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=noocaT1qnhY" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Здор Дмитрий собеседование python разработчик</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=gm8f8mdpB2k" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Смурова Елена собеседование Junior python разработчк</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=i9ZaA6Hsnfc" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Анастасия. Собеседование junior python разработчик</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=yIQgLN0QYY4&amp;t=5s" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Открытое собеседование junior backend разработчик. Задача на чанки. Тимур Хамзин. Лайфкодинг.</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=TMqDaowFHt0" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование python разработчик. Запросы ORM Джанго. Андрей Смелов.</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=UdU9O2qRqgI" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Евгений Немыкин. Junior backend devrloper. Публичное собеседование</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=2AlDe8P0njw" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Junior Python developer. Публичное собеседование Влад Михеенко</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=EiRTGMw403c" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Junior Python developer. Публичное собеседование Яков Варнаев</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=eFuTVxnYa94" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Денис Карпов. Публичное собеседование python junior backend</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=4uffE_4htYc" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Константин Кулаков. Публичное собеседование junior python developer.</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=F3sMamy7vUY&amp;t=2717s" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Андрей Востриков | Собеседование Junior Python разработчик | Задача на черный и белый список.</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=A2o7Joqo_EA" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование python. Классическая задача. У Валентина был хороший случай макнуть меня в неудобство</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=baYMs_P5dLM&amp;t=758s" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Михаил Макаров. Собеседование python - разработчик. Начинаем list с единицы</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=mGt3sIkaDSk" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Никита Ионов. Собеседование junior python разработчик. Задачка + репа + софты.</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=o0oBrIOR8a0" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Капкаев Андрей. Junior Python developer собеседование</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=nq3ki32aHWY" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Камышева Наталья/ собеседование Junior python разработчик.</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=qjXfcQM9HSI" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование junior python developer/ Михаэль Руди. Рекомендован для дальнейшего поиска работы.</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=LqhbhK8ATLk" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование junior python разработчик Евгений Путрин | Галина Трошкина и Василий Туртугешев</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=nPXx1-lcZqI" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование junior python backend developer Сомат Аристанов</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=6VWd7_962pM" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Junior Python разработчик. Собеседование Максим Никулин</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=cQZ7HkJ_Jk4" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование junior python/ Краморенко Владислав | Из плотников в IT</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=oka2Z05bsuc" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Python разработчик Ильмир Валитов. Из строителей в разработчики</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=vO1VqfhMRnM&amp;t=769s" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Python developer Сторожук Сергей</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=Z-Iu6Kbode0" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование python разработчик Новиков Максим</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=SJxgQFKp2qc&amp;t=1s" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Михаил Выборный собеседование junior python разработчик</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=VeDc_eUnjuU" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Андрей Ушаков | собеседование junior pyhton разработчик.</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=fgXCN7A8yzg" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Junior Python Developer: полный разбор собеседования и ответы на наиболее частые вопросы интервью</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=TeE0j4RN6fQ" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Техническое собеседование на позицию Python Junior | Solvery + Moscow Python</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=oZ76c0aWBIo&amp;t=1s" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Техническое собеседование Junior Python | Решаем практические задачи в прямом эфире</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=SqHpayljeTc" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Tech Interview Fest | Моковое собеседование для Python Junior | Moscow Python + Solvery</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=0DQ437j3NN8" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Техническое собеседование Junior Python разработчика</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=JjJdOh9Ornk" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование на позицию Senior Python Developer 4000-5000$ #11</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=d6xo7nsvQJI" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование на позицию Senior Python Developer 350т.р. #10</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=BE3SNu7WESI" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование на позицию Senior Python Developer 4000$ #9</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=lpXiwndG018" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование на позицию Backend Developer Python Middle #8</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=hNFMC31gUWI" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование на позицию Backend Developer Python Middle #7</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=yvJJe_TPOlw" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Практические задачи с собеседования Backend Developer Python Middle #6</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=GwqIdfP68kk" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование на позицию Backend Developer Python Middle #5</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=2UH_SBo5p-8" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Практические задачи с собеседования Backend Developer Python Middle #4</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=y1FaU6Avve0" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование на позицию Backend Developer Python + FastAPI Middle #3</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=aEcr_N_xYNs" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование на позицию Backend Developer Python + Django Middle #2</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=JXJjE2AKggM" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование на позицию Backend Developer Python + Django Middle #1</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=7LSdBXT2kmk" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Developer на $7700</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=l49xibZG2qA" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Developer на $6500</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=MbqRih0wOeE" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Developer на $8500</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=Zh6H4wxftto" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Developer на $7000</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=TM0TWuMLo_E" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Developer на $8000</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=vd_0oqscHww" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Interview Senior Python Developer $7500</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=V22YM7BGJIY" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Developer на $7000</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=0D0mEVo0pSQ" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Interview Senior Python Developer $8000</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=erW3qcRfgHE" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Developer на $7500</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=A193s_3VxZk" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Python собеседование на 10000$</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=UfVd8lZTWoE" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Interview Senior Python Engineer $9000</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=aYH4PuzeoUw" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Software Engineer на $5700 #15</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=NotXwrQyQrY" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Software Engineer на $5300 #14</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=n5deUaPupbo" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Software Engineer на $5500 #13</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=qPerKsH7HyI" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Software Engineer на $5300 #12</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=Yj9jxe3yif4" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Software Engineer на $5200 #11</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=y6OgO8G1RwU" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Software Architect на $6000 #10</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=ComnTSzUD0g" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Developer на $3200 #9</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=hACRAOdMoWY" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Software Engineer на $5000 #8</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=7Pr7LrG4mAA" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Developer на $3800 #7</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=tiZAQvG-QcI" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Middle Python Developer на $2000 #6</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=Gs_LNG-2cyM" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Software Engineer на $5200 #5</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=WyEidkeZFQY" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Software Engineer на $4500 #4</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=lk9xu3z3JoU" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Developer на $4000 #3</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=KNUvvKWkiqo" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Software Engineer на $5500 #2</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=UpG8WPZNSAE" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Запись интервью на позицию &quot;Сениора&quot;</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=yWOePYd3-lc" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Developer на $8500</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=Gjvobp5b0K4" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Developer на $6000</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=yjbhfEsmR3I" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Developer на $7000</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=Gt6GdIb0xL0" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Python Developer на $8000</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=sifkbOB6kDA&amp;t=479s" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Junior Python Developer</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=ua1bD7DfyuA&amp;t=152s" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">PYTHON JUNIOR интервью со SpaciX</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=HvMXn0lATXo&amp;t=554s" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Trainee Python Developer</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=awVshnV--o0" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Junior Python Developer</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=EW_m4GboqWM" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Middle Python Developer</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=hIepjGgrfPo" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Trainee Python Developer</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=wpm8zcjSPY0" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Trainee Python Developer</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=lw3xKYAbIPs" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Trainee Python Developer</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=bBZ5hC6Ok7k" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Trainee Python Developer</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=ZPWdmWLasGc" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Trainee Python Developer</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=BoazgBZ4D7k" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Python. Разбор вопросов</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=25xUoLye53w" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Python 2023. Разбор базовых вопросов</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=0A27QaOg33Q" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Моковое собеседование на позицию Django Junior | Solvery + Django [ru]</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=62aiHYLhonI" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Python developer на 4000$</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+                
+                <nav>
+                  <ul class="pagination pagination-sm">
+                      
+                      
+                          
+                           <li class="page-item">
+                              <a class="page-link" href="mock@&amp;page=1.html">1</a>
+                          </li>
+                          
+                      
+                      
+                      
+                          
+                           <li class="page-item">
+                              <a class="page-link" href="mock@&amp;page=2.html">2</a>
+                          </li>
+                          
+                      
+                      
+                      
+                      <li class="page-item active" aria-current="page">
+                      <span class="page-link">3</span>
+                      </li>
+                      
+                      
+                      
+                          
+                           <li class="page-item">
+                              <a class="page-link" href="mock@&amp;page=4.html">4</a>
+                          </li>
+                          
+                      
+                      
+                      
+                          
+                           <li class="page-item">
+                              <a class="page-link" href="mock@&amp;page=5.html">5</a>
+                          </li>
+                          
+                      
+                      
+                      
+                          
+                           <li class="page-item">
+                              <a class="page-link" href="mock@&amp;page=6.html">6</a>
+                          </li>
+                          
+                      
+                      
+                      
+                          
+                           <li class="page-item">
+                              <a class="page-link" href="mock@&amp;page=7.html">7</a>
+                          </li>
+                          
+                      
+                      
+                  </ul>
+                </nav>
+                
+        </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Добавление мок-интервью</h5>
+            <button type="button" class="close btn" data-bs-dismiss="modal" aria-label="Close">
+              <span  aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <form action="mock@&amp;page=3.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="pdLNENhXY4SgRqm1eHKk4FJFjErTNHaXKoEZreGhny4wwby19bmBlfUiwO8PjGZe">
+                    <p>
+    <label for="id_profession">Должность:</label>
+    <select name="profession" class="form-select" required id="id_profession">
+  <option value="" selected>---------</option>
+
+  <option value="7">PHP Developer</option>
+
+  <option value="5">Android Developer</option>
+
+  <option value="6">iOS Developer</option>
+
+  <option value="14">Data Scientist</option>
+
+  <option value="4">Java Developer</option>
+
+  <option value="24">HR Manager</option>
+
+  <option value="28">Data Analyst</option>
+
+  <option value="17">Flutter Developer</option>
+
+  <option value="26">Business Analyst</option>
+
+  <option value="3">QA Engineer</option>
+
+  <option value="9">Project Manager</option>
+
+  <option value="1">Python Developer</option>
+
+  <option value="12">C# Developer</option>
+
+  <option value="13">Golang Developer</option>
+
+  <option value="11">C/C++ Developer</option>
+
+  <option value="18">DevOps</option>
+
+  <option value="2">Frontend Developer</option>
+
+  <option value="19">Ruby Developer</option>
+
+  <option value="16">System Analyst</option>
+
+  <option value="22">Product Designer</option>
+
+  <option value="23">Unity Developer</option>
+
+  <option value="25">Product Analyst</option>
+
+  <option value="29">Unreal Engine Developer</option>
+
+  <option value="31">Database Developer</option>
+
+  <option value="55">Scala Developer</option>
+
+  <option value="54">Rust Developer</option>
+
+  <option value="32">Embedded Developer</option>
+
+  <option value="35">Data Engineer</option>
+
+  <option value="36">BI Analyst</option>
+
+  <option value="42">Pentester</option>
+
+  <option value="44">System Administrator</option>
+
+  <option value="45">Database Administrator</option>
+
+  <option value="46">Network Engineer</option>
+
+  <option value="20">1C Developer</option>
+
+  <option value="15">Machine Learning Engineer</option>
+
+  <option value="10">Node.js Developer</option>
+
+  <option value="8">Product Manager</option>
+
+  <option value="21">UX/UI Designer</option>
+
+</select>
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_title">Название:</label>
+    <input type="text" name="title" class="form-control" maxlength="600" required id="id_title">
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_url">Ссылка:</label>
+    <input type="url" name="url" class="form-control" maxlength="200" required id="id_url">
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_grade">Грейд:</label>
+    <select name="grade" class="form-select" id="id_grade">
+  <option value="Junior">Junior</option>
+
+  <option value="Middle">Middle</option>
+
+  <option value="Senior">Senior</option>
+
+</select>
+    
+    
+      
+    
+  </p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить</button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

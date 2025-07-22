@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+В чём разница между контейнеризацией и виртуализацией
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <div class="row">
+        <div class="col">
+            <h1 class="mt-5 mb-5 fs-3">В чём разница между контейнеризацией и виртуализацией</h1>
+            
+            <div class="row">
+                <div class="card mb-3 col" >
+                    <div class="card-body">
+                        <p class="card-text"><p>Виртуализация -- технология, которая позволяет низкоуровнево эмулировать полноценный ПК вместе с его комплектующими.<br />
+ОС запущенная на виртуальной машине (ВМ) будет иметь собственные выделенные ей ресурсы такие как: процессор\ОЗУ\Диск\Сеть и не будет знать о существовании хост-машины, на которой запущена ВМ&nbsp;<br />
+Притом ресурсы, которые выделяются для работы ВМ, невозможно динамически изменить в ходе работы ВМ, и ВМ будет работать ровно с тем набором выделенных ресурсов, которые ей указали при запуске&nbsp;</p>
+
+<p>Контейнеризация&nbsp; -- технология, которая позволяет запускать изолированные от внешней среды контейнеры с приложениями на базе ядра хост-машины, поверх которого выполняются надстройки из других базовых образов.&nbsp;<br />
+Изоляция контейнеров достигается засчёт механизма linux namespaces, за выделение ресурсов контейнеру отвечает механизм linux cgroups (в случае, если контейнер запускается не из-под UNIX системы -- сначала запускается виртуальная машина с ОС UNIX на борту, а затем контейнер</p>
+
+<p>Контейнеризация позволяет быстрее разворачивать приложения, добавлять им ресурсов, масштабировать и запускать на любой системе, которая поддерживает контейнеризацию</p></p>
+                        
+                        <p class="card-text"><small class="text-muted">Oct. 25, 2023, Добрый Самаритянин</small></p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="card mb-3 col" >
+                    <div class="card-body">
+                        <p class="card-text"><p>Контейнеризация и виртуализация - это два разных метода изоляции и управления приложениями и ресурсами в вычислительных средах. Вот основные различия между ними:</p>
+
+<ol>
+	<li>
+	<p><strong>Уровень изоляции</strong>:</p>
+
+	<ul>
+		<li>
+		<p><strong>Контейнеризация</strong>: В контейнеризации приложения и их зависимости упаковываются в контейнеры, которые работают на уровне операционной системы (ОС). Контейнеры разделяют ядро ОС с хост-системой, но имеют свои собственные файловые системы и процессы, что делает их более легкими и быстрыми по сравнению с виртуализацией.</p>
+		</li>
+		<li>
+		<p><strong>Виртуализация</strong>: Виртуализация создает виртуальные машины (ВМ), которые эмулируют полноценные физические серверы. Каждая ВМ включает в себя собственную операционную систему и ресурсы. Виртуализация работает на уровне гипервизора, который может быть гипервизором типа 1 (например, VMware ESXi) или типа 2 (например, VirtualBox).</p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p><strong>Ресурсы</strong>:</p>
+
+	<ul>
+		<li>
+		<p><strong>Контейнеризация</strong>: Контейнеры более эффективно используют ресурсы, так как они разделяют ОС и используют единую ядро для выполнения. Они обычно требуют меньше оперативной памяти и меньше вычислительных ресурсов по сравнению с виртуальными машинами.</p>
+		</li>
+		<li>
+		<p><strong>Виртуализация</strong>: Виртуальные машины имеют больший оверхед из-за эмуляции аппаратных средств и полноценной операционной системы. Они обычно требуют больше вычислительных ресурсов и оперативной памяти.</p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p><strong>Изолированность</strong>:</p>
+
+	<ul>
+		<li>
+		<p><strong>Контейнеризация</strong>: Контейнеры обеспечивают относительно меньшую изолированность по сравнению с виртуальными машинами. Это означает, что, если в контейнере возникает проблема, она может повлиять на другие контейнеры, работающие на том же хосте.</p>
+		</li>
+		<li>
+		<p><strong>Виртуализация</strong>: Виртуальные машины обеспечивают более жесткую изоляцию, так как каждая ВМ имеет свою собственную ОС. Проблемы в одной ВМ обычно не влияют на другие ВМ.</p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p><strong>Запуск приложений</strong>:</p>
+
+	<ul>
+		<li>
+		<p><strong>Контейнеризация</strong>: Запуск приложений в контейерах более быстр и прост, и они могут быть масштабированы более гибко.</p>
+		</li>
+		<li>
+		<p><strong>Виртуализация</strong>: Запуск приложений в виртуальных машинах требует больше времени и ресурсов.</p>
+		</li>
+	</ul>
+	</li>
+</ol>
+
+<p>Контейнеризация и виртуализация оба имеют свои преимущества и недостатки, и выбор между ними зависит от конкретных потребностей проекта и требований к изоляции и использованию ресурсов. Контейнеры часто используются для разработки и развертывания приложений, в то время как виртуализация чаще используется для изоляции и виртуализации полноценных виртуальных сред.</p></p>
+                        
+                        <p class="card-text"><small class="text-muted">Oct. 26, 2023, V.Maximov</small></p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="card mb-3 col" >
+                    <div class="card-body">
+                        <p class="card-text"><p><u>Контейнеризация и виртуализация</u> &mdash; это две популярные технологии, используемые для изоляции и развертывания приложений в современных вычислительных средах. Обе технологии имеют свои преимущества и недостатки, и выбор между ними зависит от специфических требований проекта или приложения.</p>
+
+<p>Виртуализация</p>
+
+<p>Позволяет запускать несколько операционных систем как виртуальных машин (ВМ) на одном физическом сервере. Каждая ВМ имеет свою собственную полностью изолированную операционную систему, и каждая из них эмулирует аппаратное обеспечение хоста. Это достигается с помощью гипервизора, который стоит между аппаратным обеспечением и операционными системами. Гипервизор управляет аппаратными ресурсами и распределяет их между разными виртуальными машинами.</p>
+
+<p>Примеры гипервизоров:</p>
+
+<ul>
+	<li><strong>VMware ESXi</strong></li>
+	<li><strong>Microsoft Hyper-V</strong></li>
+	<li><strong>Oracle VirtualBox</strong></li>
+</ul>
+
+<p>Контейнеризация</p>
+
+<p>В отличие от виртуализации, позволяет запускать несколько приложений и их зависимостей в изолированных процессах, называемых контейнерами, на одной операционной системе. Контейнеры разделяют ядро операционной системы хоста, но могут быть ограничены в использовании CPU, памяти и I/O. Контейнеры быстрее и легче, чем виртуальные машины, поскольку они не требуют отдельной операционной системы для каждого из них.</p>
+
+<p>Примеры технологий:</p>
+
+<ul>
+	<li><strong>Docker</strong></li>
+	<li><strong>Kubernetes</strong>&nbsp;(используется для оркестрации контейнеров)</li>
+	<li><strong>LXC</strong></li>
+</ul>
+
+<p>Основные различия</p>
+
+<p><strong>1. Уровень изоляции:</strong> Виртуализация предоставляет более полную изоляцию, так как каждая виртуальная машина имеет свою собственную операционную систему, в то время как контейнеры разделяют операционную систему хоста.<br />
+<strong>2. Ресурсы:</strong> Виртуальные машины требуют больше ресурсов, так как каждая ВМ нуждается в собственных копиях операционной системы и её ресурсах, в то время как контейнеры более легковесные и быстрее загружаются.<br />
+<strong>3. Портативность:</strong> Контейнеры обеспечивают большую портативность и легкость развертывания, так как они могут легко перемещаться между различными средами, поддерживающими контейнеризацию.<br />
+<strong>4. Производительность: </strong>Контейнеры могут предложить более высокую производительность, поскольку они не страдают от накладных расходов, связанных с дополнительными уровнями абстракции и эмуляции аппаратного обеспечения.</p>
+
+<p>Выбор между виртуализацией и контейнеризацией зависит от специфики проекта. Виртуализация лучше подходит для полной изоляции и совместимости различных операционных систем, в то время как контейнеризация идеальна для быстрого развертывания, масштабирования и эффективного использования ресурсов при работе с микросервисной архитектурой.</p></p>
+                        
+                        <p class="card-text"><small class="text-muted">April 17, 2024, easyoffer</small></p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+
+<!--            <h2 class="mb-3 mt-5 fs-5" >Добавить ответ:</h2>-->
+
+<!--            <div class="form-error"></div>-->
+<!--            <form class="row g-3" action = "" method="post">-->
+<!--                    <input type="hidden" name="csrfmiddlewaretoken" value="8wdbtfUkod7pZb5l9JdUdi6CmaIVzQVatH6ngGjENHjFEWhl4dPbuShfzkpR5PKr">-->
+<!--                  <div class="col-md-4">-->
+<!--                    <label for="id_author" class="form-label">Автор/Источник:</label>-->
+<!--                     <input type="text" name="author" class="form-control" maxlength="50" required id="id_author">-->
+<!--                  </div>-->
+<!--                  <div class="col-md-4">-->
+<!--                    <label for="id_url" class="form-label">Ссылка(не обяз.):</label>-->
+<!--                    <input type="url" name="url" class="form-control" maxlength="200" id="id_url">-->
+<!--                  </div>-->
+<!--                  <div>-->
+<!--                    <label for="id_text" class="form-label"></label>-->
+<!--                    <div class="django-ckeditor-widget" data-field-id="id_text" style="display: inline-block;">
+    <textarea name="text" cols="40" rows="10" required id="id_text" data-processed="0" data-config="{&quot;skin&quot;: &quot;moono-lisa&quot;, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]], &quot;toolbar&quot;: &quot;Custom&quot;, &quot;height&quot;: 291, &quot;width&quot;: &quot;550px&quot;, &quot;filebrowserWindowWidth&quot;: 940, &quot;filebrowserWindowHeight&quot;: 725, &quot;toolbar_Custom&quot;: [[&quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;], [&quot;NumberedList&quot;, &quot;BulletedList&quot;], [&quot;Link&quot;, &quot;Unlink&quot;], [&quot;Image&quot;, &quot;CodeSnippet&quot;]], &quot;extraPlugins&quot;: &quot;codesnippet&quot;, &quot;language&quot;: &quot;en-us&quot;}" data-external-plugin-resources="[]" data-id="id_text" data-type="ckeditortype"></textarea>
+</div>-->
+<!--                  </div>-->
+<!--                  <div class="col-12">-->
+<!--                    <button class="btn btn-primary btn-sm" type="submit">Добавить ответ</button>-->
+<!--                  </div>-->
+<!--            </form>-->
+        </div>
+        <div class="col-12 col-sm-4">
+            <h2 class="mb-3 mt-5 fs-5" >Примеры ответов:</h2>
+            <ul class="list-group list-group-flush mb-3">
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/F-63asyRz24?t=1086" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>#devops #sre #juneway DevOps интервью</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/L3Zu5eQyB3E?t=2085" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Как пройти собеседование в DevOps?</a></small></li>
+                
+                    <li class="list-group-item"><small><a href="https://youtu.be/RUTHiiYYiHA?t=6576" class="link-secondary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank">
+                        <i class="bi bi-youtube me-1"></i>Начинающий Linux-админ свичнулся в D…</a></small></li>
+                
+            </ul>
+<!--            <button type="button" class="btn btn-primary btn-sm " data-bs-toggle="modal" data-bs-target="#VideoAnswerModal">-->
+<!--              Добавить ссылку-->
+<!--            </button>-->
+<!--            <h2 class="mb-3 mt-5 fs-5">Доп. материалы:</h2>-->
+<!--            <ul class="list-group list-group-flush mb-3">-->
+<!--                -->
+<!--            </ul>-->
+<!--            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#ExtraContentModal">-->
+<!--              Добавить ссылку-->
+<!--            </button>-->
+        </div>
+    </div>
+
+
+
+    <!-- ExtraContentModal -->
+    <div class="modal fade" id="ExtraContentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Добавить ссылку на доп. матераил</h1>
+          </div>
+          <div class="modal-body">
+               <form action="6250.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="8wdbtfUkod7pZb5l9JdUdi6CmaIVzQVatH6ngGjENHjFEWhl4dPbuShfzkpR5PKr">
+                      <div class="mb-3">
+                        <label for="id_content-title" class="col-form-label">Название: </label>
+                        <input type="text" name="content-title" class="form-control" maxlength="255" required id="id_content-title">
+                      </div>
+                      <div class="mb-3">
+                        <label for="id_content-url" class="col-form-label">Ссылка: </label>
+                        <input type="url" name="content-url" class="form-control" required id="id_content-url">
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить</button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VideoAnswerModal -->
+    <div class="modal fade" id="VideoAnswerModal" tabindex="-1" aria-labelledby="VideoAnswerModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="VideoAnswerModalLabel">Добавить ответ из mock-собесов</h1>
+          </div>
+          <div class="modal-body">
+                <form action="6250.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="8wdbtfUkod7pZb5l9JdUdi6CmaIVzQVatH6ngGjENHjFEWhl4dPbuShfzkpR5PKr">
+                      <div class="mb-3">
+                        <label for="id_video-title" class="col-form-label">Название видео: </label>
+                        <input type="text" name="video-title" class="form-control" maxlength="255" required id="id_video-title">
+                      </div>
+                      <div class="mb-3">
+                        <label for="id_video-url" class="col-form-label">Ссылка на момент ответа: </label>
+                        <input type="url" name="video-url" class="form-control" required id="id_video-url">
+                      </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить</button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

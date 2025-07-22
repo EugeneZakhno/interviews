@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Вопросы с собеседований на Java Developer
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <h1 class="mt-5 fs-3"> Вопросы с собеседований на Java Developer</h1>
+    
+    <p class="fs-5 mt-3 mb-5 fs-6">Вопросов всего: 1715.
+<!--        Вы можете-->
+<!--        <a type="button" class="link" data-bs-toggle="modal" data-bs-target="#exampleModal"> Добавить вопрос </a>-->
+    </p>
+    
+    <div class="row align-items-start">
+            <div class="col-12 col-md-2 d-flex flex-column align-items-start">
+                <p class="">Фильтр:</p>
+                <form action="java_developer.html">
+                    <select class="form-select" aria-label="Default select example" name="tag">
+                        
+                            <option selected>Все</option>
+                        
+                          <option value="Все">Все</option>
+                        
+                          <option value="Нет">Нет</option>
+                        
+                          <option value="Общие">Общие</option>
+                        
+                          <option value="Паттерны">Паттерны</option>
+                        
+                          <option value="Git">Git</option>
+                        
+                          <option value="Тестирование">Тестирование</option>
+                        
+                          <option value="ООП">ООП</option>
+                        
+                          <option value="SQL">SQL</option>
+                        
+                          <option value="Tools">Tools</option>
+                        
+                          <option value="Фреймворки">Фреймворки</option>
+                        
+                          <option value="XML">XML</option>
+                        
+                          <option value="UML">UML</option>
+                        
+                          <option value="Spring">Spring</option>
+                        
+                          <option value="Servlets">Servlets</option>
+                        
+                          <option value="JVM">JVM</option>
+                        
+                          <option value="JDBC">JDBC</option>
+                        
+                          <option value="Java Core">Java Core</option>
+                        
+                          <option value="Java Collections">Java Collections</option>
+                        
+                          <option value="Java 8">Java 8</option>
+                        
+                          <option value="Hibernate">Hibernate</option>
+                        
+                          <option value="Шаблоны проектирования">Шаблоны проектирования</option>
+                        
+                          <option value="Сериализация">Сериализация</option>
+                        
+                          <option value="Потоки">Потоки</option>
+                        
+                          <option value="WEB">WEB</option>
+                        
+                          <option value="HTML">HTML</option>
+                        
+                          <option value="CSS">CSS</option>
+                        
+                          <option value="Многопоточность">Многопоточность</option>
+                        
+                          <option value="Журналирование">Журналирование</option>
+                        
+                          <option value="Базы данных">Базы данных</option>
+                        
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-primary mt-3">Выбрать</button>
+                </form>
+            </div>
+            
+            <div class="col">
+                <form class="d-flex mb-3" role="search" method="get" action="java_developer.html">
+                    <input type="text" name="search_query" class="form-control me-2" placeholder="Поиск вопроса" aria-label="Search" id="id_search_query">
+                    <button class="btn btn-outline-success" type="submit">Поиск</button>
+                </form>
+                
+                <table class="table table-sm table-hover">
+                    <thead>
+                        <tr>
+                            <th>Шанс</th>
+                            <th>Вопрос</th>
+                            <th class="d-none d-sm-table-cell">Тег</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">93%</td>
+                            
+                            <td><a href="../question/18.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о себе</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Общие</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">81%</td>
+                            
+                            <td><a href="../question/19.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое ООП</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">75%</td>
+                            
+                            <td><a href="../question/2725.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница между checked и unchecked исключениями</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">68%</td>
+                            
+                            <td><a href="../question/2727.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие методы в классе Object знаешь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">68%</td>
+                            
+                            <td><a href="../question/2726.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про иерархию исключений</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">62%</td>
+                            
+                            <td><a href="../question/6921.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи об иерархии коллекций в Java</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">62%</td>
+                            
+                            <td><a href="../question/20.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое SOLID</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Общие</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">56%</td>
+                            
+                            <td><a href="../question/6923.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как организована HashMap</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">56%</td>
+                            
+                            <td><a href="../question/6925.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличаются LinkedList и ArrayList</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">56%</td>
+                            
+                            <td><a href="../question/2730.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чём различие между интерфейсом и абстрактным классом</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">56%</td>
+                            
+                            <td><a href="../question/2728.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про Hash Code &amp; Equals Contract</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">56%</td>
+                            
+                            <td><a href="../question/2729.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чём разница между примитивом и ссылочным типом данных</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">50%</td>
+                            
+                            <td><a href="../question/21.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой есть опыт в программировании</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Общие</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">50%</td>
+                            
+                            <td><a href="../question/2731.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь о классе object</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">50%</td>
+                            
+                            <td><a href="../question/65.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть принципы ООП</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">43%</td>
+                            
+                            <td><a href="../question/7150.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое ACID</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Базы данных</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">43%</td>
+                            
+                            <td><a href="../question/7100.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">что такое  Stream в Java ?</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java 8</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">43%</td>
+                            
+                            <td><a href="../question/2392.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие Spring Scope знаешь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Spring</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">37%</td>
+                            
+                            <td><a href="../question/7101.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое функциональный интерфейс</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java 8</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">31%</td>
+                            
+                            <td><a href="../question/7121.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое ExecutorService</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Многопоточность</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">31%</td>
+                            
+                            <td><a href="../question/7153.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чём разница между SQL и NoSQL</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Базы данных</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">31%</td>
+                            
+                            <td><a href="../question/2732.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие правила переопределения hashcode и equals</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">31%</td>
+                            
+                            <td><a href="../question/7102.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Lambda</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java 8</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">31%</td>
+                            
+                            <td><a href="../question/7151.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое индексы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Базы данных</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">31%</td>
+                            
+                            <td><a href="../question/7152.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое нормализация баз данных</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Базы данных</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">31%</td>
+                            
+                            <td><a href="../question/2393.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое bean</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Spring</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">31%</td>
+                            
+                            <td><a href="../question/7120.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про deadlock</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Многопоточность</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/6927.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Каким образом HashMap связан с Set&#x27;ом</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/7123.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое процесс и поток, чем они отличаются</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Многопоточность</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/6929.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про HashMap</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/92.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие знаешь паттерны проектирования</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Паттерны</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/2734.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие участки памяти в JVM знаешь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/2733.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем вообще нужен класс object</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/2736.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие примитивные типы данных есть в Java</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/66.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое полиморфизм</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/2735.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чём разница между  final vs. finally vs. finalize</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/10549.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Знаком с SQL</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/91.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем singleton отличается от prototype</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Паттерны</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/7124.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про race condition</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Многопоточность</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/120.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Вы знакомы с SQL</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/2394.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой цикл жизни Spring Beans</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Spring</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/7122.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем идея многопоточности</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Многопоточность</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/3876.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чём разница между JDK и JRE</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/6935.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чём разница между  TreeSet и  HashSet</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/3900.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое исключение</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/2737.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие типы данных бывают в java</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/3880.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое инкапсуляция</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/3883.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая основная идея equals и HashCode</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/1760.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое ORM</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Фреймворки</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/3878.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличается операция map от flatMap</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/2396.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница между dependency injection и inverhuron of control</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Spring</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/3887.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь про String</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/93.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему синглтон называют антипаттерном</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Паттерны</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/3906.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое hashcode</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/3889.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое ключевое слово final</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/7154.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Назови сколько существует нормальных форм в SQL</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Базы данных</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/7155.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличаются LEFT JOIN от INNER JOIN</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Базы данных</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/3904.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое модификаторы доступа и какие они есть</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/7125.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое оптимистичная и пессимистичная блокировки</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Многопоточность</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/7126.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое монитор</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Многопоточность</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/22.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему именно Java</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Общие</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/122.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие виды join знаешь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/121.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличается where от having</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">SQL</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/7109.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое hibernate</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Hibernate</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/6932.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница меду hashmap и hashtable</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/3893.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое пул строк</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/6930.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему Map стоит особняком в иерархии коллекций</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Collections</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/2395.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие Scop&#x27;ы есть у bean&#x27;ов</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Spring</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/2397.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем нужен Spring Framework</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Spring</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/2398.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Spring контекст</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Spring</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">18%</td>
+                            
+                            <td><a href="../question/3896.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое итератор и зачем он нужен</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/111.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем rebase отличается от merge?</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Git</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3976.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что делает ключевое слово transient</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3975.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое finalize</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3972.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь о методе clone</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3971.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чём отличие Supplier&#x27;а от Consumer&#x27;а</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3973.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое строка в Java</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3967.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">С чем работает Garbage Collector</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3965.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем идея Stream API</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3968.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чём идея полиморфизма</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3974.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Можно ли переопределить статические методы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3958.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие методы располагаются в интерфейсе</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3956.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работает оператор try with resourses</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3960.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь про функциональный интерфейс Java 8+</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3952.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">String Builder и String Buffer , в чём различия</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/25.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое принципы SOLID</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Общие</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3954.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Может ли примитивный тип данных попасть в Hip</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3962.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Parallel Stream</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3946.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Основная идея инкапсуляции</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3944.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему нельзя сравнивать объекты через «==»</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3948.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем нужен String Pool</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3969.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чём смысл инкапсуляции</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3937.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое JVM, JDK, JRE</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3951.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем взаимосвязь контракта equals и hashCode</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3963.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Каким образом можно реализовать множественное наследование в Java</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3970.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое string pool</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/94.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие шаблоны проектирования знаешь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Паттерны</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/67.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем преимущества и недостатки ООП по сравнению с процедурным и функциональным программированием</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/3940.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие типы данных существуют в Java</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Java Core</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">12%</td>
+                            
+                            <td><a href="../question/1729.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое mock в тестирование</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Tools</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                
+                <nav>
+                  <ul class="pagination pagination-sm">
+                      
+                      
+                      <li class="page-item active" aria-current="page">
+                      <span class="page-link">1</span>
+                      </li>
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=2.html">2</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=3.html">3</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=4.html">4</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=5.html">5</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=6.html">6</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=7.html">7</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=8.html">8</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=9.html">9</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=10.html">10</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=11.html">11</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=12.html">12</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=13.html">13</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=14.html">14</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=15.html">15</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=16.html">16</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=17.html">17</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="java_developer@page=18.html">18</a>
+                              </li>
+                        
+                      
+                      
+                  </ul>
+                </nav>
+                
+            </div>
+            
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Добавление вопроса</h5>
+            <button type="button" class="close btn" data-bs-dismiss="modal" aria-label="Close">
+              <span  aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <form action="java_developer.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="GfBhwfO44StLcl8L3EpKz7I7JhJC50Lv1qutjGdotmF1R6kLY811QHTKWrqyBZAM">
+                    <div class="mb-3">
+                           <p class="fs-5">Вы добавляете вопрос для Java Developer</p>
+                        <label for="id_title" class="col-form-label">Вопрос:</label>
+                        <input type="text" name="title" class="form-control" maxlength="255" required id="id_title">
+                      </div>
+                    <div class="mb-3">
+                        <label for="id_tag" class="col-form-label">Тег:</label>
+                        <select name="tag" class="form-select">
+                            
+                                <option value="1">Нет</option>
+                            
+                                <option value="9">Общие</option>
+                            
+                                <option value="11">Паттерны</option>
+                            
+                                <option value="13">Git</option>
+                            
+                                <option value="14">Тестирование</option>
+                            
+                                <option value="16">ООП</option>
+                            
+                                <option value="21">SQL</option>
+                            
+                                <option value="22">Tools</option>
+                            
+                                <option value="34">Фреймворки</option>
+                            
+                                <option value="40">XML</option>
+                            
+                                <option value="41">UML</option>
+                            
+                                <option value="42">Spring</option>
+                            
+                                <option value="43">Servlets</option>
+                            
+                                <option value="44">JVM</option>
+                            
+                                <option value="45">JDBC</option>
+                            
+                                <option value="46">Java Core</option>
+                            
+                                <option value="47">Java Collections</option>
+                            
+                                <option value="48">Java 8</option>
+                            
+                                <option value="49">Hibernate</option>
+                            
+                                <option value="50">Шаблоны проектирования</option>
+                            
+                                <option value="51">Сериализация</option>
+                            
+                                <option value="52">Потоки</option>
+                            
+                                <option value="53">WEB</option>
+                            
+                                <option value="54">HTML</option>
+                            
+                                <option value="55">CSS</option>
+                            
+                                <option value="56">Многопоточность</option>
+                            
+                                <option value="57">Журналирование</option>
+                            
+                                <option value="18">Базы данных</option>
+                            
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить вопрос </button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

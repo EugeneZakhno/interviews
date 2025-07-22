@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Технические интервью
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <h1 class="mt-5 fs-3">Публичные собеседования</h1>
+<!--    <p class="mt-3 mb-5">Вы можете-->
+<!--        <a type="button" class="link" data-bs-toggle="modal" data-bs-target="#exampleModal"> Добавить мок-интервью </a>-->
+<!--    </p>-->
+        <div class="row">
+            <div class="col-12 col-md-2">
+                <form action="mock@&amp;page=4.html" method="get">
+                    <p>
+    <label for="id_profession">Должность:</label>
+    <select name="profession" class="form-select" required id="id_profession">
+  <option value="" selected>---------</option>
+
+  <option value="20">1C Developer</option>
+
+  <option value="5">Android Developer</option>
+
+  <option value="36">BI Analyst</option>
+
+  <option value="26">Business Analyst</option>
+
+  <option value="11">C/C++ Developer</option>
+
+  <option value="12">C# Developer</option>
+
+  <option value="28">Data Analyst</option>
+
+  <option value="45">Database Administrator</option>
+
+  <option value="31">Database Developer</option>
+
+  <option value="35">Data Engineer</option>
+
+  <option value="14">Data Scientist</option>
+
+  <option value="18">DevOps</option>
+
+  <option value="32">Embedded Developer</option>
+
+  <option value="17">Flutter Developer</option>
+
+  <option value="2">Frontend Developer</option>
+
+  <option value="13">Golang Developer</option>
+
+  <option value="24">HR Manager</option>
+
+  <option value="6">iOS Developer</option>
+
+  <option value="4">Java Developer</option>
+
+  <option value="15">Machine Learning Engineer</option>
+
+  <option value="46">Network Engineer</option>
+
+  <option value="10">Node.js Developer</option>
+
+  <option value="42">Pentester</option>
+
+  <option value="7">PHP Developer</option>
+
+  <option value="25">Product Analyst</option>
+
+  <option value="22">Product Designer</option>
+
+  <option value="8">Product Manager</option>
+
+  <option value="9">Project Manager</option>
+
+  <option value="1">Python Developer</option>
+
+  <option value="3">QA Engineer</option>
+
+  <option value="19">Ruby Developer</option>
+
+  <option value="54">Rust Developer</option>
+
+  <option value="55">Scala Developer</option>
+
+  <option value="44">System Administrator</option>
+
+  <option value="16">System Analyst</option>
+
+  <option value="23">Unity Developer</option>
+
+  <option value="29">Unreal Engine Developer</option>
+
+  <option value="21">UX/UI Designer</option>
+
+</select>
+    
+    
+  </p>
+
+  
+  <p>
+    <label>Грейд:</label>
+    <div id="id_grade"><div>
+    <label for="id_grade_0"><input type="radio" name="grade" value="Junior" required id="id_grade_0">
+ Junior</label>
+
+</div><div>
+    <label for="id_grade_1"><input type="radio" name="grade" value="Middle" required id="id_grade_1">
+ Middle</label>
+
+</div><div>
+    <label for="id_grade_2"><input type="radio" name="grade" value="Senior" required id="id_grade_2">
+ Senior</label>
+
+</div>
+</div>
+    
+    
+      
+    
+  </p>
+                    <button class="btn btn-primary btn-sm mt-3" type="submit">Выбрать</button>
+                </form>
+
+                </fieldset>
+            </div>
+            <div class="col">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Название</th>
+                      <th class="d-none d-sm-table-cell" scope="col">Должность</th>
+                      <th class="d-none d-sm-table-cell" scope="col">Грейд</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-group-divider">
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=r24Pe81QYs4" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Python developer на 3000$</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=SfH1pEWeOQc" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">СОБЕСЕДОВАНИЕ PYTHON DEVELOPER | BALABOL IT PYTHON PODCAST</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=l2GJ2ISyPng" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">luchanos | Balabot IT LIVE | Собеседование Junior Python Backend Developer</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=xEjbZOWmpsg" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">luchanos | Balabot IT LIVE | Собеседование Junior Python Backend Developer</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=jbG0uEwGnyc" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Техническое собеседование Python-разработчика с компанией Aston</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=BFOSuMc3hDc" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Публичное собеседование Python-разработчика с компанией Aston</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=MgFH0IkQNMQ" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Публичное собеседование: Junior Python-программист</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=B5Xbyj4h1JI" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">15 теоретических вопросов для начинающего Python-программиста на собеседовании (и 1 задача)</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=REN0G58nJAs" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование python-разработчика для Авито</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=hzG4IqaL410" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Публичное собеседование PYTHON-разработчик. JUNIOR Python мок-интервью. Джуниор Питон СОБЕС Пайтон</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=3eWH2hRlvaY" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Вопросы на собеседовании по PYTHON</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=LJ1A5KfqBZY" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Публичное собеседование #14: Python, API, Airflow, Async, DB, Net</a></td>
+                      <td class="d-none d-sm-table-cell">Python Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=dl19ouG0pTc" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование senior backend-разработчика / Node.js</a></td>
+                      <td class="d-none d-sm-table-cell">Node.js Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=HM42MlWbhFI" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Публичное собеседование: Демид Каширин, JS Backend</a></td>
+                      <td class="d-none d-sm-table-cell">Node.js Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=2DIBCDxYkUc" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Cобеседование Junior NODE JS backend разработчика</a></td>
+                      <td class="d-none d-sm-table-cell">Node.js Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=8b49Id8zMu8" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование на middle Node.js разработчика</a></td>
+                      <td class="d-none d-sm-table-cell">Node.js Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=pKC5VF7O-P8" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Public Interview for Node.js Developer</a></td>
+                      <td class="d-none d-sm-table-cell">Node.js Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=cuDhmVGkKUU" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Public Interview for Node.js Developer</a></td>
+                      <td class="d-none d-sm-table-cell">Node.js Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=sVWElH2Fx_c" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Публичное собеседование #2: Java, Node.js, DDD, ООП, паттерны, парадигмы, безопасность</a></td>
+                      <td class="d-none d-sm-table-cell">Node.js Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=tlBg-vwYpbs" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Публичное собеседование #11: Backend, Node.js, Nest, Patterns, Prisma, JavaScript, API, Security</a></td>
+                      <td class="d-none d-sm-table-cell">Node.js Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=3wZu07VsNMc" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Тестовое собеседование с подписчиком: JS, Next.js, Nest.js, React.js, Node.js, SQL</a></td>
+                      <td class="d-none d-sm-table-cell">Node.js Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=MHCQfayHZDQ" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Техническое собеседование на JavaScript разработчика | Junior fullstack-разработчик</a></td>
+                      <td class="d-none d-sm-table-cell">Node.js Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=2Z1YIXgEucA" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">#17 Full-stack разработчик на собеседовании Frontend Middle</a></td>
+                      <td class="d-none d-sm-table-cell">Node.js Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=Blxset-yW8Y" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">#3 Из SEO в Full Stack разработчика. Собеседование Frontend Junior</a></td>
+                      <td class="d-none d-sm-table-cell">Node.js Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=HmQW8yqG_F4" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Tech Interview Fest | Моковое cобеседование Android Junior |Solvery+Coffee&amp;Code | Иван Попов, Яндекc</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=6pEb4ihnXo0" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Публичное собеседование Android-разработчика с компанией Магнит</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=XwfWaI97Ikw" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Публичное собеседование на позицию Android-разработчика</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=api5eZhyQMM" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Вопросы с собеседований на Android</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=Z96JIhy1Bq8" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Публичное собеседование #12: Android junior, MVP, and Sockets</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=ZqLyxt3XTZQ" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Middle Android разработчика</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=ka30zdgOAYg" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование на Junior Android Dev у Анны Жарковой</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=A9EYj06al2w" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Cобеседование на позицию Android-разработчика</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=ZuZ89Cfj_jQ" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Android разработчика. Проводит Алексей Быков</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=FmgzRI47NiA" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Android system design</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=iZTJ0WRX4yU" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Junior Android разработчика. Проводит Кирилл Розов</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=sAjq8XzPOos" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Экспертное Android собеседование. Боиштян собеседует Розова</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=-NTdyKvzM0c" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование в прямом эфире. Junior Android разработчик</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=ud_yRWWFfjw" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование в прямом эфире</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=61aFEG97GrE" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Экспертное собеседование на позицию Senior Android разработчика</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=Iz0gY0ykiRw" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Android разработчика</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=lWZzEPklnU8" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Kotlin собеседование. Эксперты Тагаков и Попов</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=JaZ_1aXlX5A" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Экспертное собеседование. Дудаков — Иванов</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=umiL523LE94" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование в прямом эфире. Livecoding. Middle Android Dev</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=uZlOpmJLtL4" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Экспертное собеседование. Владимир Иванов - Артем Зиннатуллин</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=hsyTEQkaUAc" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Гончаров-Бадретдинов</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=s9j_7byy9-c" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование на Android разработчика для dev.to</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=2cgIoGOL0lA" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Junior Android разработчика на ОФФЕР в РЕАЛЬНОМ времени / Мобильный разработчи</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=KHWLjyqPvLc" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Реальное собеседование Junior Android разработчика. Денис Бекк / Мобильный разработчик</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=h6srkf8IkLo" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Реальное собеседование Junior Android разработчика. Александр Казырицкий / Мобильный разработчик</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=vRLGtjoJ1g4" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Реальное собеседование Android уровня Middle. Даниил Черняев / Мобильный разработчик</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=qb0Ezy-WO_k" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Jetpack Compose Battle: Онлайн-собеседования Senior разработчика / Мобильный разработчик</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=eDK3GW77ahc" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Что я спрашиваю на собеседовании? [RU, ITTalks] / Мобильный разработчик</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=arUctP5yAYc" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Онлайн-собеседование, Coroutines! / Мобильный разработчик</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=K3MpD8lsmvA" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Android разработчика.Часть 3</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=xw5aVMQWdUE" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Android разработчика. Часть 2</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=r-A7o_6h7yI" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Senior Android разработчика. Часть 1</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=ZLEL9BZ8OnQ" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Тестовое собеседование на позицию Android Developer (I и II этапы)</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=Bk7a0CcgNa8" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование на позицию Senior Android Developer</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=Q82ijjdkWCY" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование на позицию Junior Android Developer</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=-UEPXfGBQF0" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Тестовое собеседование на позицию Android Developer (III и IV этапы)</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=odnGQh08b8Q" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование на должность Junior Android Developer. Вопросы и ответы</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=6FRJaXv6H58" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Android Interview Preparation #6. Android Junior Interview</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=sHzl7KAtsnw" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Android Interview Preparation #3 - Behavior/Soft Skills</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=QxhHA7niXdc" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Android Interview Preparation #2 - Platform questions</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=fYEebJyNCqE" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Android Interview Preparation #1 - Language questions</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=4Bhf3vLgYYA" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">ndroid Interview Preparation #4 - Async work interview</a></td>
+                      <td class="d-none d-sm-table-cell">Android Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=MfNK8A2UgOU" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Групповое собеседование на Junior и Middle Java разработчика</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=tKKmqnXv81g" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Техническое собеседование Junior Java разработчика</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=cTYSR0J8neU" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Техническое собеседование junior Java разработчика. Часть 1.</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=OUll3psBdtU" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Tech Interview Fest | Моковое cобеседование на Java Junior |Solvery+@progmsk</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=UUhB4rVlIoU" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Публичное собеседование: Егор Бугаенко и Сагындык Мухамбетов</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=boDeUHdsfAI" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Публичное собеседование: Василий Васильков и Тимур Маликин (Первая часть)</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=JGzlKzTjl_U" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Публичное собеседование: Василий Васильков и Тимур Маликин (Вторая часть)</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=elVa3m-xG1g" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Публичное собеседование: Василий Васильков и Тимур Маликин (Третья часть)</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=bt794-68tpI" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Как пройти собеседование по JAVA?</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=_7riaBIOxbM" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Java Spring - Разбор вопросов с собеседований на Java Developer</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=cljQ1Mru4XM" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Java Middle Senior | Собеседование без конкретных требований от компании | Jetbulb</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Senior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=qVm7diz18fE" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Java Junior | Артем М. vs. Максим Добрынин | Jetbulb</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=THdyhz0LAKQ" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Java Middle | Реальное собеседование | Jetbulb</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=2JZIE1oKYuo" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Java Junior | Jetbulb</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=82b4caBULBQ" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Java Junior | Никита В. vs. Максим Добрынин | Jetbulb</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=BtuEx9BpA7k" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Собеседование Java Junior | Алексей Сытый vs. Максим Добрынин | Jetbulb</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Junior</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=SX82OpGP0XE" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Техническое интервью Java Developer - Сергей Гонтаренко</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=SnhpLVdJGuo" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Техническое интервью Java Developer - Артем Рутковский</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=45MPWlipgBQ" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Техническое интервью Java Developer - Артем Таужнянский</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=6MOW9lfpI6U" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Техническое интервью Java Developer - Артем Никулин</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=jgypel6JSzE" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Техническое интервью Java Developer - Алексей Ботя</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=OX9daXWRs0Q" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Техническое интервью Java Developer - Максим Стеблевский</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=2IaideAsMIo" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Техническое интервью Java Developer - Михаил Кончиц</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=kGuxvfTyDto" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Техническое интервью Java Developer - Дмитрий Квасников</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=qhuL3aJjN2U" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Техническое интервью Java Developer - Азамат Сегизбаев</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=H08ECNPEcsg" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Техническое интервью Java Developer - Евгений Мереха</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=U5HZLQvebEE" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Техническое интервью Java Developer - Юрий Бродинский</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=LTJpKChCNSA" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Техническое интервью Java Developer - Алексей Гумен</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=mNIqPQn2-Rk" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Техническое интервью Java Developer - Юрий Мусиенко</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=6AvQ6a8-s-Y" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Техническое интервью Java Developer - Иван Крутиков</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=1oaaB1c-oiQ" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Тестовое собеседование Java разработчика #27 - Зуфар Сунагатов</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=M_fmLac_PCY" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Тестовое собеседование Java разработчика #23 - Аскар Сариев</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=IDpe1C_KH8o" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Тестовое собеседование Java разработчика #25 - Алексей Пригода</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                    <tr>
+                      <td><a href="https://www.youtube.com/watch?v=TkFRIbKpeEM" target="_blank" class="link-offset-2 link-offset-3-hover link-underline
+            link-underline-opacity-0 link-underline-opacity-75-hover">Тестовое собеседование Java разработчика #22 - Николай Оськин</a></td>
+                      <td class="d-none d-sm-table-cell">Java Developer</td>
+                      <td class="d-none d-sm-table-cell">Middle</td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+                
+                <nav>
+                  <ul class="pagination pagination-sm">
+                      
+                      
+                          
+                           <li class="page-item">
+                              <a class="page-link" href="mock@&amp;page=1.html">1</a>
+                          </li>
+                          
+                      
+                      
+                      
+                          
+                           <li class="page-item">
+                              <a class="page-link" href="mock@&amp;page=2.html">2</a>
+                          </li>
+                          
+                      
+                      
+                      
+                          
+                           <li class="page-item">
+                              <a class="page-link" href="mock@&amp;page=3.html">3</a>
+                          </li>
+                          
+                      
+                      
+                      
+                      <li class="page-item active" aria-current="page">
+                      <span class="page-link">4</span>
+                      </li>
+                      
+                      
+                      
+                          
+                           <li class="page-item">
+                              <a class="page-link" href="mock@&amp;page=5.html">5</a>
+                          </li>
+                          
+                      
+                      
+                      
+                          
+                           <li class="page-item">
+                              <a class="page-link" href="mock@&amp;page=6.html">6</a>
+                          </li>
+                          
+                      
+                      
+                      
+                          
+                           <li class="page-item">
+                              <a class="page-link" href="mock@&amp;page=7.html">7</a>
+                          </li>
+                          
+                      
+                      
+                  </ul>
+                </nav>
+                
+        </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Добавление мок-интервью</h5>
+            <button type="button" class="close btn" data-bs-dismiss="modal" aria-label="Close">
+              <span  aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <form action="mock@&amp;page=4.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="sNF5jcNNW31FYTm5Z0WoFzpRfJaPGcOENYyh6Dc7lxdVDEy5UuyFW9AusTRLcbDV">
+                    <p>
+    <label for="id_profession">Должность:</label>
+    <select name="profession" class="form-select" required id="id_profession">
+  <option value="" selected>---------</option>
+
+  <option value="7">PHP Developer</option>
+
+  <option value="5">Android Developer</option>
+
+  <option value="6">iOS Developer</option>
+
+  <option value="14">Data Scientist</option>
+
+  <option value="4">Java Developer</option>
+
+  <option value="24">HR Manager</option>
+
+  <option value="28">Data Analyst</option>
+
+  <option value="17">Flutter Developer</option>
+
+  <option value="26">Business Analyst</option>
+
+  <option value="3">QA Engineer</option>
+
+  <option value="9">Project Manager</option>
+
+  <option value="1">Python Developer</option>
+
+  <option value="12">C# Developer</option>
+
+  <option value="13">Golang Developer</option>
+
+  <option value="11">C/C++ Developer</option>
+
+  <option value="18">DevOps</option>
+
+  <option value="2">Frontend Developer</option>
+
+  <option value="19">Ruby Developer</option>
+
+  <option value="16">System Analyst</option>
+
+  <option value="22">Product Designer</option>
+
+  <option value="23">Unity Developer</option>
+
+  <option value="25">Product Analyst</option>
+
+  <option value="29">Unreal Engine Developer</option>
+
+  <option value="31">Database Developer</option>
+
+  <option value="55">Scala Developer</option>
+
+  <option value="54">Rust Developer</option>
+
+  <option value="32">Embedded Developer</option>
+
+  <option value="35">Data Engineer</option>
+
+  <option value="36">BI Analyst</option>
+
+  <option value="42">Pentester</option>
+
+  <option value="44">System Administrator</option>
+
+  <option value="45">Database Administrator</option>
+
+  <option value="46">Network Engineer</option>
+
+  <option value="20">1C Developer</option>
+
+  <option value="15">Machine Learning Engineer</option>
+
+  <option value="10">Node.js Developer</option>
+
+  <option value="8">Product Manager</option>
+
+  <option value="21">UX/UI Designer</option>
+
+</select>
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_title">Название:</label>
+    <input type="text" name="title" class="form-control" maxlength="600" required id="id_title">
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_url">Ссылка:</label>
+    <input type="url" name="url" class="form-control" maxlength="200" required id="id_url">
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_grade">Грейд:</label>
+    <select name="grade" class="form-select" id="id_grade">
+  <option value="Junior">Junior</option>
+
+  <option value="Middle">Middle</option>
+
+  <option value="Senior">Senior</option>
+
+</select>
+    
+    
+      
+    
+  </p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить</button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

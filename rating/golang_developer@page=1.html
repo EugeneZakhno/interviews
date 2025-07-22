@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Вопросы с собеседований на Golang Developer
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <h1 class="mt-5 fs-3"> Вопросы с собеседований на Golang Developer</h1>
+    
+    <p class="fs-5 mt-3 mb-5 fs-6">Вопросов всего: 349.
+<!--        Вы можете-->
+<!--        <a type="button" class="link" data-bs-toggle="modal" data-bs-target="#exampleModal"> Добавить вопрос </a>-->
+    </p>
+    
+    <div class="row align-items-start">
+            <div class="col-12 col-md-2 d-flex flex-column align-items-start">
+                <p class="">Фильтр:</p>
+                <form action="golang_developer@page=1.html">
+                    <select class="form-select" aria-label="Default select example" name="tag">
+                        
+                            <option selected>Все</option>
+                        
+                          <option value="Все">Все</option>
+                        
+                          <option value="Нет">Нет</option>
+                        
+                          <option value="Общие">Общие</option>
+                        
+                          <option value="Паттерны">Паттерны</option>
+                        
+                          <option value="HRский">HRский</option>
+                        
+                          <option value="Тестирование">Тестирование</option>
+                        
+                          <option value="Протоколы">Протоколы</option>
+                        
+                          <option value="ООП">ООП</option>
+                        
+                          <option value="Базы данных">Базы данных</option>
+                        
+                          <option value="Архитектура">Архитектура</option>
+                        
+                          <option value="Алгоритмы, структуры">Алгоритмы, структуры</option>
+                        
+                          <option value="Runtime">Runtime</option>
+                        
+                          <option value="Reflection">Reflection</option>
+                        
+                          <option value="Go">Go</option>
+                        
+                          <option value="Системный дизайн">Системный дизайн</option>
+                        
+                          <option value="Примитивы синхронизации">Примитивы синхронизации</option>
+                        
+                          <option value="Операционные системы">Операционные системы</option>
+                        
+                          <option value="Инфраструктура и деплой">Инфраструктура и деплой</option>
+                        
+                          <option value="Интерфейсы">Интерфейсы</option>
+                        
+                          <option value="Горутины и каналы">Горутины и каналы</option>
+                        
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-primary mt-3">Выбрать</button>
+                </form>
+            </div>
+            
+            <div class="col">
+                <form class="d-flex mb-3" role="search" method="get" action="golang_developer@page=1.html">
+                    <input type="text" name="search_query" class="form-control me-2" placeholder="Поиск вопроса" aria-label="Search" id="id_search_query">
+                    <button class="btn btn-outline-success" type="submit">Поиск</button>
+                </form>
+                
+                <table class="table table-sm table-hover">
+                    <thead>
+                        <tr>
+                            <th>Шанс</th>
+                            <th>Вопрос</th>
+                            <th class="d-none d-sm-table-cell">Тег</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">91%</td>
+                            
+                            <td><a href="../question/6092.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как каналы устроены в Go</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Горутины и каналы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">83%</td>
+                            
+                            <td><a href="../question/6091.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое горутины</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Горутины и каналы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">75%</td>
+                            
+                            <td><a href="../question/6051.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое интерфейсы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Интерфейсы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">66%</td>
+                            
+                            <td><a href="../question/5920.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница слайсов и массивов</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">58%</td>
+                            
+                            <td><a href="../question/5918.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работает Map</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">50%</td>
+                            
+                            <td><a href="../question/10610.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о своем опыте</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">50%</td>
+                            
+                            <td><a href="../question/5850.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о себе</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">HRский</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">41%</td>
+                            
+                            <td><a href="../question/5883.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как строки работают в Golang внутри</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">41%</td>
+                            
+                            <td><a href="../question/5958.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как устроен Map в Go</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">33%</td>
+                            
+                            <td><a href="../question/6036.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как устроены контексты в Go</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">33%</td>
+                            
+                            <td><a href="../question/5919.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как слайсы работают</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">33%</td>
+                            
+                            <td><a href="../question/11215.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем нужны транзакции</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">33%</td>
+                            
+                            <td><a href="../question/6025.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница процесса и потока в рамках операционной системы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Операционные системы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">33%</td>
+                            
+                            <td><a href="../question/6094.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие типы каналов существуют</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Горутины и каналы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">33%</td>
+                            
+                            <td><a href="../question/6002.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работает Select</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/5973.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница TCP и UDP</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Протоколы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/6000.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое WaitGroup</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/6031.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как ООП в Go реализовано</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/5844.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем нужна конструкция defer</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Runtime</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/6096.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница между буферизированными и небуферизированными каналами</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Горутины и каналы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/6015.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое mutex, какие они бывают и как их использовать</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/6073.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие недостатки есть у Go</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/11216.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие индексы знаешь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/6041.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое context в Go</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/11217.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие БД бывают</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/5921.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем ключевое различие слайса от массива</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/6095.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что будет, если попытатся писать в закрытом канале</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Горутины и каналы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">25%</td>
+                            
+                            <td><a href="../question/6175.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое репликация</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Базы данных</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/5976.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем отличия http 1.1 и http 2</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Протоколы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/5897.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие бывают типы в Go</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/11222.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про гарбидж коллектор</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/11221.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как устроены строки в Go</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/5922.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как устроены таблицы Map</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/11218.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое SOLID</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/6149.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Разница между WHERE и HAVING</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Базы данных</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/5923.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Насколько увеличивается слайс при append</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/11219.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие основные структуры данных есть в Go</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/6087.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем разница между императивным и декларативным</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/6093.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем горутины отличаются от тредов</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Горутины и каналы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/5924.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Возможны ли случаи, когда перебор по слайсу будет быстрее чем по map</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/6177.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое шардинг</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Базы данных</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/6052.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое утиная типизация</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Интерфейсы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/6071.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие преимущества есть у Go</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/5887.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Каково стандартное поведение в Go при передаче функции</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/6028.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как инкапсуляция осуществлена в Golang</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/11220.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что делает команда килл в linux</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/6001.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как завершить много горутин</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/6029.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как наследование осуществлено в Golang</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/5979.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое HTTP</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Протоколы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/5960.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое эвакуация, и в каком случае она будет происходить</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/5969.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое микросервисная архитектура</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Системный дизайн</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/5981.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чем отличия HTTP и HTTPS</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Протоколы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-success">16%</td>
+                            
+                            <td><a href="../question/6030.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как полиморфизм осуществлен в Golang</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5872.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи, какой паттерн использовал в продукте/своем коде</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Паттерны</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5871.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про паттерн Singleton(Одиночка)</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Паттерны</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5854.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Кто управляет горутинами</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5900.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как преобразовать строку в int и наоборот</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5899.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое обычный int и какие есть нюансы его реализации</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5901.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Можно ли сделать int(string) и string(int) соответственно</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5902.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Сколько в памяти занимают реализации int32 и int64</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5903.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие предельные значения int32 и int64</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5904.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой результат получим если разделить int на 0 и float на 0</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5870.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про паттерн Factory(Фабрика)</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Паттерны</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5898.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Отличие uint от int</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5869.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про паттерн Builder(Строитель)</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Паттерны</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5853.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое runtime (планировщик sheduler)</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5846.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как устроен runtime в Go</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Runtime</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5896.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как эффективно склеивать строки (конкатенация строк)</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5895.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть нюансы при итерации по строке</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5868.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">С какими паттернами проектирования знакомы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Паттерны</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5894.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как определить количество символов для строки</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5893.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что будет если сложить строки</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5867.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Сколько очередей в паттерне</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Паттерны</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5852.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про планирование goroutine</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5892.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как можно оперировать строками</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5891.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что происходит при склеивании строк</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5866.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи о GMP паттерне</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Паттерны</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5890.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Можно ли изменить определенный символ в строке</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5938.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие функции у map</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5889.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что из себя представляет тип данных string в языке Golang</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5865.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Сколько весит число в байтах</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5851.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работает сборщик мусора в Go</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5845.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой концепт конструкция defer помогает реализовывать</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Runtime</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5888.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой вес у пустой структуры</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5934.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как со слайсами работать</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5864.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Сколько весит пустая строка в байтах</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5933.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что будет в Map, если не делать make или short assign</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5932.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какое свойство должно быть у ключа в Map</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5886.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">У ресивера имеется звёздочка - что это значит</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5931.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как работает append в слайсе</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5930.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что будет, если подставить переменную в массив</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5935.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как думаешь, будут ли MAP ordered</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5936.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как правильно объявлять Маппу</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5937.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как быстро можно что-то найти, если искать по индексу в слайсе и в Маппе</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5885.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие отличия у быстрого объявления и объявления через var</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5939.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какая средняя сложность поиска по слайсу и по map</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5940.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как объявлять слайс</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5941.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие ключи могут быть в МАПе</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5942.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие типы данных можно использовать в ключах</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5861.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как устроены горутины, сколько памяти они занимают в стеке</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                
+                <nav>
+                  <ul class="pagination pagination-sm">
+                      
+                      
+                      <li class="page-item active" aria-current="page">
+                      <span class="page-link">1</span>
+                      </li>
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="golang_developer@page=2.html">2</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="golang_developer@page=3.html">3</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="golang_developer@page=4.html">4</a>
+                              </li>
+                        
+                      
+                      
+                  </ul>
+                </nav>
+                
+            </div>
+            
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Добавление вопроса</h5>
+            <button type="button" class="close btn" data-bs-dismiss="modal" aria-label="Close">
+              <span  aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <form action="golang_developer@page=1.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="aTnTv4FAhg4kVEgShSZQvo8DHI9gtsIhv4g5iv4UGKgAApsScmB7MYjgUSQcZrxy">
+                    <div class="mb-3">
+                           <p class="fs-5">Вы добавляете вопрос для Golang Developer</p>
+                        <label for="id_title" class="col-form-label">Вопрос:</label>
+                        <input type="text" name="title" class="form-control" maxlength="255" required id="id_title">
+                      </div>
+                    <div class="mb-3">
+                        <label for="id_tag" class="col-form-label">Тег:</label>
+                        <select name="tag" class="form-select">
+                            
+                                <option value="1">Нет</option>
+                            
+                                <option value="9">Общие</option>
+                            
+                                <option value="11">Паттерны</option>
+                            
+                                <option value="12">HRский</option>
+                            
+                                <option value="14">Тестирование</option>
+                            
+                                <option value="15">Протоколы</option>
+                            
+                                <option value="16">ООП</option>
+                            
+                                <option value="18">Базы данных</option>
+                            
+                                <option value="19">Архитектура</option>
+                            
+                                <option value="39">Алгоритмы, структуры</option>
+                            
+                                <option value="63">Runtime</option>
+                            
+                                <option value="64">Reflection</option>
+                            
+                                <option value="65">Go</option>
+                            
+                                <option value="66">Системный дизайн</option>
+                            
+                                <option value="67">Примитивы синхронизации</option>
+                            
+                                <option value="68">Операционные системы</option>
+                            
+                                <option value="69">Инфраструктура и деплой</option>
+                            
+                                <option value="70">Интерфейсы</option>
+                            
+                                <option value="71">Горутины и каналы</option>
+                            
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить вопрос </button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>

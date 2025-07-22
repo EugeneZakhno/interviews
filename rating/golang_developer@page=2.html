@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+Вопросы с собеседований на Golang Developer
+</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(95314788, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Вопросы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mock.html">Собесы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../mentor.html">Менторы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../analytic.html">Требования</a>
+              </li>
+          </ul>
+              <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container" style="flex: 1 1 auto;">
+        
+
+    <h1 class="mt-5 fs-3"> Вопросы с собеседований на Golang Developer</h1>
+    
+    <p class="fs-5 mt-3 mb-5 fs-6">Вопросов всего: 349.
+<!--        Вы можете-->
+<!--        <a type="button" class="link" data-bs-toggle="modal" data-bs-target="#exampleModal"> Добавить вопрос </a>-->
+    </p>
+    
+    <div class="row align-items-start">
+            <div class="col-12 col-md-2 d-flex flex-column align-items-start">
+                <p class="">Фильтр:</p>
+                <form action="golang_developer@page=2.html">
+                    <select class="form-select" aria-label="Default select example" name="tag">
+                        
+                            <option selected>Все</option>
+                        
+                          <option value="Все">Все</option>
+                        
+                          <option value="Нет">Нет</option>
+                        
+                          <option value="Общие">Общие</option>
+                        
+                          <option value="Паттерны">Паттерны</option>
+                        
+                          <option value="HRский">HRский</option>
+                        
+                          <option value="Тестирование">Тестирование</option>
+                        
+                          <option value="Протоколы">Протоколы</option>
+                        
+                          <option value="ООП">ООП</option>
+                        
+                          <option value="Базы данных">Базы данных</option>
+                        
+                          <option value="Архитектура">Архитектура</option>
+                        
+                          <option value="Алгоритмы, структуры">Алгоритмы, структуры</option>
+                        
+                          <option value="Runtime">Runtime</option>
+                        
+                          <option value="Reflection">Reflection</option>
+                        
+                          <option value="Go">Go</option>
+                        
+                          <option value="Системный дизайн">Системный дизайн</option>
+                        
+                          <option value="Примитивы синхронизации">Примитивы синхронизации</option>
+                        
+                          <option value="Операционные системы">Операционные системы</option>
+                        
+                          <option value="Инфраструктура и деплой">Инфраструктура и деплой</option>
+                        
+                          <option value="Интерфейсы">Интерфейсы</option>
+                        
+                          <option value="Горутины и каналы">Горутины и каналы</option>
+                        
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-primary mt-3">Выбрать</button>
+                </form>
+            </div>
+            
+            <div class="col">
+                <form class="d-flex mb-3" role="search" method="get" action="golang_developer@page=2.html">
+                    <input type="text" name="search_query" class="form-control me-2" placeholder="Поиск вопроса" aria-label="Search" id="id_search_query">
+                    <button class="btn btn-outline-success" type="submit">Поиск</button>
+                </form>
+                
+                <table class="table table-sm table-hover">
+                    <thead>
+                        <tr>
+                            <th>Шанс</th>
+                            <th>Вопрос</th>
+                            <th class="d-none d-sm-table-cell">Тег</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5955.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое функция copy</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5956.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как можно слить два слайса</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5957.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как можно нарезать слайс Какие есть нюансы, подводные камни</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5959.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему нельзя брать ссылку на значение, хранящееся по ключу в map</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5961.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть особенности синтаксиса получения и записи значений в map</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5962.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как происходит поиск по ключу в map</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5963.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Каков порядок перебора map</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5964.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое len и capacity в slice Go</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5965.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое хэш-таблица</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5966.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое массив (array)</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5967.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое хеш-функция</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Алгоритмы, структуры</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5968.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое РПС</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Системный дизайн</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5970.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличается микросервис от монолита</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Системный дизайн</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5971.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Опишите плюсы и минусы микросервисной архитектуры</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Системный дизайн</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5972.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Опишите плюсы и минусы монолита</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Системный дизайн</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5974.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие бывают версии HTTP</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Протоколы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5975.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что можешь сказать о HTTP3</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Протоколы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5977.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как произвести дебаг protobuff</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Протоколы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5978.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое NAT</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Протоколы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5980.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое HTTPS</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Протоколы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5982.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое SSL</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Протоколы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5983.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое TLS</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Протоколы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5984.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">есть отличия между SSL и TLS</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Протоколы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5985.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как проверить тип переменной в среде выполнения</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5986.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как тестировать распределённую систему</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5987.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Знакомы ли с lock-free концепцией</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5988.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Можешь описать принцип работы lock-free</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5989.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как можно измерить использование памяти в Go Что такое pprof</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5990.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Способы поиска проблем производительности на проде</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5991.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как встроить стандартный профайлер в свое приложение</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5992.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Overhead от стандартного профайлера</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5993.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Насколько безопасно передавать слайсы в разные горутины</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5994.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Где потокобезопасность Маппы безопасна</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5995.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему Маппу не сделали более сейфовой</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5996.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что можно и что нельзя делать с потокобезопасностью каналов</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5997.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Насколько безопасен слайс в контексте Concurrency</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5998.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Безопасен ли map</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/5999.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Насколько безопасны каналы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6003.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что следует помнить при работе с мьютексами в Go</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6004.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи про аналог default в select&quot;e</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6005.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем WaitGroup нужны</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6006.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что знаешь о sync.map</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6007.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как объединить по смыслу Маппу и Мьютексы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6008.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличается RW Мьютекс от обычного</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6009.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи, что такое starvation/голодание</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6010.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие используешь мьютексы для того, чтобы обезопасить МАПу</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6011.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что выполняет default в select</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6012.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что будет происходить при конкуррентной записи в map Как можно решить эту проблему</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6013.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как защититься от ошибки во время конкурентной записи в map</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6014.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие бывают способоы синхронизации данных в Go</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6016.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое atomics, какие бывают и как и когда их лучше использовать</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6017.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое lock-free структуры данных, и есть ли в Go такие</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6018.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как можно обработать панику с помощью defer и recovery</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6019.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Можно ли использовать один и тот же буфер []byte в нескольких горутинах</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6020.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие типы мьютексов предоставляет stdlib</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Примитивы синхронизации</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6021.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как тесты и TDD влияют на организацию кода</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Тестирование</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6022.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">В чём разница между сцеплением и связанностью</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6023.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему в TDD тесты пишутся прежде кода</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Тестирование</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6024.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Если у кода плохая организация, как это поймёшь</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6026.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Каки знаешь способы общения между процессами</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Операционные системы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6027.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем воспользоваться, если два процесса запрашивают доступ к оперативной памяти, а свободного места только для одного</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Операционные системы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6032.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Сравни как реализован ООП Go и C#</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6033.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как устроена объектоориентированная модель в Go</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6034.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему встраивание — не наследование</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">ООП</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6035.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть способы написания обобщенного кода в Go</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Общие</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6037.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие известны  виды контекстов в Go</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6038.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Расскажи кейсы использования контекста</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6039.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие есть возможности у создания дочернего контекста данных</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6040.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">На какие уровни контекста распространяется отмена</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6042.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое сине-зеленый деплой(blue-green deployment)</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Инфраструктура и деплой</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6043.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Canary (канареечные развертывания)</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Инфраструктура и деплой</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6044.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Dark (скрытые) или А/В-развертывания</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Инфраструктура и деплой</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6045.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое SLA</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Инфраструктура и деплой</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6046.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое SLO</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Инфраструктура и деплой</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6047.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое SLI</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Инфраструктура и деплой</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6048.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие инструменты CI/CD  известны</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Инфраструктура и деплой</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6049.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как обеспечить непрерывность и стабильность деплоя приложения</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Инфраструктура и деплой</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6050.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">С какими проблемами при деплое продукта сталкивался, как митигировал</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Инфраструктура и деплой</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6053.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как можно проверить тип интерфейса</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Интерфейсы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6054.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Почему пустой интерфейс можно привести к любому типу</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Интерфейсы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6055.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как пустой интерфейс связан с обычным</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Интерфейсы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6056.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что может быть пустым интерфейсом</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Интерфейсы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6057.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем нужен пустой интерфейс</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Интерфейсы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6058.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое пустой интерфейс</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Интерфейсы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6059.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какой есть способ проверки соответствия структуры интерфейсу</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Интерфейсы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6060.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое closer и принцип его работы</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Интерфейсы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6061.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Чем отличается интерфейс Go от интерфейсов в других языках</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Интерфейсы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6062.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Внутренее устройство интерфейса</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Интерфейсы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6063.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое nil интерфейс</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Интерфейсы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6064.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое type switch</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Интерфейсы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6065.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как преобразовать интерфейс к другому типу</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Интерфейсы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6066.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Где следует поместить описание интерфейса</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Интерфейсы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6067.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как сообщить компилятору, что наш тип реализует интерфейс</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Интерфейсы</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6068.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое Go</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Go</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6070.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Какие основные отличия есть у Go перед языками Java, Python</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6074.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое пакеты (package) в Go</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6077.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Как создавать и импортировать пакеты</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6078.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое CI/CD</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6079.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Что такое линтеры (linters)</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td align="center" class=" text-warning">8%</td>
+                            
+                            <td><a href="../question/6080.html" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Зачем нужны линтеры (linters)</a></td>
+                            
+                            <td class="d-none d-sm-table-cell">Нет</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                
+                <nav>
+                  <ul class="pagination pagination-sm">
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="golang_developer@page=1.html">1</a>
+                              </li>
+                        
+                      
+                      
+                      
+                      <li class="page-item active" aria-current="page">
+                      <span class="page-link">2</span>
+                      </li>
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="golang_developer@page=3.html">3</a>
+                              </li>
+                        
+                      
+                      
+                      
+                        
+                              <li class="page-item">
+                                  <a class="page-link" href="golang_developer@page=4.html">4</a>
+                              </li>
+                        
+                      
+                      
+                  </ul>
+                </nav>
+                
+            </div>
+            
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Добавление вопроса</h5>
+            <button type="button" class="close btn" data-bs-dismiss="modal" aria-label="Close">
+              <span  aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <form action="golang_developer@page=2.html" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="Js4TdysBhUBHEMxW92uKgQHaohinjjmu4DX50ZRVGoNXjxJW4w61xqSNBrZjPibL">
+                    <div class="mb-3">
+                           <p class="fs-5">Вы добавляете вопрос для Golang Developer</p>
+                        <label for="id_title" class="col-form-label">Вопрос:</label>
+                        <input type="text" name="title" class="form-control" maxlength="255" required id="id_title">
+                      </div>
+                    <div class="mb-3">
+                        <label for="id_tag" class="col-form-label">Тег:</label>
+                        <select name="tag" class="form-select">
+                            
+                                <option value="1">Нет</option>
+                            
+                                <option value="9">Общие</option>
+                            
+                                <option value="11">Паттерны</option>
+                            
+                                <option value="12">HRский</option>
+                            
+                                <option value="14">Тестирование</option>
+                            
+                                <option value="15">Протоколы</option>
+                            
+                                <option value="16">ООП</option>
+                            
+                                <option value="18">Базы данных</option>
+                            
+                                <option value="19">Архитектура</option>
+                            
+                                <option value="39">Алгоритмы, структуры</option>
+                            
+                                <option value="63">Runtime</option>
+                            
+                                <option value="64">Reflection</option>
+                            
+                                <option value="65">Go</option>
+                            
+                                <option value="66">Системный дизайн</option>
+                            
+                                <option value="67">Примитивы синхронизации</option>
+                            
+                                <option value="68">Операционные системы</option>
+                            
+                                <option value="69">Инфраструктура и деплой</option>
+                            
+                                <option value="70">Интерфейсы</option>
+                            
+                                <option value="71">Горутины и каналы</option>
+                            
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Добавить вопрос </button>
+                    </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+  <footer class="py-3 my-4">
+      <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</p>
+      <ul class="nav justify-content-center pb-1 mb-1">
+<!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+          <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+          <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+          <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+          <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+          <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+          <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+  </footer>
+</div>
+</html>
