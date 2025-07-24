@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+        Что такое обычный int и какие есть нюансы его реализации
+    </title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(95314788, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+    <div class="container">
+        <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 easyoffer</a></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Вопросы</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../mock.html">Собесы</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../mentor.html">Менторы</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../analytic.html">Требования</a>
+                </li>
+            </ul>
+            <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+    </div>
+</nav>
+<main class="container" style="flex: 1 1 auto;">
+
+
+    <div class="row">
+        <div class="col">
+            <h1>1. Основы языка (Fundamentals)</h1>
+
+            <h2>• Типы данных:</h2>
+            <ul>
+                <li>Какие основные типы данных в Go? (int, float64, string, bool, struct, slice, map, chan, interface)</li>
+                <li>В чем разница между int и uint?</li>
+                <li>Что такое rune? Чем отличается от byte?</li>
+                <li>Что такое string в Go? Неизменяемость строк.</li>
+                <li>Что такое nil? Для каких типов данных nil является нулевым значением?</li>
+                <li>Что такое iota? Где он используется?</li>
+                <li>Как объявить константу?</li>
+            </ul>
+
+            <h2>• Переменные:</h2>
+            <ul>
+                <li>В чем разница между объявлением переменной с использованием var и :=?</li>
+                <li>Что такое нулевое значение переменной?</li>
+                <li>Как объявить несколько переменных одного типа в одной строке?</li>
+                <li>Что такое область видимости переменной?</li>
+            </ul>
+
+            <h2>• Операторы:</h2>
+            <ul>
+                <li>Какие арифметические, логические и побитовые операторы есть в Go?</li>
+                <li>Какие операторы сравнения есть в Go?</li>
+            </ul>
+
+            <h2>• Управляющие конструкции:</h2>
+            <ul>
+                <li>Как работает оператор if? Можно ли использовать if без else?</li>
+                <li>Как работает оператор switch? В чем его отличие от if-else if-else?</li>
+                <li>Как работает цикл for?</li>
+                <li>Как работают операторы break и continue?</li>
+                <li>Как работает оператор goto (хотя его использование не рекомендуется)?</li>
+            </ul>
+
+            <h2>• Функции:</h2>
+            <ul>
+                <li>Как объявить функцию?</li>
+                <li>Что такое параметры и аргументы функции?</li>
+                <li>Что такое возвращаемые значения функции? Можно ли возвращать несколько значений?</li>
+                <li>Что такое именованные возвращаемые значения?</li>
+                <li>Что такое variadic function (функция с переменным числом аргументов)?</li>
+                <li>Как передаются аргументы в функцию: по значению или по ссылке?</li>
+            </ul>
+
+            <h2>• Указатели:</h2>
+            <ul>
+                <li>Что такое указатель?</li>
+                <li>Как получить адрес переменной?</li>
+                <li>Как разыменовать указатель?</li>
+                <li>Зачем нужны указатели?</li>
+            </ul>
+
+            <h2>• Структуры (Structs):</h2>
+            <ul>
+                <li>Что такое структура? Как она объявляется?</li>
+                <li>Как получить доступ к полям структуры?</li>
+                <li>Что такое анонимные поля структуры (embedded fields)?</li>
+            </ul>
+
+            <h2>• Срезы (Slices):</h2>
+            <ul>
+                <li>Что такое срез? Чем он отличается от массива?</li>
+                <li>Как создать срез? (с использованием make, слайс-литералы)</li>
+                <li>Что такое capacity и length среза?</li>
+                <li>Как добавить элементы в срез? (append)</li>
+                <li>Что происходит, когда capacity среза превышается при использовании append?</li>
+                <li>Как скопировать срез? (copy)</li>
+            </ul>
+
+            <h2>• Карты (Maps):</h2>
+            <ul>
+                <li>Что такое карта?</li>
+                <li>Как создать карту? (с использованием make, map-литералы)</li>
+                <li>Как получить значение из карты?</li>
+                <li>Как проверить, существует ли ключ в карте? (comma ok idiom)</li>
+                <li>Как удалить элемент из карты? (delete)</li>
+            </ul>
+
+            <h2>• Строки:</h2>
+            <ul>
+                <li>Что такое строка в Go? Неизменяемость строк. UTF-8 кодировка.</li>
+                <li>Как получить длину строки в байтах и в рунах? (len, utf8.RuneCountInString)</li>
+                <li>Как итерировать по строке?</li>
+                <li>Как преобразовать строку в []byte и []rune и наоборот?</li>
+            </ul>
+
+            <h2>• Пакеты:</h2>
+            <ul>
+                <li>Что такое пакет?</li>
+                <li>Как импортировать пакет?</li>
+                <li>Что такое видимость (scope) переменных и функций в пакете (публичные/приватные)?</li>
+            </ul>
+
+            <h1>2. Конкурентность (Concurrency)</h1>
+
+            <h2>• Горутины (Goroutines):</h2>
+            <ul>
+                <li>Что такое горутина? Чем она отличается от потока?</li>
+                <li>Как запустить горутину? (go keyword)</li>
+                <li>Как работает планировщик горутин? (M:N scheduling)</li>
+                <li>Что такое вытесняющая многозадачность (preemptive scheduling) в Go?</li>
+            </ul>
+
+            <h2>Каналы (Channels)</h2>
+            <ul>
+                <li>Что такое канал?</li>
+                <li>Как создать канал? (make(chan Type))</li>
+                <li>Какие типы каналов есть? (buffered/unbuffered)</li>
+                <li>Как отправить и получить данные из канала? (&lt;- operator)</li>
+                <li>Что происходит, когда отправляется данные в полный буферизованный канал или принимается данные из пустого небуферизованного канала? (блокировка)</li>
+                <li>Как закрыть канал? (close)</li>
+                <li>Как проверить, закрыт ли канал? (comma ok idiom)</li>
+                <li>Что такое select statement? Как он используется для выбора из нескольких каналов?</li>
+            </ul>
+
+            <h2>Мьютексы (Mutexes)</h2>
+            <ul>
+                <li>Что такое мьютекс? Зачем он нужен?</li>
+                <li>Как использовать мьютекс для защиты общих ресурсов? (Lock, Unlock)</li>
+                <li>Что такое RWMutex (мьютекс для чтения/записи)? Когда его следует использовать?</li>
+            </ul>
+
+            <h2>WaitGroup</h2>
+            <ul>
+                <li>Что такое sync.WaitGroup? Зачем он нужен?</li>
+                <li>Как использовать sync.WaitGroup для ожидания завершения нескольких горутин? (Add, Done, Wait)</li>
+            </ul>
+
+            <h2>Context</h2>
+            <ul>
+                <li>Что такое context.Context? Зачем он нужен?</li>
+                <li>Как использовать context.Context для отмены горутин и передачи данных между ними? (WithCancel, WithTimeout, WithValue)</li>
+            </ul>
+
+            <h1>Race conditions</h1>
+            <ul>
+                <li>Что такое race condition? Как их избежать?</li>
+                <li>Какие инструменты Go помогают обнаружить race conditions? (go run -race)</li>
+            </ul>
+
+            <h1>Интерфейсы (Interfaces) и типы</h1>
+
+            <h2>Интерфейсы</h2>
+            <ul>
+                <li>Что такое интерфейс?</li>
+                <li>Как объявить интерфейс?</li>
+                <li>Что такое interface satisfaction (удовлетворение интерфейса)?</li>
+                <li>Что такое пустой интерфейс (interface{})? Для чего он используется?</li>
+                <li>Type assertion (утверждение типа): Как проверить и преобразовать тип интерфейса?</li>
+                <li>Type switch (переключатель типа): Как обрабатывать различные типы интерфейсов в одном блоке кода?</li>
+            </ul>
+
+            <h2>Методы</h2>
+            <ul>
+                <li>Что такое метод?</li>
+                <li>Как объявить метод?</li>
+                <li>В чем разница между методом, принимающим value receiver и pointer receiver? Когда какой использовать?</li>
+            </ul>
+
+            <h2>Embedding</h2>
+            <ul>
+                <li>Что такое embedding (встраивание) в Go?</li>
+                <li>Как встраивать структуры и интерфейсы?</li>
+                <li>Как работает promotion (продвижение) методов при встраивании?</li>
+            </ul>
+
+            <h1>Ошибки (Errors)</h1>
+
+            <ul>
+                <li>Как обрабатывать ошибки в Go? (возвращение error как второго значения)</li>
+                <li>Что такое интерфейс error?</li>
+                <li>Как создать свой тип ошибки?</li>
+                <li>Как возвращать и обрабатывать несколько ошибок?</li>
+                <li>Что такое panic и recover? Когда их следует использовать? (panic - для невосстановимых ошибок, recover - для перехвата panic)</li>
+                <li>Что такое deferred functions (defer)? Как они используются для обработки ошибок и освобождения ресурсов?</li>
+            </ul>
+
+            <h1>Работа с памятью и производительность (Memory Management and Performance)</h1>
+
+            <h2>Сборка мусора (Garbage Collection)</h2>
+            <ul>
+                <li>Как работает сборщик мусора в Go? (Concurrent mark and sweep)</li>
+                <li>Что такое profiling и tracing? Как использовать pprof для анализа производительности?</li>
+                <li>Как избежать утечек памяти?</li>
+            </ul>
+
+            <h2>Производительность</h2>
+            <ul>
+                <li>Какие инструменты Go помогают анализировать производительность? (go tool pprof, go tool trace)</li>
+                <li>Как оптимизировать код на Go? (использование эффективных алгоритмов, избежание ненужных аллокаций, использование strings.Builder для конкатенации строк)</li>
+                <li>Что такое escape analysis? Как она влияет на производительность?</li>
+            </ul>
+
+            <h2>Reflection</h2>
+
+            <ul>
+                <li>Что такое reflection?</li>
+                <li>Когда следует использовать reflection? (в основном для метапрограммирования, сериализации/десериализации)</li>
+                <li>Какие типы и функции предоставляет пакет reflect? (TypeOf, ValueOf, Kind, Field, Method)</li>
+                <li>Какие ограничения у reflection? (снижение производительности, потеря безопасности типов)</li>
+            </ul>
+
+            <h1>Concurrency patterns</h1>
+
+            <ul>
+                <li>Worker pools</li>
+                <li>Fan-in, Fan-out</li>
+                <li>Pipelines</li>
+                <li>Context-aware operations</li>
+            </ul>
+
+            <h1>Code organization and design principles</h1>
+
+            <ul>
+                <li>SOLID principles</li>
+                <li>DRY (Don't Repeat Yourself)</li>
+                <li>KISS (Keep It Simple, Stupid)</li>
+                <li>YAGNI (You Ain't Gonna Need It)</li>
+                <li>Clean Architecture</li>
+                <li>Dependency Injection</li>
+            </ul>
+
+            <h1>Паттерны проектирования</h1>
+
+            <ul>
+                <li>Singleton</li>
+                <li>Factory</li>
+                <li>Builder</li>
+                <li>Observer</li>
+                <li>Strategy</li>
+            </ul>
+
+            <h1>Разное:</h1>
+            <h2>Дополнительные темы в Go</h2>
+
+            <ul>
+                <li>
+                    <strong>Что такое defer? Как он работает?</strong>
+                    <p>Defer — это ключевое слово в Go, которое используется для отложенного выполнения функции. Функции, помеченные defer, будут выполнены после завершения enclosing функции, даже если произошла ошибка или паника. Это часто используется для освобождения ресурсов, таких как закрытие файлов или мьютексов.</p>
+                </li>
+
+                <li>
+                    <strong>Что такое iota?</strong>
+                    <p>Iota — это специальная идентификаторная константа в Go, которая используется для создания последовательных значений. Она автоматически увеличивается на единицу при каждой новой строке констант в блоке const.</p>
+                </li>
+
+                <li>
+                    <strong>Как создать кастомный пакет? Как организовать код в Go?</strong>
+                    <p>Для создания кастомного пакета необходимо создать директорию с кодом и добавить файл с расширением .go. В начале файла нужно указать имя пакета с помощью ключевого слова <code>package</code>. Код можно организовать по функциональности, разделяя его на различные пакеты и подкаталоги.</p>
+                </li>
+
+                <li>
+                    <strong>Как работать с файлами? (os package)</strong>
+                    <p>Пакет <code>os</code> предоставляет функции для работы с файловой системой. Вы можете открывать, создавать, читать и записывать файлы с помощью функций, таких как <code>os.Open</code>, <code>os.Create</code>, <code>os.ReadFile</code>, и <code>os.WriteFile</code>.</p>
+                </li>
+
+                <li>
+                    <strong>Как работать с сетью? (net package)</strong>
+                    <p>Пакет <code>net</code> предоставляет интерфейсы для работы с сетевыми соединениями. Вы можете создавать TCP/UDP-серверы и клиентов, а также работать с HTTP-запросами и ответами с помощью пакета <code>net/http</code>.</p>
+                </li>
+
+                <li>
+                    <strong>Как написать тесты в Go? (testing package)</strong>
+                    <p>Для написания тестов в Go используется пакет <code>testing</code>. Тесты пишутся в файлах с именем, заканчивающимся на <code>_test.go</code>, и должны содержать функции, начинающиеся с <code>Test</code>. Можно использовать команды <code>go test</code> для запуска тестов.</p>
+                </li>
+
+                <li>
+                    <strong>Что такое benchmarks? Как их писать и запускать?</strong>
+                    <p>Бенчмарки — это тесты производительности, которые измеряют время выполнения функций. Они пишутся в тех же файлах, что и тесты, и используют функцию с именем, начинающимся на <code>Benchmark</code>. Запуск бенчмарков осуществляется с помощью команды <code>go test -bench=.</code>.</p>
+                </li>
+
+                <li>
+                    <strong>Как работает go mod? Управление зависимостями.</strong>
+                    <p><code>go mod</code> — это инструмент для управления зависимостями в Go. Он позволяет создавать модули, указывать версии зависимостей в файле <code>go.mod</code>, а также автоматически загружать и обновлять зависимости.</p>
+                </li>
+
+                <li>
+                    <strong>Что такое build tags?</strong>
+                    <p>Build tags — это специальные комментарии в начале файла, которые указывают компилятору, когда включать или исключать файл из сборки. Это полезно для условной компиляции кода для различных платформ или конфигураций.</p>
+                </li>
+            </ul>
+
+
+
+        </div>
+        <div class="col-12 col-sm-4">
+            <h2 class="mb-3 mt-5 fs-5" >Примеры ответов:</h2>
+            <ul class="list-group list-group-flush mb-3">
+            </ul>
+        </div>
+    </div>
+
+
+
+    <!-- ExtraContentModal -->
+    <div class="modal fade" id="ExtraContentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Добавить ссылку на доп. матераил</h1>
+                </div>
+                <div class="modal-body">
+                    <form action="5899.html" method="POST">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="2cRbCuVoFX5cN5aiC53jmvl2ZE8f7aswnnKnpVkI4rhssQmixzFAD5wFcOPbD9hN">
+                        <div class="mb-3">
+                            <label for="id_content-title" class="col-form-label">Название: </label>
+                            <input type="text" name="content-title" class="form-control" maxlength="255" required id="id_content-title">
+                        </div>
+                        <div class="mb-3">
+                            <label for="id_content-url" class="col-form-label">Ссылка: </label>
+                            <input type="url" name="content-url" class="form-control" required id="id_content-url">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                            <button type="submit" class="btn btn-primary">Добавить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VideoAnswerModal -->
+    <div class="modal fade" id="VideoAnswerModal" tabindex="-1" aria-labelledby="VideoAnswerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="VideoAnswerModalLabel">Добавить ответ из mock-собесов</h1>
+                </div>
+                <div class="modal-body">
+                    <form action="5899.html" method="POST">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="2cRbCuVoFX5cN5aiC53jmvl2ZE8f7aswnnKnpVkI4rhssQmixzFAD5wFcOPbD9hN">
+                        <div class="mb-3">
+                            <label for="id_video-title" class="col-form-label">Название видео: </label>
+                            <input type="text" name="video-title" class="form-control" maxlength="255" required id="id_video-title">
+                        </div>
+                        <div class="mb-3">
+                            <label for="id_video-url" class="col-form-label">Ссылка на момент ответа: </label>
+                            <input type="url" name="video-url" class="form-control" required id="id_video-url">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                            <button type="submit" class="btn btn-primary">Добавить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+    <footer class="py-3 my-4">
+        <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">interviews</p>
+        <ul class="nav justify-content-center pb-1 mb-1">
+            <!--          <li class="nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">👾 easyoffer by Кивайко Алексей</li>-->
+            <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+            <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+            <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+            <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+            <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+            <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+        </ul>
+    </footer>
+</div>
+</html>
