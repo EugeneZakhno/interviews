@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript" src="../static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="../static/ckeditor/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <title>
+        Какие есть нюансы при итерации по строке
+    </title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFVDXM9B');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="yandex-verification" content="fbc87e7cf8354d83" />
+</head>
+
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVDXM9B"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(95314788, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/95314788" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+    <div class="container">
+        <div class="fs-2 me-2 nav-link"><a class="nav-link navbar-brand fs-4" href="../index.html">👾 interviews </a></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Вопросы</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../mock.html">Собесы</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../mentor.html">Менторы</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../analytic.html">Требования</a>
+                </li>
+            </ul>
+            <a class="btn btn-sm btn btn-danger" href="https://t.me/+Korj4gSMfStlNDAy" target="_blank" type="button"><i class="bi bi-lock"></i> Приватная база собесов</a>
+        </div>
+    </div>
+</nav>
+<main class="container" style="flex: 1 1 auto;">
+
+    <div class="row">
+        <div class="col">
+            <details>
+             <summary><span style="color: red"><b>345. Какие есть нюансы при итерации по строке</b></span></summary>
+                <br>
+            <h6>Итерация по строкам в Go (Golang)</h6>
+            <p>Имеет свои особенности, которые важно учитывать. Вот некоторые из них:</p>
+            <ol>
+                <li>
+                    <strong>Неизменяемость строк:</strong>
+                    <p>В Go строки являются неизменяемыми (immutable). Это означает, что вы не можете изменять строку на месте. Если вы хотите изменить строку, вам нужно создать новую строку.</p>
+                </li>
+                <li>
+                    <strong>Итерация по рунам:</strong>
+                    <p>При итерации по строке в Go рекомендуется использовать <code>range</code>, чтобы правильно обрабатывать символы, особенно если они являются многобайтовыми (например, символы UTF-8):</p>
+                    <pre><code>myString := "Hello, 世界"
+for i, char := range myString {
+    fmt.Printf("Index: %d, Rune: %c\n", i, char)
+}</code></pre>
+                </li>
+                <li>
+                    <strong>Индексация и длина:</strong>
+                    <p>Индексы в строках представляют собой байты, а не руны. Это означает, что если строка содержит многобайтовые символы, индексы могут не соответствовать визуальным символам:</p>
+                    <pre><code>fmt.Println(myString[7]) // Выведет байт, а не символ</code></pre>
+                </li>
+                <li>
+                    <strong>Использование функции <code>len()</code>:</strong>
+                    <p>Функция <code>len()</code> возвращает длину строки в байтах, а не в рунах. Чтобы получить количество руна, используйте <code>utf8.RuneCountInString()</code>:</p>
+                    <pre><code>fmt.Println(len(myString)) // Длина в байтах
+fmt.Println(utf8.RuneCountInString(myString)) // Количество руна</code></pre>
+                </li>
+                <li>
+                    <strong>Конвертация между строками и рунами:</strong>
+                    <p>Для работы с рунами можно конвертировать строку в срез рун и обратно:</p>
+                    <pre><code>runes := []rune(myString) // Конвертация строки в срез рун
+newString := string(runes) // Конвертация среза рун обратно в строку</code></pre>
+                </li>
+                <li>
+                    <strong>Срезы строк:</strong>
+                    <p>Срезы строк в Go также работают с байтами, а не с рунами. Если вы хотите создать подстроку, которая включает многобайтовые символы, лучше сначала конвертировать строку в срез рун:</p>
+                    <pre><code>substring := string([]rune(myString)[1:5]) // Подстрока от 1 до 5 руны</code></pre>
+                </li>
+                <li>
+                    <strong>Пробелы и специальные символы:</strong>
+                    <p>При итерации по строке учитывайте пробелы и специальные символы. Они будут частью итерации так же, как и любые другие символы.</p>
+                </li>
+                <li>
+                    <strong>Использование пакета <code>unicode</code>:</strong>
+                    <p>Для работы с символами можно использовать пакет <code>unicode</code>, который предоставляет функции для проверки свойств символов (например, <code>unicode.IsLetter</code>, <code>unicode.IsDigit</code> и т.д.).</p>
+                </li>
+                <li>
+                    <strong>Генераторы и функции высшего порядка:</strong>
+                    <p>Go не поддерживает генераторы в том смысле, как это делает Python, но вы можете создавать функции для обработки строк и передавать их как аргументы.</p>
+                </li>
+                <li>
+                    <strong>Работа с многобайтовыми кодировками:</strong>
+                    <p>Go использует UTF-8 по умолчанию для строк, поэтому важно быть внимательным к многобайтовым символам при работе с ними.</p>
+                </li>
+            </ol>
+            <p>Эти нюансы помогут вам более эффективно работать со строками в Go и избежать распространенных ошибок при итерации по ним.</p>
+            </details>
+
+            <details>  <summary><span style="color: red"><b>346. Как эффективно склеивать строки (конкатенация строк)</b></span></summary>
+                <div>
+                    Cуществует несколько способов для эффективной конкатенации строк. Рассмотрим основные методы:
+                    <br>
+                    ▎ 1. Использование оператора <b>+</b>
+                    <br>
+                    Наиболее простой способ — это использование оператора <b>+</b> для объединения строк:
+                    <pre>
+            <code>```go
+                str1 := "Hello"
+                str2 := "World"
+                result := str1 + " " + str2
+                  ```</code>
+                    </pre>
+                    Однако, этот метод может быть неэффективным, если вы объединяете большое количество строк, так как он
+                    создает новые строки при каждой конкатенации.
+                    <br>
+                    ▎ 2. Использование <b>strings.Join</b> <br>
+                    Если у вас есть срез строк, вы можете использовать функцию strings.Join, что будет более эффективно:
+                    <pre>
+                   <code>```go
+                import "strings"
+                words := []string{"Hello", "World", "from", "Go"}
+                result := strings.Join(words, " ") // "Hello World from Go"
+                    ```</code>
+            </pre>
+                    Этот метод эффективнее, так как он создает одну строку за один проход по срезу.
+                    <br>
+                    ▎ 3. Использование <b>strings.Builder</b>
+                    <br>
+                    Для более сложных случаев, когда вы хотите конкатенировать строки в цикле или много раз, рекомендуется
+                    использовать strings.Builder. Это позволяет избежать создания множества временных строк:
+                    <pre>
+                <code>```go
+                import (
+                "strings"
+                )
+                var builder strings.Builder
+                builder.WriteString("Hello")
+                builder.WriteString(" ")
+                builder.WriteString("World")
+                result := builder.String() // "Hello World"
+                    ``` </code>
+            </pre>
+                    <b>strings.Builder</b> оптимизирован для конкатенации строк и минимизирует количество выделений памяти.
+                    <br>
+                    ▎ Вывод: <br>
+                    • Для простых случаев можно использовать оператор +. <br>
+                    • Для объединения большого количества строк лучше использовать strings.Join. <br>
+                    • Для динамического построения строк в циклах или при многократной конкатенации — strings.Builder. <br>
+                    • Для форматирования строк — fmt.Sprintf
+                </div>
+            </details>
+            <details>  <summary><span style="color: red"><b>347. Какие бывают типы в Go</b></span></summary>
+                <p>В Go существует несколько основных типов, которые можно разделить на следующие категории: базовые типы, агрегированные типы, ссылочные типы и интерфейсы. Рассмотрим каждую категорию более подробно.</p>
+
+                <p>Базовые типы</p>
+
+                <p><strong>1. Числовые типы</strong><br />
+                    <strong>Целые числа:</strong></p>
+
+                <ul>
+                    <li><strong>`int` </strong>(размер зависит от платформы)</li>
+                    <li><strong>`int8`, `int16`, `int32`, `int64`</strong></li>
+                    <li><strong>`uint`</strong> (беззнаковый, размер зависит от платформы)</li>
+                    <li><strong>`uint8`</strong> (также известен как <strong>`byte`</strong>)<strong>, `uint16`, `uint32`, `uint64`</strong></li>
+                </ul>
+
+                <p><strong>Числа с плавающей запятой:</strong></p>
+
+                <ul>
+                    <li><strong>`float32`, `float64`</strong></li>
+                </ul>
+
+                <p><strong>Комплексные числа:</strong></p>
+
+                <ul>
+                    <li><strong>`complex64`, `complex128`</strong></li>
+                </ul>
+
+                <p><strong>2. Булевый тип</strong></p>
+
+                <ul>
+                    <li><strong>`bool`</strong> (значения<strong> `true` </strong>и <strong>`false`</strong>)</li>
+                </ul>
+
+                <p><strong>3. Символьные типы</strong></p>
+
+                <ul>
+                    <li><strong>`byte`</strong> (аналог<strong> `uint8`</strong>)</li>
+                    <li><strong>`rune`</strong> (аналог<strong> `int32`</strong>, используется для представления символов Unicode)</li>
+                </ul>
+
+                <p><strong>4. Строки</strong></p>
+
+                <ul>
+                    <li><strong>`string` </strong>(последовательность байт, используемая для хранения текста)</li>
+                </ul>
+
+                <p><strong>Агрегированные типы</strong></p>
+
+                <p><strong>1. Массивы</strong></p>
+
+                <ul>
+                    <li>Фиксированный размер:<strong> `[n]T`</strong> (например,<strong> `[5]int` </strong>для массива из пяти целых чисел)</li>
+                </ul>
+
+                <p><strong>2. Срезы</strong></p>
+
+                <ul>
+                    <li>Переменный размер: <strong>`[]T`</strong> (например,<strong> `[]int`</strong> для среза целых чисел)</li>
+                </ul>
+
+                <p><strong>3. Структуры</strong></p>
+
+                <ul>
+                    <li>Набор полей: <strong>`struct` </strong>(например,<strong> `type Person struct { Name string; Age int }`</strong>)</li>
+                </ul>
+
+                <p>Ссылочные типы</p>
+
+                <p><strong>1. Указатели</strong></p>
+
+                <ul>
+                    <li>Хранит адрес переменной:<strong> `*T`</strong> (например, <strong>`*int`</strong> для указателя на целое число)</li>
+                </ul>
+
+                <p><strong>2. Карты (map)</strong></p>
+
+                <ul>
+                    <li>Хранит пары ключ-значение:<strong> `map[K]V`</strong> (например,<strong> `map[string]int`</strong> для карты, где ключи - строки, а значения - целые числа)</li>
+                </ul>
+
+                <p><strong>3. Функции</strong></p>
+
+                <ul>
+                    <li>Определяет тип функции: <strong>`func(параметры) возвращаемые_типы`</strong> (например, <strong>`func(int) int`</strong> для функции, принимающей целое число и возвращающей целое число)</li>
+                </ul>
+
+                <p><strong>Интерфейсы</strong></p>
+
+                <ul>
+                    <li>Определяет методы, которые должны быть реализованы: <strong>`interface{}`</strong> (например, <strong>`type Stringer interface { String() string }`</strong>)</li>
+                </ul>
+
+                <p>Рассмотрим небольшой пример, демонстрирующий использование различных типов:</p>
+
+                <pre>
+<code>```go
+package main
+
+import "fmt"
+
+// Определение структуры
+type Person struct {
+    Name string
+    Age  int
+}
+
+// Функция, использующая интерфейс
+func (p Person) String() string {
+    return fmt.Sprintf("%s (%d years old)", p.Name, p.Age)
+}
+
+func main() {
+    // Пример использования базовых типов
+    var age int = 30
+    var name string = "Alice"
+    var isStudent bool = false
+
+    // Пример использования агрегированных типов
+    var scores [3]int = [3]int{90, 85, 88}
+    var people []Person = []Person{
+        {Name: "Bob", Age: 25},
+        {Name: "Charlie", Age: 35},
+    }
+
+    // Пример использования ссылочных типов
+    var p *Person = &amp;Person{Name: "Dave", Age: 40}
+    var ageMap map[string]int = map[string]int{"Alice": 30, "Bob": 25}
+
+    // Вывод данных
+    fmt.Println("Name:", name)
+    fmt.Println("Age:", age)
+    fmt.Println("Is student:", isStudent)
+    fmt.Println("Scores:", scores)
+    fmt.Println("People:", people)
+    fmt.Println("Pointer to Person:", p)
+    fmt.Println("Age map:", ageMap)
+}
+```</code></pre>
+
+                <p>В Go есть базовые типы (числа, строки, булевы значения), агрегированные типы (массивы, срезы, структуры), ссылочные типы (указатели, карты, функции) и интерфейсы. Эти типы помогают структурировать и управлять данными в программе.</p></p>
+
+
+            </details>
+            <details>  <summary><span style="color: red"><b>348. Что такое обычный int и какие есть нюансы его реализации</b></span></summary>
+                <p>Тип int представляет собой целочисленный тип данных, который используется для хранения целых чисел.
+                    Из-за зависимости от платформы, лучше использовать типы с фиксированным размером (int32, int64), если вам нужно гарантировать определенный размер.
+                    В Go нет автоматического приведения типов между int и другими целочисленными типами (например, int32, int64, uint). Вам нужно явно преобразовывать их, если вы хотите выполнять операции между разными типами. По умолчанию 0.
+                    Для преобразования значений из одного типа в другой используется явное преобразование, например:     <p>
+                <pre>
+                <code>
+                    var a int = 10
+                    var b int64 = int64(a)
+                     </code>
+                 </pre>
+            </details>
+            <details>  <summary><span style="color: red"><b>349. Как преобразовать строку в int и наоборот</b></span></summary>
+                <p>Для преобразования строки в целое число используйте функцию strconv.Atoi (наоборот strconv.Itoa)</p>
+                <img src="gallery/mentors_images/Atoi_Itoa.png" height="414" width="409"/>
+            </details>
+
+    <!-- ExtraContentModal -->
+    <div class="modal fade" id="ExtraContentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Добавить ссылку на доп. матераил</h1>
+                </div>
+                <div class="modal-body">
+                    <form action="5895.html" method="POST">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="JmLoOxTAXl5uRF0WyU0W31ZrHj5A6u2x4xEABYiUmPhKwqcWtoCdkBa4UtMwCtRO">
+                        <div class="mb-3">
+                            <label for="id_content-title" class="col-form-label">Название: </label>
+                            <input type="text" name="content-title" class="form-control" maxlength="255" required id="id_content-title">
+                        </div>
+                        <div class="mb-3">
+                            <label for="id_content-url" class="col-form-label">Ссылка: </label>
+                            <input type="url" name="content-url" class="form-control" required id="id_content-url">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                            <button type="submit" class="btn btn-primary">Добавить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VideoAnswerModal -->
+    <div class="modal fade" id="VideoAnswerModal" tabindex="-1" aria-labelledby="VideoAnswerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="VideoAnswerModalLabel">Добавить ответ из mock-собесов</h1>
+                </div>
+                <div class="modal-body">
+                    <form action="5895.html" method="POST">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="JmLoOxTAXl5uRF0WyU0W31ZrHj5A6u2x4xEABYiUmPhKwqcWtoCdkBa4UtMwCtRO">
+                        <div class="mb-3">
+                            <label for="id_video-title" class="col-form-label">Название видео: </label>
+                            <input type="text" name="video-title" class="form-control" maxlength="255" required id="id_video-title">
+                        </div>
+                        <div class="mb-3">
+                            <label for="id_video-url" class="col-form-label">Ссылка на момент ответа: </label>
+                            <input type="url" name="video-url" class="form-control" required id="id_video-url">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                            <button type="submit" class="btn btn-primary">Добавить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</main>
+<script>hljs.highlightAll();</script>
+</body>
+
+<div class="container">
+    <footer class="py-3 my-4">
+        <p class="text-center nav-item nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6">☀️ interviews </p>
+        <ul class="nav justify-content-center pb-1 mb-1">
+            <li class="nav-item"><a href="https://t.me/+3xsbmERSOP0wMWRi" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-telegram"></i></a></li>
+            <li class="nav-item"><a href="https://www.youtube.com/@goingtoit" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-youtube"></i></a></li>
+            <li class="nav-item"><a href="https://github.com/kivaiko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-github"></i></a></li>
+            <li class="nav-item"><a href="https://www.linkedin.com/in/kivaiko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-linkedin"></i></a></li>
+            <li class="nav-item"><a href="https://www.instagram.com/kivaiyko/" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-instagram"></i></a></li>
+            <li class="nav-item"><a href="https://twitter.com/kivaiyko" target="_blank" class="nav-link px-2 text-body-secondary text-decoration-none text-reset fs-6"><i class="bi bi-twitter"></i></a></li>
+        </ul>
+    </footer>
+</div>
+</html>
